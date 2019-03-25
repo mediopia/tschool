@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq4').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(5).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+	if($('.coupon_list_table tbody tr').length == 0){
+		$('.coupon_list_table tfoot').show();
+	}
+
+	$('.tab_btns li').on('mouseover', function(){
+		$('.tab_btns li').removeClass('on');
+		$(this).addClass('on');
+		$('.user_content').removeClass('on');
+		$('.' + $(this).attr('data-link')).addClass('on');
+	});
+
+	$('#coupon_no1').keyup(function(){
+		coupon_no_input(form_coupon.coupon_no1, form_coupon.coupon_no2);
+	});
+	$('#coupon_no2').keyup(function(){
+		coupon_no_input(form_coupon.coupon_no2, form_coupon.coupon_no3);
+	});
+});
+//쿠폰번호 체크
+var cu_number = "";
+function coupon_no_input(source, target) {
+	var input = $.trim(source.value);
+	if (input.length == 5) target.focus();
+}
+
+function use_coupon_check(f) {
+	if (cu_number) {
+		//var msg = "쿠폰을 사용하시겠습니까?\n\n사용하신 쿠폰은 재사용이 불가능함니다";
+		var msg = "쿠폰을 등록하시겠습니까?";
+		if (!window.confirm(msg)) return false;
+		f.action = "coupon_update.php";
+	} else {
+		var coupon_no1 = $.trim(f.coupon_no1.value);
+		var coupon_no2 = $.trim(f.coupon_no2.value);
+		var coupon_no3 = $.trim(f.coupon_no3.value);
+		if (coupon_no1 == '') {
+			alert("쿠폰번호를 입력하세요");
+			f.coupon_no1.focus();
+			f.coupon_no1.select();
+			return false;
+		} else if (coupon_no1.length < 4 || coupon_no1.length > 5) {
+			alert("쿠폰번호를 확인하세요");
+			f.coupon_no1.focus();
+			f.coupon_no1.select();
+			return false;
+		} else if (coupon_no2 == '') {
+			alert("쿠폰번호를 입력하세요");
+			f.coupon_no2.focus();
+			f.coupon_no2.select();
+			return false;
+		} else if (coupon_no2.length < 4 || coupon_no2.length > 5) {
+			alert("쿠폰번호를 확인하세요");
+			f.coupon_no2.focus();
+			f.coupon_no2.select();
+			return false;
+		} else if (coupon_no3 == '') {
+			alert("쿠폰번호를 입력하세요");
+			f.coupon_no3.focus();
+			f.coupon_no3.select();
+			return false;
+		} else if (coupon_no3.length < 4 || coupon_no3.length > 5) {
+			alert("쿠폰번호를 확인하세요");
+			f.coupon_no3.focus();
+			f.coupon_no3.select();
+			return false;
+		}
+		/*
+		if (! f.number.value.replace( /\s/g,"")) {
+			alert("쿠폰번호를 입력하세요");
+			f.number.value = f.number.value.replace(/\s/g,"");
+			return false;
+		}
+		f.number.value = f.number.value.replace(/\s/g,"");
+		*/
+		f.action = '';
+	}
+	return true;
+}
+//--쿠폰번호 체크
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>나의강의실</h2>
+					<ul>
+						<li><a href="./menu01.html">나의 수강 현황</a></li>
+						<li><a href="./menu02.html">장바구니</a></li>
+						<li><a href="./menu03.html">결제내역</a></li>
+						<li><a href="./menu04.html" class="small">성적/이수증/이수통보</a></li>
+						<li><a href="./menu05.html">수강연기</a></li>
+						<li><a href="./menu06.html">포인트/쿠폰</a></li>
+						<li><a href="./menu07.html">회원정보수정</a></li>
+						<li><a href="./menu08.html">나의 문의 글</a></li>
+						<li><a href="./menu09.html">회원탈퇴</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu04_06">
+					<div class="title">
+						<h3>포인트/쿠폰</h3>
+						<p class="route">홈 &gt; 나의강의실 &gt; <span>포인트/쿠폰</span></p>
+					</div>
+
+					<ul class="tab_btns">
+						<li class="on" data-link="content_point">포인트</li>
+						<li data-link="content_coupon">쿠폰</li>
+					</ul>
+
+					<div class="user_content content_point on">
+						<div class="caution_box">
+							포인트는 <strong>10점 이상부터 사용 가능</strong>합니다.<br>
+							적립된 포인트는 홈페이지 내에서 현금과 같이 사용하실 수 있습니다.<br>
+							(예 : 연수 신청 시 / 1,000점 → 1,000원 할인)<br>
+							포인트 유효기간: 적립된 날로부터 2년<br>
+							포인트 소멸 : 1. 적립된 날로부터 2년까지의 미사용 포인트는 매년 12월 31일 자동 소멸됩니다.<br>
+							<span class="trans">포인트 소멸 :</span> 2. 휴면회원 전환 시 모든 포인트는 자동 소멸 됩니다.<br>
+							※ 포인트 소멸 30일 전 등록된 포인트 소멸 사실을 개인정보의 전자우편으로 회원에게 통지합니다.
+						</div>
+
+						<h4><span>홍길동</span> 님의 포인트 내역</h4>
+						<table class="point_history_table qna_table_template">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>일시</th>
+									<th>내용</th>
+									<th>지급 포인트</th>
+									<th>사용 포인트</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2018-12-12 09:00:00</td>
+									<td>회원가입 축하</td>
+									<td class="ta_r"><span class="plus">+1,000</span></td>
+									<td class="ta_r">0</td>
+								</tr>
+								<tr>
+									<td>2018-12-12 09:00:00</td>
+									<td>2018-12-12 첫로그인</td>
+									<td class="ta_r"><span class="plus">+10</span></td>
+									<td class="ta_r">0</td>
+								</tr>
+								<tr>
+									<td>2018-12-12 09:00:00</td>
+									<td>포인트 사용</td>
+									<td class="ta_r">0</td>
+									<td class="ta_r"><span class="minus">-500</span></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2">보유포인트</td>
+									<td class="ta_r"><span class="plus">1,040점</span></td>
+									<td></td>
+								</tr>
+							</tfoot>
+						</table>
+
+						<h4>사이트 이용 시</h4>
+						<table class="point_site_table qna_table_template">
+							<thead>
+								<tr>
+									<th>포인트 적립방법</th>
+									<th>적립 포인트</th>
+									<th>조건사항</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>로그인시</td>
+									<td><span class="plus">10</span> 점</td>
+									<td>1일 1회</td>
+								</tr>
+								<tr>
+									<td>회원가입시</td>
+									<td><span class="plus">1,000</span> 점</td>
+									<td>최초 1회</td>
+								</tr>
+								<tr>
+									<td>연수후기 작성시</td>
+									<td><span class="plus">1,000</span> 점</td>
+									<td>강좌별 1회</td>
+								</tr>
+								<tr>
+									<td>회원추천시</td>
+									<td><span class="plus">200</span> 점</td>
+									<td>회원가입시 1회</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h4>연수신청 시</h4>
+						<table class="point_apply_table qna_table_template">
+							<colspan>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+							</colspan>
+							<thead>
+								<tr>
+									<th colspan="2">포인트 적립방법</th>
+									<th>적립 포인트</th>
+									<th>조건사항</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="2"><strong>무료연수</strong></td>
+									<td>없음</td>
+									<td rowspan="6">교육청 위탁과정<br>
+										일부 제휴 강좌<br>
+										단체수강 시<br>
+										쿠폰할인으로 연수신청 시<br>
+										<span class="plus">↓</span><br>
+										<span class="plus">포인트 적립 없음</span>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2"><strong>자율연수</strong></td>
+									<td><span class="plus">200</span> 점</td>
+								</tr>
+								<tr>
+									<td rowspan="4"><strong>직무연수</strong></td>
+									<td>1학점 (15시간)</td>
+									<td><span class="plus">400</span> 점</td>
+								</tr>
+								<tr>
+									<td>2학점 (30시간)</td>
+									<td><span class="plus">600</span> 점</td>
+								</tr>
+								<tr>
+									<td>3학점 (45시간)</td>
+									<td><span class="plus">800</span> 점</td>
+								</tr>
+								<tr>
+									<td>4학점 (60시간)</td>
+									<td><span class="plus">1,000</span> 점</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="user_content content_coupon">
+						<div class="caution_box">
+							<span>홍길동</span> 선생님께서 보유한 쿠폰은 <span>0</span>장입니다.<br>
+							* 연수 신청시 쿠폰 사용이 가능합니다.
+						</div>
+
+						<h4>쿠폰 등록</h4>
+						<div class="caution_box">
+							가지고 계신 쿠폰이 있으신가요?<br>
+							<span>쿠폰 번호를 등록</span>하시면 할인 혜택을 누릴 수 있습니다.
+							<form name="form_coupon" class="form_coupon">
+								<input type="text" name="coupon_no1" id="coupon_no1" maxlength="5" class="coupon_input"> -
+								<input type="text" name="coupon_no2" id="coupon_no2" maxlength="5" class="coupon_input"> -
+								<input type="text" name="coupon_no3" id="coupon_no3" maxlength="5" class="coupon_input">
+								<a href="javascript:use_coupon_check(form_coupon);" class="btn_blue">쿠폰등록하기</a>
+							</form>
+						</div>
+
+						<h4>연수신청 시</h4>
+						<table class="coupon_list_table qna_table_template">
+							<colspan>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+							</colspan>
+							<thead>
+								<tr>
+									<th>쿠폰명</th>
+									<th>혜택</th>
+									<th>사용기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--<tr>
+									<td>쿠폰이름</td>
+									<td>혜택</td>
+									<td>0000-00-00 까지</td>
+								</tr>-->
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3">등록된 쿠폰이 없습니다.</td>
+								</tr>
+							</tfoot>
+						</table>
+
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

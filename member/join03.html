@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	$('.aside_menu_wrap > ul > li').eq(1).addClass('on');
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>멤버십</h2>
+					<ul>
+						<li><a href="./find_idpw.html">ID/PW 찾기</a></li>
+						<li><a href="./join.html">회원가입</a></li>
+						<li><a href="../info/rule.html">이용약관</a></li>
+						<li><a href="../info/policy.html">개인정보처리방침</a></li>
+						<li><a href="../info/email.html">이메일무단수집거부</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+            <div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap member02 step03">
+					<div class="title">
+						<h3>회원가입</h3>
+						<p class="route">홈 &gt; 멤버십 &gt; <span>회원가입</span></p>
+					</div>
+
+					<ul class="step_wrap">
+						<li class="step1">회원구분 / 약관동의</li>
+						<li class="step2">본인인증</li>
+						<li class="step3 on">회원정보입력</li>
+						<li class="step4">가입완료</li>
+					</ul>
+
+					<form name="user_form" class="user_wrap">
+						<h4>회원정보입력</h4>
+						<table class="user_table table_template01">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th class="col1">이름</th>
+									<td class="col2 ta_l">홍길동</td>
+								</tr>
+								<tr>
+									<th class="col1"><em>* </em>아이디</th>
+									<td class="col2 ta_l">
+										<input id="mb_id" name="mb_id" type="text" size="10" onblur="check_id();">
+										<span id="msg_id"></span>
+										<i>5~10자 이내로 영문/숫자만 입력해 주세요.</i>
+									</td>
+								</tr>
+								<tr>
+									<th class="col1"><em>* </em>비밀번호</th>
+									<td class="col2 ta_l">
+										<input type="password" id="mb_password" name="mb_password" size="20" maxlength="20" onblur="passwordlength();">
+										<span id="msg_password"></span>
+										<i>비밀번호는 10자 이상 영문/숫자/특수기호를 혼합하여 입력해 주세요.</i>
+									</td>
+								</tr>
+								<tr>
+									<th class="col1"><em>* </em>비밀번호 확인</th>
+									<td class="col2 ta_l">
+										<input type="password" id="mb_password_re" name="mb_password_re" size="20" maxlength="20" onblur="passwordidentify();">
+										<span id="msg_password_re"></span>
+									</td>
+								</tr>
+								<tr>
+									<th class="col1"><em>* </em>E-mail</th>
+									<td class="col2 ta_l">
+										<input id="reg_mb_email" name="mail1" type="text" size="15"> @ <input name="mail2" type="text" id="mail2" size="20">&nbsp;
+										<select name="email_select" class="tx" id="email_select" onchange="javascript:checkemailaddy();">
+											<option value="">선택하세요</option>
+											<option value="-----------------">-----------------</option>
+											<option value="hanmail.net">hanmail.net</option>
+											<option value="daum.net">daum.net</option>
+											<option value="naver.com" selected="">naver.com</option>
+											<option value="nate.com">nate.com</option>
+											<option value="empal.com">empal.com</option>
+											<option value="korea.kr">korea.kr</option>
+											<option value="-----------------">-----------------</option>
+											<option value="1" selected="">직접입력</option>
+											<option value="cbe.go.kr">cbe.go.kr</option>
+											<option value="cne.go.kr">cne.go.kr</option>
+											<option value="dge.go.kr">dge.go.kr</option>
+											<option value="dgedu.net">dgedu.net</option>
+											<option value="goe.go.kr">goe.go.kr</option>
+											<option value="gen.go.kr">gen.go.kr</option>
+											<option value="gwe.go.kr">gwe.go.kr</option>
+											<option value="gbe.kr">gbe.kr</option>
+											<option value="gen.go.kr">gen.go.kr</option>
+											<option value="gne.go.kr">gne.go.kr</option>
+											<option value="ice.go.kr">ice.go.kr</option>
+											<option value="jbe.go.kr">jbe.go.kr</option>
+											<option value="jne.go.kr">jne.go.kr</option>
+											<option value="jje.go.kr">jje.go.kr</option>
+											<option value="pne.go.kr">pne.go.kr</option>
+											<option value="sje.go.kr">sje.go.kr</option>
+											<option value="sen.go.kr">sen.go.kr</option>
+											<option value="use.go.kr">use.go.kr</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th class="col1"><em>* </em>휴대폰 번호</th>
+									<td class="col2 ta_l">
+										<select name="mb_hp1" class="phone_number">
+											<option value="010">010</option>
+											<option value="011">011</option>
+											<option value="016">016</option>
+											<option value="017">017</option>
+											<option value="018">018</option>
+											<option value="019">019</option>
+				                        </select>
+				                        - <input type="text" name="mb_hp2" value="" size="4" maxlength="4" class="phone_number"> -
+				                        <input type="text" name="mb_hp3" value="" size="5" maxlength="4" class="phone_number">
+									</td>
+								</tr>
+								<tr>
+									<th class="col1">개인정보 유효 기간</th>
+									<td class="col2 ta_l">
+										<input type="radio" name="activeYear" id="privacy_2" value="3"><label for="privacy_2">3년</label>
+										<input type="radio" name="activeYear" id="privacy_3" value="5"><label for="privacy_3">5년</label>
+										<input type="radio" name="activeYear" id="privacy_4" value="10"><label for="privacy_4">10년</label>
+										<input type="radio" name="activeYear" id="privacy_5" value="100"><label for="privacy_5">탈퇴 시 까지</label><br>
+										<em>※ 관련 법에 따라 현행 개인정보 유효기간은 1년이나 이용자의 요청 시 예외적 1년 이외 기간 설정 가능합니다. 개인정보 유효기간을 3년 이상으로 설정 시, 장기 미접속에 따른 휴면계정 및 자동 탈퇴를 방지할 수 있습니다.<br>(별도 미설정 시 관련법에 따라 미로그인 1년 경과 시 이용자의 개인정보는 별도 보관됩니다.)</em>
+									</td>
+								</tr>
+								<tr>
+									<th class="col1">추천인아이디</th>
+									<td class="col2 ta_l">
+										<input id="reg_mb_recommend" name="recommend" type="text" size="10">
+										<i>* 아이디를 입력하시면 200포인트가 지급됩니다.</i>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<a href="./join04.html" class="btn_confirm">확인</a>
+					</form>
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

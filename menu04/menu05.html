@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq4').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(4).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+	if($('.delay_wrap table tbody tr').length == 0){
+		$('.delay_wrap table thead').hide();
+		$('.delay_wrap table tfoot').show();
+	}
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>나의강의실</h2>
+					<ul>
+						<li><a href="./menu01.html">나의 수강 현황</a></li>
+						<li><a href="./menu02.html">장바구니</a></li>
+						<li><a href="./menu03.html">결제내역</a></li>
+						<li><a href="./menu04.html" class="small">성적/이수증/이수통보</a></li>
+						<li><a href="./menu05.html">수강연기</a></li>
+						<li><a href="./menu06.html">포인트/쿠폰</a></li>
+						<li><a href="./menu07.html">회원정보수정</a></li>
+						<li><a href="./menu08.html">나의 문의 글</a></li>
+						<li><a href="./menu09.html">회원탈퇴</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu04_05">
+					<div class="title">
+						<h3>수강연기</h3>
+						<p class="route">홈 &gt; 나의강의실 &gt; <span>수강연기</span></p>
+					</div>
+
+					<div class="caution_box">
+						<ul class="blet_alert">
+							<li>
+								꼭 확인해주세요!
+								<ul class="blet_circle">
+									<li>수강 기수 변경은 <span>동일 과정</span>으로만 가능하며, 교육청 단체연수는 게시판으로만 연기 신청이 가능합니다.</li>
+									<li>수강 기수 변경은 <span>연수 종료일 전 총 3회</span> 까지만 가능합니다.</li>
+									<li>수강 기수를 변경하시면 이전 <span>진도/과제/시험</span> 응시 내역은 모두 초기화 됩니다.</li>
+									<li><span>교육청 단체연수 및 자율연수</span>는 연기가 불가능합니다.</li>
+									<li>수강 기수를 변경하신 경우 연수 <span>취소 및 환불</span>이 불가능합니다.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+					<div class="delay_wrap">
+						<h4>즉시 수강 연기하기</h4>
+						<p class="plain_text">교육청 단체연수는 아래 수강 내역에 노출되지 않습니다. 게시판으로 신청해주세요.</p>
+						<table class="table_template01">
+							<thead>
+								<tr>
+									<th class="col1">기수</th>
+									<th class="col2">과정명/교재명</th>
+									<th class="col3">결제금액</th>
+									<th class="col4">신청일자</th>
+									<th class="col5">수강연기</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--<tr>
+									<td class="col1"></td>
+									<td class="col2 ta_l"></td>
+									<td class="col3"></td>
+									<td class="col4"></td>
+									<td class="col5"></td>
+								</tr>-->
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="5">즉시 수강 연기 가능한 연수가 없습니다.</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+
+					<div class="question_board_wrap">
+						<h4>수강 연기 관련 문의 하기<a class="btn_delay" href="./menu05_delay.html">수강 연기 문의하기</a></h4>
+						<p class="plain_text">교육청 단체연수는 아래 수강 내역에 노출되지 않습니다. 게시판으로 신청해주세요.</p>
+						<table class="table_template01">
+							<thead>
+								<tr>
+									<th class="col1">번호</th>
+									<th class="col2">제목</th>
+									<th class="col3">진행상황</th>
+									<th class="col4">작성자</th>
+									<th class="col5">작성일</th>
+									<th class="col6">조회</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col1">공지</td>
+									<td class="col2 ta_l"><a href="./sub01.html">수강취소 방법 안내</a></td>
+									<td class="col3"></td>
+									<td class="col4">ad****</td>
+									<td class="col5">2017-05-25</td>
+									<td class="col6">18</td>
+								</tr>
+								<tr>
+									<td class="col1">1488</td>
+									<td class="col2 ta_l"><a href="./sub01.html">수강연기 신청합니다.<span class="new">N</span><span class="lock"></span></a></td>
+									<td class="col3"><i class="condition ing">처리중</i></td>
+									<td class="col4">cjg1****</td>
+									<td class="col5">2019-01-02</td>
+									<td class="col6">1</td>
+								</tr>
+								<tr>
+									<td class="col1">1486</td>
+									<td class="col2 ta_l"><a href="./sub01.html">수강연기 신청합니다.<span class="new">N</span><span class="lock"></span></a></td>
+									<td class="col3"><i class="condition end">완료</i></td>
+									<td class="col4">nan****</td>
+									<td class="col5">2019-01-01</td>
+									<td class="col6">4</td>
+								</tr>
+								<tr>
+									<td class="col1">1487</td>
+									<td class="col2 ta_l"><span class="reply"></span><a href="./sub01.html">감사합니다.<span class="new">N</span><span class="lock"></span></a></td>
+									<td class="col3"><i class="condition end">완료</i></td>
+									<td class="col4">nan****</td>
+									<td class="col5">2019-01-02</td>
+									<td class="col6">1</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+
+				<div class="pager">
+					<a class="prev" href="#">이전 페이지</a>
+					<ul>
+						<li><a class="on" href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
+					</ul>
+					<a class="next" href="#">다음 페이지</a>
+				</div>
+
+				<div class="bottom_search_wrap">
+					<select name="bottom_search" id="bottom_search">
+						<option value="title_name">제목</option>
+						<option value="content_name">내용</option>
+						<option value="mix">제목+내용</option>
+					</select>
+					<input type="text" name="searchtextm" maxlength="15" itemname="검색어" required="" value="" title="검색어 입력">
+					<a class="btn_submit" href="#">검색</a>
+				</div>
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

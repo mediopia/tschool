@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq3').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(9).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>연수지원</h2>
+					<ul>
+						<li><a href="./menu01.html">공지사항</a></li>
+						<li><a href="./menu02.html">묻고 답하기</a></li>
+						<li><a href="./menu03.html">연수후기</a></li>
+						<li><a href="./menu04.html">자주묻는 질문</a></li>
+						<li><a href="./menu05.html">연수자료실</a></li>
+						<li><a href="./menu06.html">연수안내</a></li>
+						<li><a href="./menu07.html">신청방법</a></li>
+						<li><a href="./menu08.html">학습방법</a></li>
+						<li><a href="./menu09.html">평가방법</a></li>
+						<li><a href="./menu10.html">시스템지원</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu03_10">
+					<div class="title">
+						<h3>시스템지원</h3>
+						<p class="route">홈 &gt; 연수지원 &gt; <span>시스템지원</span></p>
+					</div>
+
+					<table class="system_guide_table table_template01">
+						<colgroup>
+							<col class="col1"/>
+							<col class="col2"/>
+							<col class="col3"/>
+							<col class="col4"/>
+							<col class="col5"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th class="col1">번호</th>
+								<th class="col2">제목</th>
+								<th class="col3">파일</th>
+								<th class="col4">작성일</th>
+								<th class="col5">조회</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>5</td>
+								<td class="ta_l"><a href="./sub01.html">동영상이 자꾸 끊기는것 같아요</a></td>
+								<td></td>
+								<td>2014-01-08</td>
+								<td>3021</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td class="ta_l"><a href="./sub01.html">[회원가입] I-PIN 발급받는 방법.</a></td>
+								<td></td>
+								<td>2014-04-25</td>
+								<td>2854</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td class="ta_l"><a href="./sub01.html">[이수증 출력] 이수증의 이미지가 출력되지 않습니다.</a></td>
+								<td></td>
+								<td>2014-01-14</td>
+								<td>3557</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td class="ta_l"><a href="./sub01.html">인터넷 익스플로어 버전 10, 11 이상의 브라우저를 사용하실 경우 호환성 설정 방법</a></td>
+								<td></td>
+								<td>2014-01-08</td>
+								<td>4928</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td class="ta_l"><a href="./sub01.html">동영상 플레이어 구동을 위한 "스타플레이어" 설치 방법</a></td>
+								<td></td>
+								<td>2014-01-08</td>
+								<td>7277</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+				<!-- //board_wrap -->
+
+				<div class="pager">
+					<a class="prev" href="#">이전 페이지</a>
+					<ul>
+						<li><a class="on" href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
+					</ul>
+					<a class="next" href="#">다음 페이지</a>
+				</div>
+
+				<div class="bottom_search_wrap">
+					<select name="bottom_search" id="bottom_search">
+						<option value="edu_name">교육청명</option>
+						<option value="lecture_name">연수명</option>
+					</select>
+					<input type="text" name="searchtextm" maxlength="15" itemname="검색어" required="" value="" title="검색어 입력">
+					<a class="btn_submit" href="#">검색</a>
+				</div>
+
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

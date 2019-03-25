@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	$('.aside_menu_wrap > ul > li').eq(1).addClass('on');
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>멤버십</h2>
+					<ul>
+						<li><a href="./find_idpw.html">ID/PW 찾기</a></li>
+						<li><a href="./join.html">회원가입</a></li>
+						<li><a href="../info/rule.html">이용약관</a></li>
+						<li><a href="../info/policy.html">개인정보처리방침</a></li>
+						<li><a href="../info/email.html">이메일무단수집거부</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap member02 step02">
+					<div class="title">
+						<h3>회원가입</h3>
+						<p class="route">홈 &gt; 멤버십 &gt; <span>회원가입</span></p>
+					</div>
+
+					<ul class="step_wrap">
+						<li class="step1">회원구분 / 약관동의</li>
+						<li class="step2 on">본인인증</li>
+						<li class="step3">회원정보입력</li>
+						<li class="step4">가입완료</li>
+					</ul>
+
+					<div class="caution_box">
+						<p>아래에서 원하는 가입 방법을 선택해 주세요.<br>입력하신 정보는 가입이 완료되기 전까지 저장되지 않습니다.<p>
+					</div>
+
+					<div class="auth_wrap">
+						<form name="form_phone" class="form_box phone">
+							<h5>본인 인증</h5>
+							<dl class="auth_type phone">
+								<dt></dt>
+								<dd><a class="btn_blue" href="./join03.html">휴대폰 인증</a></dd>
+							</dl>
+						</form>
+
+						<form name="form_ipin" class="form_box ipin">
+							<h5>아이핀 인증</h5>
+							<dl class="auth_type ipin">
+								<dt></dt>
+								<dd><a class="btn_blue" href="./join03.html">I-PIN 인증</a></dd>
+							</dl>
+						</form>
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

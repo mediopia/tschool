@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq3').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(8).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>연수지원</h2>
+					<ul>
+						<li><a href="./menu01.html">공지사항</a></li>
+						<li><a href="./menu02.html">묻고 답하기</a></li>
+						<li><a href="./menu03.html">연수후기</a></li>
+						<li><a href="./menu04.html">자주묻는 질문</a></li>
+						<li><a href="./menu05.html">연수자료실</a></li>
+						<li><a href="./menu06.html">연수안내</a></li>
+						<li><a href="./menu07.html">신청방법</a></li>
+						<li><a href="./menu08.html">학습방법</a></li>
+						<li><a href="./menu09.html">평가방법</a></li>
+						<li><a href="./menu10.html">시스템지원</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu03_09">
+					<div class="title">
+						<h3>평가방법</h3>
+						<p class="route">홈 &gt; 연수지원 &gt; <span>평가방법</span></p>
+					</div>
+
+					<div class="text_contents">
+						<p class="plain_text">직무연수 평가 프로세스 <span>직무연수 성적은 교육부 연수규정에 따라 산출됩니다.</span></p>
+
+						<h4>연수시간별 평가 계획 <span>1학점 과정</span></h4>
+						<table class="qna_table_template">
+							<thead>
+								<tr>
+									<th colspan="2">항목</th>
+									<th>배점</th>
+									<th>평가횟수</th>
+									<th>이수기준</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2">온라인평가<br>(100%)</td>
+									<td>참여점수(진도)</td>
+									<td><span>50</span>점</td>
+									<td></td>
+									<td rowspan="3">
+										진도율 80% 이상 &amp;<br>
+										시험 필수 응시 &amp;<br>
+										총점 60점 이상
+									</td>
+								</tr>
+								<tr>
+									<td>시험</td>
+									<td><span>50</span>점</td>
+									<td>1회</td>
+								</tr>
+								<tr class="total">
+									<td colspan="2">합계</td>
+									<td><span>100</span>점</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h4>연수시간별 평가 계획 <span>2학점 과정</span></h4>
+						<table class="qna_table_template">
+							<thead>
+								<tr>
+									<th colspan="2">항목</th>
+									<th>배점</th>
+									<th>평가횟수</th>
+									<th>이수기준</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="3">온라인평가<br>(100%)</td>
+									<td>참여점수(진도)</td>
+									<td><span>30</span>점</td>
+									<td></td>
+									<td rowspan="4">
+										진도율 80% 이상 &amp;<br>
+										시험 필수 응시 &amp;<br>
+										과제 필수 제출 &amp;<br>
+										총점 60점 이상
+									</td>
+								</tr>
+								<tr>
+									<td>시험</td>
+									<td><span>40</span>점</td>
+									<td>1회</td>
+								</tr>
+								<tr>
+									<td>과제</td>
+									<td><span>30</span>점</td>
+									<td>1회</td>
+								</tr>
+								<tr class="total">
+									<td colspan="2">합계</td>
+									<td><span>100</span>점</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h4>연수시간별 평가 계획 <span>4학점 과정</span></h4>
+						<table class="qna_table_template">
+							<thead>
+								<tr>
+									<th colspan="2">항목</th>
+									<th>배점</th>
+									<th>평가횟수</th>
+									<th>이수기준</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="3">온라인평가<br>(100%)</td>
+									<td>참여점수(진도)</td>
+									<td><span>20</span>점</td>
+									<td></td>
+									<td rowspan="5">
+										진도율 80% 이상 &amp;<br>
+										시험 필수 응시 &amp;<br>
+										과제 필수 제출 &amp;<br>
+										출석고사 필수 응시 &amp;<br>
+										총점 60점 이상
+									</td>
+								</tr>
+								<tr>
+									<td>시험</td>
+									<td><span>10</span>점</td>
+									<td>1회</td>
+								</tr>
+								<tr>
+									<td>과제</td>
+									<td><span>10</span>점</td>
+									<td>1회</td>
+								</tr>
+								<tr>
+									<td>오프라인 평가<br>(60%)</td>
+									<td>출석시험(지필평가)</td>
+									<td><span>60</span>점</td>
+									<td>1회</td>
+								</tr>
+								<tr class="total">
+									<td colspan="2">합계</td>
+									<td><span>100</span>점</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h4>4학점 연수 성적분포 조견표</h4>
+						<table class="qna_table_template">
+							<thead>
+								<tr>
+									<th>점수</th>
+									<th>백분율</th>
+									<th>점수</th>
+									<th>백분율</th>
+									<th>점수</th>
+									<th>백분율</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>100</td>
+									<td>2.0</td>
+									<td>93</td>
+									<td>6.2</td>
+									<td>86</td>
+									<td>5.7</td>
+								</tr>
+								<tr>
+									<td>99</td>
+									<td>2.6</td>
+									<td>92</td>
+									<td>6.6</td>
+									<td>85</td>
+									<td>5.1</td>
+								</tr>
+								<tr>
+									<td>98</td>
+									<td>3.2</td>
+									<td>91</td>
+									<td>6.8</td>
+									<td>84</td>
+									<td>4.5</td>
+								</tr>
+								<tr>
+									<td>97</td>
+									<td>3.8</td>
+									<td>90</td>
+									<td>7.0</td>
+									<td>83</td>
+									<td>3.8</td>
+								</tr>
+								<tr>
+									<td>96</td>
+									<td>4.5</td>
+									<td>89</td>
+									<td>6.8</td>
+									<td>82</td>
+									<td>3.2</td>
+								</tr>
+								<tr>
+									<td>95</td>
+									<td>5.1</td>
+									<td>88</td>
+									<td>6.6</td>
+									<td>81</td>
+									<td>2.6</td>
+								</tr>
+								<tr>
+									<td>94</td>
+									<td>5.7</td>
+									<td>87</td>
+									<td>6.2</td>
+									<td>80</td>
+									<td>2.0</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h4>상대평가 동점자 처리 기준</h4>
+						<div class="caution_box">
+							<ul class="blet_circle">
+								<li>출석고사 점수</li>
+								<li>온라인 시험 점수</li>
+								<li>과제 점수</li>
+								<li>학습 진도율</li>
+								<li>발표 점수 순으로 점수가 높은 학습자부터 순위 배정</li>
+							</ul>
+						</div>
+
+						<h4>이수증 발급</h4>
+						<div class="caution_box">
+							<ul class="blet_circle">
+								<li>이수증은 우편 발송되지 않으며, 온라인 발급을 원칙으로 합니다.</li>
+								<li>이수증은 [나의 강의실] &gt; <a class="link" href="../menu04/menu05.html">[성적/이수증/이수통보]</a> 메뉴에서 확인이 가능합니다.</li>
+								<li>이수증 발급은 연수종료 후, 2일~5일 후 부터 발급이 가능합니다.</li>
+							</ul>
+						</div>
+
+						<h4>연수 결과 통보</h4>
+						<div class="caution_box">
+							<ul class="blet_circle">
+								<li>연수 결과는 연수 종료 후 10일 이내로 각 시도교육청에 이수자 명단을 통보합니다.</li>
+								<li>이수통보 결과는 [나의 강의실] &gt; <a class="link" href="../menu04/menu05.html">[성적/이수증/이수통보]</a> 메뉴에서 확인이 가능합니다.</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

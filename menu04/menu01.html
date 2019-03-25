@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq4').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(0).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+	for(var i = 0; i < $('.progress_mask').length; i++){
+		var rate = $('.progress_mask').eq(i).parent().attr('data-fill') + '%';
+		$('.progress_mask').eq(i).css('width', rate);
+		$('.rate').eq(i).html(rate)
+	}
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>나의강의실</h2>
+					<ul>
+						<li><a href="./menu01.html">나의 수강 현황</a></li>
+						<li><a href="./menu02.html">장바구니</a></li>
+						<li><a href="./menu03.html">결제내역</a></li>
+						<li><a href="./menu04.html" class="small">성적/이수증/이수통보</a></li>
+						<li><a href="./menu05.html">수강연기</a></li>
+						<li><a href="./menu06.html">포인트/쿠폰</a></li>
+						<li><a href="./menu07.html">회원정보수정</a></li>
+						<li><a href="./menu08.html">나의 문의 글</a></li>
+						<li><a href="./menu09.html">회원탈퇴</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu04_01">
+					<div class="title">
+						<h3>나의수강현황</h3>
+						<p class="route">홈 &gt; 나의강의실 &gt; <span>나의수강현황</span></p>
+					</div>
+
+					<div class="my_lecture_wrap">
+						<h4>직무연수</h4>
+						<a class="what_lecture_num" href="#">연수지명번호란?</a>
+						<table class="lecture_table">
+							<colgroup>
+								<col class="col_title"/>
+								<col class="col_content"/>
+								<col class="col_title"/>
+								<col class="col_content"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="col_title">과정명</th>
+									<th class="col_content" colspan="3">교실속! 메이커 교육<a class="go_studyroom" href="#">강의실 입장하기</a></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col_title">구분</td>
+									<td class="col_content">직무 <span class="crbtn_grey">15시간/1학점</span></td>
+									<td class="col_title">연수기간</td>
+									<td class="col_content">2018-06-01~2018-12-31 <span class="d_day">D-39일</span></td>
+								</tr>
+								<tr>
+									<td class="col_title">연수지명번호</td>
+									<td class="col_content" colspan="3">
+										<form class="lecture_form">
+											<div class="group">
+												<input type="radio" name="uniqueRadio_0" value="Y" onclick="textboxHold('0');"><!--
+												--><select name="unique_area_0" class="user" id="unique_area_0" disabled="true">
+													<option value="">지역</option>
+													<option>서울</option>
+													<option>부산</option>
+													<option>대구</option>
+													<option>인천</option>
+													<option>광주</option>
+													<option>대전</option>
+													<option>울산</option>
+													<option>경기</option>
+													<option>강원</option>
+													<option>충북</option>
+													<option>충남</option>
+													<option>전북</option>
+													<option>전남</option>
+													<option>경북</option>
+													<option>경남</option>
+													<option>제주</option>
+													<option>세종</option>
+												</select>
+												- <input type="text" name="unique_s01_0" size="5" maxlength="15" onfocus="reset_txt(this)" value="학교명" disabled="true" class="user" id="unique_s01">
+												- <input type="text" name="unique_s02_0" size="4" maxlength="10" onfocus="reset_txt(this)" value="년도" disabled="true" class="user" id="unique_s02">
+												- <input type="text" name="unique_s03_0" size="4" maxlength="10" onfocus="reset_txt(this)" value="지명명부번호" disabled="true" class="user" id="unique_s03">
+												<input type="submit" name="image" onfocus="blur();" value="연수지명번호 저장">
+											</div>
+											<div class="group">
+												<p>
+													<input type="radio" name="uniqueRadio_0" value="N" onclick="textboxHold('');" checked="" id="neisNo"><label for="neisNo"><span>연수 지명번호가 없습니다.</span> (사립유치원, 강사, 일반인 등)</label>
+												</p>
+											</div>
+										</form>
+									</td>
+								</tr>
+								<tr>
+									<td class="col_title">온라인 과제</td>
+									<td class="col_content"><span class="condition">미제출</span><p class="period">(2018-11-19 ~ 2018-12-31)</p></td>
+									<td class="col_title">온라인 시험</td>
+									<td class="col_content"><span class="condition">미응시</span><p class="period">(2018-11-19 ~ 2018-12-31)</p></td>
+								</tr>
+								<tr>
+									<td class="col_title">진도율</td>
+									<td class="col_content" colspan="3">
+										<div class="progress_bg" data-fill="14"><div class="progress_mask"><div class="progress_fill"></div></div></div>
+										<strong class="rate"></strong> <!-- 진도율 -->
+									</td>
+									<!-- data-fill에 진도율 삽입 -->
+									<!-- 프로그레스 바는 하위 브라우저에서 border-radius가 적용이 안되어 이미지로 대체 -->
+								</tr>
+							</tbody>
+						</table>
+
+						<h4>자율연수</h4>
+						<table class="lecture_table">
+							<colgroup>
+								<col class="col_title"/>
+								<col class="col_content"/>
+								<col class="col_title"/>
+								<col class="col_content"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="col_title">과정명</th>
+									<th class="col_content" colspan="3">소중한것 먼저하기 실행편<a class="go_studyroom" href="#">강의실 입장하기</a></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col_title">구분</td>
+									<td class="col_content">자율</span></td>
+									<td class="col_title">연수기간</td>
+									<td class="col_content">2018-02-13~2018-03-17 <span class="d_day">D-1일</span></td>
+								</tr>
+								<tr>
+									<td class="col_title">진도율</td>
+									<td class="col_content" colspan="3">
+										<div class="progress_bg" data-fill="5"><div class="progress_mask"><div class="progress_fill"></div></div></div>
+										<strong class="rate"></strong> <!-- 진도율 -->
+									</td>
+									<!-- data-fill에 진도율 삽입 -->
+									<!-- 프로그레스 바는 하위 브라우저에서 border-radius가 적용이 안되어 이미지로 대체 -->
+								</tr>
+							</tbody>
+						</table>
+
+						<h4>종료된 연수</h4>
+						<table class="end_lecture_table">
+							<colgroup>
+								<col class="col1"/>
+								<col class="col2"/>
+								<col class="col3"/>
+								<col class="col4"/>
+								<col class="col5"/>
+								<col class="col6"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="col1">구분</th>
+									<th class="col2">과정명</th>
+									<th class="col3">연수지명번호</th>
+									<th class="col4">이수여부</th>
+									<th class="col5">복습기간</th>
+									<th class="col6">복습하기</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col1">직무</td>
+									<td class="col2">학교 위기탈출 프로젝트! 교사를 위한 학교 안전 매뉴얼</td>
+									<td class="col3">[부산-1111-1111-11111]<a class="btn_grey" href="수정">수정</a></td>
+									<td class="col4">미이수</td>
+									<td class="col5">2019-03-07 까지</td>
+									<td class="col6"><a class="btn_blue" href="../studyroom/menu01.html">복습하기</a></td>
+								</tr>
+								<tr>
+									<td class="col1">직무</td>
+									<td class="col2">2015 개정 정보 교육과정의 이해와 수업</td>
+									<td class="col3">지명번호없음<a class="btn_grey" href="수정">수정</a></td>
+									<td class="col4">미이수</td>
+									<td class="col5">2019-03-07 까지</td>
+									<td class="col6"><a class="btn_blue" href="../studyroom/menu01.html">복습하기</a></td>
+								</tr>
+								<tr>
+									<td class="col1">직무</td>
+									<td class="col2">학교 위기탈출 프로젝트! 교사를 위한 학교 안전 매뉴얼</td>
+									<td class="col3">[부산-1111-1111-11111]<a class="btn_grey" href="수정">수정</a></td>
+									<td class="col4">미이수</td>
+									<td class="col5">2019-03-07 까지</td>
+									<td class="col6"><a class="btn_blue" href="../studyroom/menu01.html">복습하기</a></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+
+				<div class="pager">
+					<a class="prev" href="#">이전 페이지</a>
+					<ul>
+						<li><a class="on" href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
+					</ul>
+					<a class="next" href="#">다음 페이지</a>
+				</div>
+
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

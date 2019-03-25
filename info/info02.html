@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.aside_menu_wrap > ul > li').eq(1).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>연수원 소개</h2>
+					<ul>
+						<li><a href="./info01.html">연수원 소개</a></li>
+						<li><a href="./info02.html">찾아오시는 길</a></li>
+						<li><a href="./info03.html">사이트맵</a></li>
+						<li><a href="./info04.html">제휴문의</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap info02">
+					<div class="title">
+						<h3>찾아오시는 길</h3>
+						<p class="route">홈 &gt; 연수원 소개 &gt; <span>찾아오시는 길</span></p>
+					</div>
+
+					<div class="map">
+						<img src="../image/info/tschool_map.png" alt="티스쿨 원격교육연수원 찾아오시는 자세한 안내는 아래의 내용을 참고하세요"/>
+					</div>
+					<table class="table_template01">
+						<colgroup>
+							<col style="width:20%;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>주소</td>
+								<td class="ta_l">서울시 구로구 구로동 170-10번지 대륭포스트타워 7차 14층</td>
+							</tr>
+							<tr>
+								<td>TEL</td>
+								<td class="ta_l">1544-9044</td>
+							</tr>
+							<tr>
+								<td>FAX</td>
+								<td class="ta_l">02-6970-6179</td>
+							</tr>
+							<tr>
+								<td>지하철</td>
+								<td class="ta_l">
+									<p><span class="line2">2호선 › </span>구로디지털단지역 3번 출구</p> <p><span class="line2">2호선 › </span>대림역 1번 출구</p><br>
+									<p><span class="line7">7호선 › </span>대림역 8번 출구</p> <p><span class="line7">7호선 › </span>남구로역 1번 출구</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

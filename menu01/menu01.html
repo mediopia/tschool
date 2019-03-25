@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+var $credit_tab_btns;
+
+function setDOMS_page(){
+	$credit_tab_btns = $('.credit_tab_btns');
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq1').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(0).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+	//체크리스트
+	$('.check_list .sort').click(function(){
+		var $this = $(this);
+		if($this.hasClass('check')){
+			$this.removeClass('check');
+		}else{
+			$this.addClass('check');
+		}
+	});
+	//--체크리스트
+
+	//검색창 관련
+	$('.lecture_wrap .category').on('click', function(){
+		var $this = $(this);
+		if($this.hasClass('open')){
+			$this.removeClass('open');
+		}else{
+			$this.addClass('open');
+		}
+	});
+
+	$('.lecture_wrap .category li').on('click', function(){
+		$this = $(this);
+		$('.lecture_wrap .category .cur_value').html($this.html());
+	});
+	//--검색창 관련
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>직무연수</h2>
+					<ul>
+						<li><a href="./menu01.html">연수신청</a></li>
+						<li><a href="./menu02.html">교육청 연수</a></li>
+						<li><a href="./menu03.html">단체신청</a></li>
+						<li><a href="./menu04.html">테마연수</a></li>
+						<li><a href="./menu05.html">연수일정</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu01_01">
+					<div class="title">
+						<h3>연수신청</h3>
+						<p class="route">홈 &gt; 직무연수 &gt; <span>연수신청</span></p>
+					</div>
+					<ul class="tab_btns credit_tab_btns">
+						<li><a class="on" href="javascript:tab_btn('', 'credit', '0');">전체</a></li>
+						<li><a href="javascript:tab_btn('', 'credit', '1');">1학점</a></li>
+						<li><a href="javascript:tab_btn('', 'credit', '2');">2학점</a></li>
+						<li><a href="javascript:tab_btn('', 'credit', '3');">4학점</a></li>
+					</ul>
+					<div class="search">
+						<ul class="check_list">
+							<li class="sort" data-sort="1"><div class="check_box"><span class="dot"></span></div><p>상담지도</p></li>
+							<li class="sort" data-sort="2"><div class="check_box"><span class="dot"></span></div><p>학습지도</p></li>
+							<li class="sort" data-sort="3"><div class="check_box"><span class="dot"></span></div><p>교과지도</p></li>
+							<li class="sort" data-sort="4"><div class="check_box"><span class="dot"></span></div><p>학급경영</p></li>
+							<li class="sort" data-sort="5"><div class="check_box"><span class="dot"></span></div><p>SW교육</p></li>
+							<li class="sort min" data-sort="6"><div class="check_box"><span class="dot"></span></div><p>생활지도</p></li>
+							<li class="sort" data-sort="7"><div class="check_box"><span class="dot"></span></div><p>전문성</p></li>
+							<li class="sort" data-sort="8"><div class="check_box"><span class="dot"></span></div><p>자기계발</p></li>
+							<li class="sort" data-sort="9"><div class="check_box"><span class="dot"></span></div><p>신규</p></li>
+							<li class="sort" data-sort="10"><div class="check_box"><span class="dot"></span></div><p>정책연수</p></li>
+							<li class="sort" data-sort="11"><div class="check_box"><span class="dot"></span></div><p>모바일 지원</p></li>
+						</ul>
+						<label for="lecture_search">강사/과정명</label><input type="text" name="lecture_search" value="" id="lecture_search" placeholder="" alt="강사 또는 과정명을 입력해주세요." onclick="">
+					</div>
+					<a class="search_submit" href="javascript:lecture_load();">검색</a>
+
+					<div class="lecture_wrap">
+						<div class="title">
+							<h4>강좌 리스트</h4>
+							<div class="category">
+								<div class="cur_value">최근 등록순</div>
+								<ul class="list">
+									<li>최근 등록순</li>
+									<li>가나다순</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="lecture_list">
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img src="../image/data/thumbnail_job/thumb_001.png"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="can_mobile"></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 1학점/15시간 <span class="space"></span> 50,000원<strong>50,000원<i>(10%)</i></strong></dd>
+									<dd><span class="label">강사</span>최만</dd>
+								</dl>
+								<div class="btns">
+									<a class="btn_grey" href="#">미리보기</a>
+									<a class="btn_blue" href="./sub02.html">신청하기</a>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+
+					<a class="view_more" href="#">더보기 +</a>
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

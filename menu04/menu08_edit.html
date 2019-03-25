@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+
+}
+
+function open_teacher_edit(){
+	$('.btn_confirm, .change_teacher').hide();
+	$('.teacher_edit_wrap').show();
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq4').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(7).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>나의강의실</h2>
+					<ul>
+						<li><a href="./menu01.html">나의 수강 현황</a></li>
+						<li><a href="./menu02.html">장바구니</a></li>
+						<li><a href="./menu03.html">결제내역</a></li>
+						<li><a href="./menu04.html">단체연수 결제내역</a></li>
+						<li><a href="./menu05.html">성적/이수증/이수통보</a></li>
+						<li><a href="./menu06.html">수강연기</a></li>
+						<li><a href="./menu07.html">포인트/쿠폰</a></li>
+						<li><a href="./menu08.html">회원정보수정</a></li>
+						<li><a href="./menu09.html">나의 문의 글</a></li>
+						<li><a href="./menu10.html">회원탈퇴</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu04_08">
+					<div class="title">
+						<h3>회원정보수정</h3>
+						<p class="route">홈 &gt; 나의강의실 &gt; <span>회원정보수정</span></p>
+					</div>
+
+					<form name="edit_form" class="edit_wrap">
+						<h4>회원정보입력</h4>
+						<table class="edit_table table_template01">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th class="col1">이름</th>
+									<td class="col2 ta_l">홍길동</td>
+								</tr>
+								<tr>
+									<th class="col1"><em>* </em>아이디</th>
+									<td class="col2 ta_l">asdf</td>
+								</tr>
+								<tr>
+									<th class="col1"><em>* </em>비밀번호</th>
+									<td class="col2 ta_l">
+										<input type="password" id="mb_password" name="mb_password" size="20" maxlength="20" disabled=""><a href="javascript:open_window('./password_change.html', '', 'width=900, height=279')" target="_blank" class="btn_blue">비밀번호 변경</a>
+									</td>
+								</tr>
+								<tr>
+									<th class="col1"><em>* </em>E-mail</th>
+									<td class="col2 ta_l">
+										<input id="reg_mb_email" name="mail1" type="text" size="15"> @ <input name="mail2" type="text" id="mail2" size="20">&nbsp;
+										<select name="email_select" class="tx" id="email_select" onchange="javascript:checkemailaddy();">
+											<option value="">선택하세요</option>
+											<option value="-----------------">-----------------</option>
+											<option value="hanmail.net">hanmail.net</option>
+											<option value="daum.net">daum.net</option>
+											<option value="naver.com" selected="">naver.com</option>
+											<option value="nate.com">nate.com</option>
+											<option value="empal.com">empal.com</option>
+											<option value="korea.kr">korea.kr</option>
+											<option value="-----------------">-----------------</option>
+											<option value="1" selected="">직접입력</option>
+											<option value="cbe.go.kr">cbe.go.kr</option>
+											<option value="cne.go.kr">cne.go.kr</option>
+											<option value="dge.go.kr">dge.go.kr</option>
+											<option value="dgedu.net">dgedu.net</option>
+											<option value="goe.go.kr">goe.go.kr</option>
+											<option value="gen.go.kr">gen.go.kr</option>
+											<option value="gwe.go.kr">gwe.go.kr</option>
+											<option value="gbe.kr">gbe.kr</option>
+											<option value="gen.go.kr">gen.go.kr</option>
+											<option value="gne.go.kr">gne.go.kr</option>
+											<option value="ice.go.kr">ice.go.kr</option>
+											<option value="jbe.go.kr">jbe.go.kr</option>
+											<option value="jne.go.kr">jne.go.kr</option>
+											<option value="jje.go.kr">jje.go.kr</option>
+											<option value="pne.go.kr">pne.go.kr</option>
+											<option value="sje.go.kr">sje.go.kr</option>
+											<option value="sen.go.kr">sen.go.kr</option>
+											<option value="use.go.kr">use.go.kr</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th class="col1"><em>* </em>휴대폰 번호</th>
+									<td class="col2 ta_l">
+										<select name="mb_hp1" class="phone_number">
+											<option value="010">010</option>
+											<option value="011">011</option>
+											<option value="016">016</option>
+											<option value="017">017</option>
+											<option value="018">018</option>
+											<option value="019">019</option>
+				                        </select>
+				                        - <input type="text" name="mb_hp2" value="" size="4" maxlength="4" class="phone_number"> -
+				                        <input type="text" name="mb_hp3" value="" size="5" maxlength="4" class="phone_number">
+									</td>
+								</tr>
+								<tr>
+									<th class="col1">개인정보 유효 기간</th>
+									<td class="col2 ta_l">
+										<input type="radio" name="activeYear" id="privacy_2" value="3"><label for="privacy_2">3년</label>
+										<input type="radio" name="activeYear" id="privacy_3" value="5"><label for="privacy_3">5년</label>
+										<input type="radio" name="activeYear" id="privacy_4" value="10"><label for="privacy_4">10년</label>
+										<input type="radio" name="activeYear" id="privacy_5" value="100"><label for="privacy_5">탈퇴 시 까지</label><br>
+										<em>※ 관련 법에 따라 현행 개인정보 유효기간은 1년이나 이용자의 요청 시 예외적 1년 이외 기간 설정 가능합니다. 개인정보 유효기간을 3년 이상으로 설정 시, 장기 미접속에 따른 휴면계정 및 자동 탈퇴를 방지할 수 있습니다.<br>(별도 미설정 시 관련법에 따라 미로그인 1년 경과 시 이용자의 개인정보는 별도 보관됩니다.)</em>
+									</td>
+								</tr>
+								<tr>
+									<td class="col1 ta_l" colspan="2">
+										<p>교육청 무료/유료 연수 정보 및 마케팅 정보 활용 동의 여부</p>&nbsp;&nbsp;&nbsp;&nbsp;
+										<input type="checkbox" name="mb_sms" id="mb_sms" value="1" checked=""><label for="mb_sms">SMS</label>
+										<input type="checkbox" name="mb_mailling" id="mb_mailling" value="1" checked=""><label for="mb_mailling">이메일</label>
+										<input type="checkbox" name="mb_telling" id="mb_telling" value="1" checked=""><label for="mb_telling">전화</label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<a href="#" class="btn_confirm">확인</a>
+
+						<div class="caution_box change_teacher">
+							<strong>현재 회원님은 <em>[일반 회원]</em>이십니다.</strong>
+							<p><span>교원 직무연수 이수</span> 및 학점 인정이 필요하신 경우 <span>[교원회원]</span>으로 변경 해 주세요.</p>
+							<p>교원회원으로 변경 시, 기관(학교, 유치원, 대학 등) 정보를 추가 입력하셔야 합니다.</p>
+							<a href="javascript:open_teacher_edit();" class="teacher_edit btn_blue">교원회원으로 변경</a>
+						</div>
+
+						<div class="teacher_edit_wrap">
+							<h4>학교 및 기관정보 입력</h4>
+							<p class="plain_text">교원 또는 교육공무원일 경우 아래 입력폼을 반드시 작성하시기 바랍니다.</p>
+
+							<table class="teacher_edit_table table_template01">
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th><em>* </em>학교/기관명</th>
+										<td class="ta_l school_cell" colspan="3">
+											<p><input type="text" name="school_name" size="46" maxlength="100" value="" readonly="" onfocus="javascript:blur();" onclick="this.blur();">&nbsp;<a href="javascript:open_window('./find_school.html', '', 'width=600, height=522')"><img src="../image/common/btn_school.gif" alt="학교 및 기관 찾기"/></a>
+											<p>* 해당 학교명이나 기관명이 없을 경우 1544-9044 로 연락바랍니다.</p>
+										</td>
+									</tr>
+									<tr>
+										<th>시도교육청</th>
+										<td class="ta_l"></td>
+										<th>관할교육지원청</th>
+										<td class="ta_l"></td>
+									</tr>
+									<tr>
+										<th>직위구분</th>
+										<td class="ta_l radio_cell" colspan="3">
+											<p>
+												<input type="radio" id="ck01" name="school_level" value="교장"><label for="ck01">교  장</label>
+												<input type="radio" id="ck02" name="school_level" value="교감"><label for="ck02">교  감 </label>
+												<input type="radio" id="ck03" name="school_level" value="교사"><label for="ck03">교  사 </label>
+												<input type="radio" id="ck04" name="school_level" value="보건교사"><label for="ck04">보건교사 </label>
+												<input type="radio" id="ck05" name="school_level" value="유치원장"><label for="ck05">유치원장</label>
+											</p>
+											<p>
+												<input type="radio" id="ck06" name="school_level" value="유치원감"><label for="ck06">유치원감</label>
+												<input type="radio" id="ck07" name="school_level" value="유치원교사"><label for="ck07">유치원교사 </label>
+												<input type="radio" id="ck08" name="school_level" value="장학관"><label for="ck08">장학관</label>
+												<input type="radio" id="ck09" name="school_level" value="장학사"><label for="ck09">장학사</label>
+												<input type="radio" id="ck10" name="school_level" value="연구사"><label for="ck10">연구사 </label>
+											</p>
+											<p>
+												<input type="radio" id="ck11" name="school_level" value="수석교사"><label for="ck11">수석교사</label>
+												<input type="radio" id="ck12" name="school_level" value="교육연구사"><label for="ck12">교육연구사</label>
+												<input type="radio" id="ck13" name="school_level" value="기간제교사"><label for="ck13">기간제교사</label>
+												<input type="radio" id="ck14" name="school_level" value="영양교사"><label for="ck14">영양교사 </label>
+												<input type="radio" id="ck15" name="school_level" value="특수교사"><label for="ck15">특수교사 </label>
+											</p>
+											<p>
+												<input type="radio" id="ck16" name="school_level" value="사서교사"><label for="ck16">사서교사</label>
+												<input type="radio" id="ck17" name="school_level" value="연구부장"><label for="ck17">연구부장 </label>
+												<input type="radio" id="ck18" name="school_level" value="교무부장"><label for="ck18">교무부장 </label>
+												<input type="radio" id="ck19" name="school_level" value="정보부장"><label for="ck19">정보부장</label>
+												<input type="radio" id="ck20" name="school_level" value="교수"><label for="ck20">교수</label>
+											</p>
+											<p>
+												<input type="radio" id="ck21" name="school_level" value="실기교사"><label for="ck21">실기교사</label>
+												<input type="radio" id="ck22" name="school_level" value="전문상담교사"><label for="ck22">전문상담교사</label>
+												<input type="radio" id="ck23" name="school_level" value="교육연구관"><label for="ck23">교육연구관</label>
+												<input type="radio" id="ck24" name="school_level" value="교육행정직"><label for="ck24">교육행정직 </label>
+												<input type="radio" id="ck25" name="school_level" value="교육전문직"><label for="ck25">교육전문직</label>
+											</p>
+											<p>
+												<input type="radio" id="ck26" name="school_level" value="교육공무직"><label for="ck26">교육공무직 </label>
+												<input type="radio" id="ck27" name="school_level" value="방과후학교강사"><label for="ck27">방과후학교강사 </label>
+												<input type="radio" id="ck28" name="school_level" value="돌봄전담사"><label for="ck28">돌봄전담사 </label>
+												<input type="radio" id="ck29" name="school_level" value="기타"><label for="ck29">기타</label>
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<th>나이스 개인번호</th>
+										<td class="ta_l code_cell" colspan="3">
+											<p><input type="text" maxlength="10" id="identification" name="identification" value="" title="나이스 개인번호 10자리를 입력해주세요.">
+											<em>10자리로 입력해주세요.</em></p>
+											<p>(예 : A123456789 전체 <em>10</em>자리)</p>
+											<p><input type="checkbox" id="nice_indentity" name="nice_indentity" value="Y" checked="">
+											<label for="nice_indentity"><em>나이스 개인번호가 없습니다.</em> (사립유치원, 강사, 일반인 등  나이스 개인번호가 없는 경우)</label></p>
+											<div class="caution_box">
+												<p>※ 교육부 및 KERIS '원격교육연수 이수자 통보 업무 개선(2014.02)' 지침에 따라 나이스 개인번호를 취합하고 있습니다.&nbsp;<a href="javascript:popimage('../image/common/neis.jpg',700,717);" class="btn_blue">나이스 도움말</a></p>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<a href="#" class="btn_teacher_save">교원회원으로 저장</a>
+						</div>
+					</form>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

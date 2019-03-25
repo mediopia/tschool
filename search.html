@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="./js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="./js/util.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="./js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+var $edu_tab_btns;
+var $edu_wrap;
+
+function setDOMS_page(){
+	$edu_tab_btns = $('.edu_wrap .tab_btns');
+	$edu_wrap = $('.edu_wrap');
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq3').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(0).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("./inc/header.html");
+            $("#footer").load("./inc/footer.html");
+            $("#nav").load("./inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 교육청 -->
+			<div id="aside">
+				<div class="edu_wrap">
+					<ul class="tab_btns">
+						<li class="first"><a class="on" href="javascript:tab_btn('all', 'edu', '0');">전체 교육청</a></li>
+						<li class=""><a href="javascript:tab_btn('my', 'edu', '1');">나의 교육청</a></li>
+					</ul>
+					<ul class="edu_banner all on">
+						<li class="edu_thumb">
+							<a href="./menu01/sub01.html">
+								<i><img src="./image/data/edu/jb_i.png" alt="2018 유아교육 핵심 역량강화 원격 직무연수"/></i>
+								<strong>전라북도 유아교육진흥원</strong>
+								<p>2018 유아교육 핵심 역량강화 원격 직무연수</p>
+								<span class="label ing">진행</span>
+							</a>
+						</li>
+
+						<li class="edu_thumb">
+							<a href="./menu01/sub01.html">
+								<i><img src="./image/data/edu/gb_e.png" alt="2018 유아교육 핵심 역량강화 원격 직무연수"/></i>
+								<strong>경상북도 문경교육지원청</strong>
+								<p>자유학기제 및 진로지도 역량강화</p>
+								<span class="label ing">진행</span>
+							</a>
+						</li>
+
+						<li class="edu_thumb">
+							<a href="./menu01/sub01.html">
+								<i><img src="./image/data/edu/cn_e.png" alt="2018 유아교육 핵심 역량강화 원격 직무연수"/></i>
+								<strong>충청남도 교육연구정보원</strong>
+								<p>교원 정보교육 원격연수</p>
+								<span class="label wait">대기</span>
+							</a>
+						</li>
+
+						<li class="edu_thumb">
+							<a href="./menu01/sub01.html">
+								<i><img src="./image/data/edu/cb_i.png" alt="2018 유아교육 핵심 역량강화 원격 직무연수"/></i>
+								<strong>충청북도 단재교육연수원</strong>
+								<p>2018 교원능력개발 평가 원격직무연수</p>
+								<span class="label end">마감</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="edu_banner my">
+						<!-- 로그인 후에 이용하세요 -->
+					</ul>
+					<a class="view_all" href="#">전체 보기</a>
+				</div>
+				<ul class="aside_banner">
+					<li><a href="http://www.vivasam.com?utm_source=ad&utm_medium=online&utm_campaign=Tschool&utm_content=T%5Ftop" target="_blank"><img src="./image/banner/aside_viva.png"/></a></li>
+					<li><a href="https://blog.naver.com/vstschool?utm_source=banner&utm_medium=main&utm_campaign=blogbn&utm_content=tschoolblog" target="_blank"><img src="./image/banner/aside_blog.png"/></a></li>
+				</ul>
+			</div>
+			<!-- //좌측 교육청 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap search">
+					<div class="title">
+						<h3>검색결과</h3>
+					</div>
+
+					<table class="search_result_table table_template01">
+						<colgroup>
+							<col class="col1"/>
+							<col class="col2"/>
+							<col class="col3"/>
+							<col class="col4"/>
+							<col class="col5"/>
+							<col class="col6"/>
+							<col class="col7"/>
+							<col class="col8"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th class="col1">연수분야</th>
+								<th class="col2">과정명</th>
+								<th class="col3">학점</th>
+								<th class="col4">연수비</th>
+								<th class="col5">교재비</th>
+								<th class="col6">소개영상</th>
+								<th class="col7">미리보기</th>
+								<th class="col8">상세보기</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong>교과지도</strong></td>
+								<td class="ta_l"><a href="./menu01/sub02.html"><span>VR·AR·로봇을 활용한 수업</span></a></td>
+								<td><span>1</span>학점</td>
+								<td><span>50,000</span>원</td>
+								<td>교재없음</td>
+								<td>-</td>
+								<td><a class="btn_grey" href="#">미리보기</a></td>
+								<td><a class="btn_blue" href="./menu01/sub02.html">신청하기</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

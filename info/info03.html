@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.aside_menu_wrap > ul > li').eq(2).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>연수원 소개</h2>
+					<ul>
+						<li><a href="./info01.html">연수원 소개</a></li>
+						<li><a href="./info02.html">찾아오시는 길</a></li>
+						<li><a href="./info03.html">사이트맵</a></li>
+						<li><a href="./info04.html">제휴문의</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap info03">
+					<div class="title">
+						<h3>사이트맵</h3>
+						<p class="route">홈 &gt; 연수원 소개 &gt; <span>사이트맵</span></p>
+					</div>
+
+					<div class="site_map_wrap">
+						<div class="site_map_group">
+							<h4>직무연수</h4>
+							<ul>
+								<li><a href="../menu01/menu01.html">연수신청</a></li>
+								<li><a href="../menu01/menu02.html">교육청연수</a></li>
+								<li><a href="../menu01/menu03.html">단체신청</a></li>
+								<li><a href="../menu01/menu04.html">테마연수</a></li>
+								<li><a href="../menu01/menu05.html">연수일정</a></li>
+							</ul>
+						</div>
+						<div class="site_map_group">
+							<h4>자율연수</h4>
+							<ul>
+								<li><a href="../menu02/menu01.html">연수신청</a></li>
+								<li><a href="../menu02/menu02.html">학부모 연수</a></li>
+								<li><a href="../menu02/menu03.html">학부모 무료 특강</a></li>
+								<li><a href="../menu02/menu04.html">집합연수신청</a></li>
+								<li><a href="../menu02/menu05.html">집합연수 결제내역</a></li>
+							</ul>
+						</div>
+						<div class="site_map_group">
+							<h4>연수지원</h4>
+							<ul>
+								<li><a href="../menu03/menu01.html">공지사항</a></li>
+								<li><a href="../menu03/menu02.html">묻고 답하기</a></li>
+								<li><a href="../menu03/menu03.html">연수후기</a></li>
+								<li><a href="../menu03/menu04.html">자주묻는 질문</a></li>
+								<li><a href="../menu03/menu05.html">연수자료실</a></li>
+								<li><a href="../menu03/menu06.html">연수안내</a></li>
+								<li><a href="../menu03/menu07.html">시스템지원</a></li>
+							</ul>
+						</div>
+						<div class="site_map_group">
+							<h4>나의강의실</h4>
+							<ul>
+								<li><a href="../menu04/menu01.html">수강현황</a></li>
+								<li><a href="../menu04/menu02.html">장바구니</a></li>
+								<li><a href="../menu04/menu03.html">결제내역</a></li>
+								<li><a href="../menu04/menu04.html">단체연수 결제내역</a></li>
+								<li><a href="../menu04/menu05.html">성적/이수</a></li>
+								<li><a href="../menu04/menu06.html">수강연기</a></li>
+								<li><a href="../menu04/menu07.html">포인트/쿠폰</a></li>
+								<li><a href="../menu04/menu08.html">회원정보수정</a></li>
+								<li><a href="../menu04/menu09.html">나의 문의 글</a></li>
+							</ul>
+						</div>
+						<div class="site_map_group">
+							<h4>이벤트</h4>
+							<ul>
+								<li><a href="../menu05/menu01.html">이벤트</a></li>
+								<li><a href="../menu05/menu02.html">교육설문</a></li>
+								<li><a href="../menu05/menu03.html">월간T스토리</a></li>
+							</ul>
+						</div>
+						<div class="site_map_group">
+							<h4>연수원 소개</h4>
+							<ul>
+								<li><a href="./info01.html">연수원 소개</a></li>
+								<li><a href="./info02.html">찾아오시는 길</a></li>
+								<li><a href="./info03.html">사이트맵</a></li>
+								<li><a href="./info04.html">제휴문의</a></li>
+							</ul>
+						</div>
+						<div class="site_map_group">
+							<h4>멤버십</h4>
+							<ul>
+								<li><a href="../member/find_idpw.html">ID/PW 찾기</a></li>
+								<li><a href="../member/join.html">회원가입</a></li>
+								<li><a href="../info/rule.html">이용약관</a></li>
+								<li><a href="../info/policy.html">개인정보처리방침</a></li>
+								<li><a href="../info/email.html">이메일무단수집거부</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

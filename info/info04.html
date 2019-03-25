@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+var upload_limit = 2;
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	add_file('');
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.aside_menu_wrap > ul > li').eq(3).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>연수원 소개</h2>
+					<ul>
+						<li><a href="./info01.html">연수원 소개</a></li>
+						<li><a href="./info02.html">찾아오시는 길</a></li>
+						<li><a href="./info03.html">사이트맵</a></li>
+						<li><a href="./info04.html">제휴문의</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap info04">
+					<div class="title">
+						<h3>제휴 문의</h3>
+						<p class="route">홈 &gt; 연수원 소개 &gt; <span>제휴 문의</span></p>
+					</div>
+
+					<form class="form_write">
+						<table class="table_template01">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+							</colgroup>
+							<thead>
+								<tr><th colspan="2">제휴문의</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>연락처</th>
+									<td class="ta_l"><input name="write_tel" class="write_tel"><p>* 개강 10일 이후 과정은 연기/취소처리불가</p></td>
+								</tr>
+								<tr>
+									<th>소속 및 기업명</th>
+									<td class="ta_l"><input name="write_from" class="write_from"></td>
+								</tr>
+								<tr>
+									<th>제목</th>
+									<td class="ta_l"><input name="write_title" class="write_title"></td>
+								</tr>
+								<tr>
+									<th>내용</th>
+									<td class="ta_l">
+										<div class="text_area_btns">
+											<a class="decrease" href="javascript:textarea_decrease('write_content', 10);">높이 줄이기</a>
+											<a class="original" href="javascript:textarea_original('write_content', 5);">높이 원래대로</a>
+											<a class="increase" href="javascript:textarea_increase('write_content', 10);">높이 늘이기</a>
+										</div>
+										<textarea name="write_content" id="write_content" class="write_content" rows="5"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<th>파일첨부<a class="btn_add" href="javascript:add_file();">파일 추가</a><a class="btn_del" href="javascript:del_file();">파일 삭제</a></th>
+									<td class="ta_l">
+										<table id="variable_files">
+
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h4>개인정보 수집 및 이용에 대한 안내</h4>
+						<div class="agree_box">
+							(주)티스쿨이앤씨는 제휴를 희망하는 기업 및 개인을 대상으로 아래와 같이 개인정보를 수집하고 있습니다.<br><br>
+							<ul class="text_indent_num">
+								<li>1. 수집 개인정보 항목 : [필수] 소속 및 기업명, 연락처/ [선택] 홈페이지 주소, 팩스번호</li>
+								<li>2. 개인정보의 수집 및 이용목적 : 제휴신청에 따른 본인확인 및 원활한 의사소통 경로 확보</li>
+								<li>3. 개인정보의 이용기간 : 모든 검토가 완료된 후 1개월간 이용자의 조회를 위하여 보관하며, 이 후 해당정보를 지체없이 파기합니다.</li>
+								<li>4. 동의 거부권리 안내 추가 :위와 같은 개인정보 수집 동의를 거부할 수 있습니다. 다만 동의를 거부하는 경우 제휴제안 신청이 제한될 수 있습니다.</li>
+							</ul>
+							그 밖의 사항은 각 사별 개인정보처리방침을 준수합니다.
+						</div>
+						<div class="agree_check_box">
+							<input type="checkbox" id="agree01" name="agree01"><label for="agree01">개인정보 수집 및 이용에 동의합니다.</label>
+						</div>
+
+						<div class="btns">
+							<a class="btn_blue" href="#">글쓰기</a>
+						</div>
+					</form>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

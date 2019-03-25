@@ -1,0 +1,1671 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="/main/css/common.css">
+<script type="text/javascript" src="/main/js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="/main/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="/main/js/util.js"></script>
+<script type="text/javascript" src="/main/js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/main/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+var $credit_tab_btns;
+
+function setDOMS_page(){
+	$credit_tab_btns = $('.credit_tab_btns');
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq1').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(0).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+	//체크리스트
+	$('.check_list .sort').click(function(){
+		var $this = $(this);
+		if($this.hasClass('check')){
+			$this.removeClass('check');
+			set_aa3($this.attr("data-sort"),"R");
+
+		}else{
+			$this.addClass('check');
+			set_aa3($this.attr("data-sort"),"A");
+
+		}
+	});
+	//--체크리스트
+
+	//검색창 관련
+	$('.lecture_wrap .category').on('click', function(){
+		var $this = $(this);
+		if($this.hasClass('open')){
+			$this.removeClass('open');
+		}else{
+			$this.addClass('open');
+		}
+	});
+
+	$('.lecture_wrap .category li').on('click', function(){
+		$this = $(this);
+		$('.lecture_wrap .category .cur_value').html($this.html());
+	});
+	//--검색창 관련
+});
+
+
+
+function set_aa3(_test,_m){
+	if ( _test == "counsel_guide" && _m == "A" ) {
+		document.getElementById("aa31").value = _test;
+	}
+	if ( _test == "counsel_guide" && _m == "R" ) {
+		document.getElementById("aa31").value = "";
+	}
+	if ( _test == "learn_guide" && _m == "A" ) {
+		document.getElementById("aa32").value = _test;
+	}
+	if ( _test == "learn_guide" && _m == "R" ) {
+		document.getElementById("aa32").value = "";
+	}
+	if ( _test == "subject_guide" && _m == "A" ) {
+		document.getElementById("aa33").value = _test;
+	}
+	if ( _test == "subject_guide" && _m == "R" ) {
+		document.getElementById("aa33").value = "";
+	}
+
+
+}
+
+function initchk(){
+
+
+
+
+
+
+}
+//initchk();
+</script>
+</head>
+
+
+
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+
+
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>직무연수</h2>
+					<ul>
+						<li><a href="/mdvs/menu01">연수신청</a></li>
+						<li><a href="/mdvs/menu02">교육청연수</a></li>
+						<li><a href="./menu03.html">단체신청</a></li>
+						<li><a href="./menu04.html">테마연수</a></li>
+						<li><a href="./menu05.html">연수일정</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu01_01">
+					<div class="title">
+						<h2>연수신청</h2>
+						<p class="route">홈 &gt; 직무연수 &gt; <span>연수신청</span></p>
+					</div>
+
+			<form id="form1" name="form1" method="post">
+			<input type="hidden" name="orderKeyword" id="orderKeyword"
+			value="" />
+
+			<input type="hidden" name="searchType" id="searchType"
+			value="" />
+
+			<input type="hidden" name="searchKeyword" id="searchKeyword"
+			value="" />
+
+
+
+			<input type="hidden" id="aa31" name="aa31" value="" >
+			<input type="hidden" id="aa32" name="aa32" value="" >
+			<input type="hidden" id="aa33" name="aa33" value="" >
+			<input type="hidden" id="aa34" name="aa34" value="" >
+			<input type="hidden" id="aa35" name="aa35" value="" >
+
+
+
+
+					<ul class="tab_btns credit_tab_btns">
+						<li><a
+
+						href="javascript:tab_btn('', 'credit', '0');tc2namechk('학점');">전체</a></li>
+						<li><a
+
+						href="javascript:tab_btn('', 'credit', '1');tc2namechk('1학점');">1학점</a></li>
+						<li><a
+
+						href="javascript:tab_btn('', 'credit', '2');tc2namechk('2학점');">2학점</a></li>
+						<li><a
+
+						href="javascript:tab_btn('', 'credit', '3');tc2namechk('4학점');">4학점</a></li>
+					</ul>
+					<div class="search">
+						<ul class="check_list">
+
+							<li id="counsel_guide"
+
+
+							class="sort"
+
+
+							data-sort="counsel_guide"><div class="check_box"><span class="dot"></span></div><p>상담지도</p></li>
+							<li id="learn_guide"
+
+
+							class="sort"
+
+							class="sort" data-sort="learn_guide"><div class="check_box"><span class="dot"></span></div><p>학습지도</p></li>
+							<li id="subject_guide"
+
+
+							class="sort"
+
+							class="sort" data-sort="subject_guide"><div class="check_box"><span class="dot"></span></div><p>교과지도</p></li>
+							<li class="sort" data-sort="4"><div class="check_box"><span class="dot"></span></div><p>학급경영</p></li>
+							<li class="sort" data-sort="5"><div class="check_box"><span class="dot"></span></div><p>SW교육</p></li>
+							<li class="sort min" data-sort="6"><div class="check_box"><span class="dot"></span></div><p>생활지도</p></li>
+							<li class="sort" data-sort="7"><div class="check_box"><span class="dot"></span></div><p>전문성</p></li>
+							<li class="sort" data-sort="8"><div class="check_box"><span class="dot"></span></div><p>자기계발</p></li>
+							<li class="sort" data-sort="9"><div class="check_box"><span class="dot"></span></div><p>신규</p></li>
+							<li class="sort" data-sort="10"><div class="check_box"><span class="dot"></span></div><p>정책연수</p></li>
+							<li class="sort" data-sort="11"><div class="check_box"><span class="dot"></span></div><p>모바일 지원</p></li>
+						</ul>
+						<label for="lecture_search">강사/과정명</label>
+
+						<input type="text" id="lecture_search" name="lecture_search" value="" >
+
+
+					</div>
+
+
+
+
+
+					<a class="search_submit" href="javascript:fn_formSubmit();">검색</a>
+
+					<div class="lecture_wrap">
+						<div class="title">
+							<h4>강좌 리스트</h4>
+							<div class="category">
+								<div class="cur_value">
+
+								최근 등록순
+								</div>
+								<ul class="list">
+
+
+
+
+									<li onclick="fn_orderKey('LA')" class='on'>최근 등록순</li>
+									<li onclick="fn_orderKey('LD')">가나다순</li>
+
+
+								</ul>
+							</div>
+						</div>
+
+
+						</form>
+
+						<ul class="lecture_list">
+
+
+
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/793.gif"/></a>
+								<dl>
+									<dt><a href="#">VR·AR·로봇을 활용한 수업</a><span class="new recom  event     mobile  "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 15시간/1학점
+
+
+
+									<span class="space"></span> 50,000원<strong>54,000원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>최만&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143793952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/792.gif"/></a>
+								<dl>
+									<dt><a href="#">우리 아이가 알고 싶은 거침없는 성교육 이야기</a><span class="new recom  event    policy mobile  "></span></dt>
+									<dd><span class="label">분류</span>생활지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 65,000원<strong>58,500원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>이명화&nbsp;박현이&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143792952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/788.gif"/></a>
+								<dl>
+									<dt><a href="#">신병주 교수의 조선기록문화유산</a><span class="new recom  event     mobile  "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 70,000원<strong>63,000원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>신병주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143788952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/787.gif"/></a>
+								<dl>
+									<dt><a href="#">선생님과 아이들이 함께 만드는 즐거운 음악수업</a><span class="new recom       mobile  "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 70,000원<strong>63,000원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>최은아&nbsp;박용삼&nbsp;한승모&nbsp;박주민&nbsp;남지영&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143787952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/786.gif"/></a>
+								<dl>
+									<dt><a href="#">학교 현장 중심, 사례로 배우는 안전한 학교 만들기</a><span class="new recom  event    policy mobile  "></span></dt>
+									<dd><span class="label">분류</span>생활지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 65,000원<strong>58,500원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>한종극&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143786952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/784.gif"/></a>
+								<dl>
+									<dt><a href="#">한번에 끝내는 진학지도 전략</a><span class=" recom    new     "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>이치우&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143784952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/783.gif"/></a>
+								<dl>
+									<dt><a href="#">디지털교과서, 학생 중심 수업에 녹이다</a><span class="new recom hot     policy mobile  "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>양선환&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143783952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/782.gif"/></a>
+								<dl>
+									<dt><a href="#">교실 속! 메이커 교육</a><span class="new recom hot     policy mobile  "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 50,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>이철현&nbsp;권석영&nbsp;김도현&nbsp;김동만&nbsp;김주현&nbsp;김준수</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143782952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/780.gif"/></a>
+								<dl>
+									<dt><a href="#">교사를 위한 비폭력대화 - 활용편</a><span class="new recom  event     mobile  "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 75,000원<strong>67,500원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>캐서린 한&nbsp;모미나&nbsp;박기원&nbsp;정하린&nbsp;양선형&nbsp;송주미</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143780952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/779.gif"/></a>
+								<dl>
+									<dt><a href="#">교사를 위한 비폭력대화 - 기본편</a><span class="new recom hot event     mobile  "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 75,000원<strong>67,500원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>캐서린 한&nbsp;모미나&nbsp;박기원&nbsp;정하린&nbsp;염미영&nbsp;최효진</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143779952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/778.gif"/></a>
+								<dl>
+									<dt><a href="#">활동으로 공감하는 수업 만들기</a><span class="new recom hot      mobile  "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 70,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>강우석&nbsp;김석태&nbsp;박진원&nbsp;박경우&nbsp;정유화&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143778952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/767.gif"/></a>
+								<dl>
+									<dt><a href="#">모두가 행복한 기초학력, 학습부진 현장 전문가 과정</a><span class="new recom hot     policy mobile  "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 75,000원<strong>60,000원<i>(20%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>이대식&nbsp;김수미&nbsp;이지현&nbsp;권수경&nbsp;김선은&nbsp;김은혜</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143767952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/765.gif"/></a>
+								<dl>
+									<dt><a href="#">노래하는 교장 선생님 방승호의 모험놀이</a><span class="new recom hot event     mobile  "></span></dt>
+									<dd><span class="label">분류</span>학급경영 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 70,000원<strong>63,000원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>방승호&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143765952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/764.gif"/></a>
+								<dl>
+									<dt><a href="#">지하철 타고 떠나자! 보고 듣고 즐기는 현장체험학습</a><span class=" recom       mobile  "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 70,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>송범수&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143764952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/763.gif"/></a>
+								<dl>
+									<dt><a href="#">상상하고, 만들고, 코딩하는 비트브릭 교실</a><span class=" recom      policy   "></span></dt>
+									<dd><span class="label">분류</span>SW교육 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김재영&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143763952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/762.gif"/></a>
+								<dl>
+									<dt><a href="#">교과를 꽃피게 하는 독서 수업</a><span class=" recom hot     policy mobile license "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 75,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>강인숙&nbsp;김마리아&nbsp;목효정&nbsp;&nbsp;박혜연&nbsp;위현미</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143762952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/761.gif"/></a>
+								<dl>
+									<dt><a href="#">최수일 박사님의 수포자 없는 소통과 배움의 수학교실</a><span class=" recom hot event     mobile  "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 75,000원<strong>67,500원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>최수일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143761952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/760.gif"/></a>
+								<dl>
+									<dt><a href="#">2015 개정 정보 교육과정의 이해와 수업</a><span class=" recom      policy   "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>황규호&nbsp;임희석&nbsp;김장환&nbsp;김형기&nbsp;서성원&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143760952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/759.gif"/></a>
+								<dl>
+									<dt><a href="#">2015 개정 사회과 교육과정의 이해와 수업</a><span class=" recom      policy   "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>황규호&nbsp;이건홍&nbsp;김효수&nbsp;강봉균&nbsp;조성백&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143759952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/758.gif"/></a>
+								<dl>
+									<dt><a href="#">2015 개정 영어과 교육과정의 이해와 수업</a><span class=" recom      policy   "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>황규호&nbsp;황종배&nbsp;신미경&nbsp;이윤희&nbsp;조성옥&nbsp;조현정</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143758952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/757.gif"/></a>
+								<dl>
+									<dt><a href="#">2015 개정 국어과 교육과정의 이해와 수업</a><span class=" recom      policy   "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>황규호&nbsp;박영민&nbsp;윤천탁&nbsp;박형우&nbsp;장은주&nbsp;호민애</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143757952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/756.gif"/></a>
+								<dl>
+									<dt><a href="#">2015 개정 수학과 교육과정의 이해와 수업</a><span class=" recom      policy   "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>황규호&nbsp;김원경&nbsp;배수경&nbsp;이동근&nbsp;최정아&nbsp;이화숙</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143756952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/754.gif"/></a>
+								<dl>
+									<dt><a href="#">철학이 살아있는 수업 기술</a><span class=" recom hot event     mobile  "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 65,000원<strong>58,500원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>김현섭&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143754952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/753.gif"/></a>
+								<dl>
+									<dt><a href="#">선생님을 바꾸는 시간 20분</a><span class="new recom hot      mobile  "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 75,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>조벽 외 29명&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143753952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/751.gif"/></a>
+								<dl>
+									<dt><a href="#">중등 수업 평가 혁신</a><span class=" recom hot     policy mobile  "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 75,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>국광윤&nbsp;장아름&nbsp;최정아&nbsp;고 혁&nbsp;허성연&nbsp;김수길</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143751952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/750.gif"/></a>
+								<dl>
+									<dt><a href="#">토론으로 수업을 잡자!</a><span class=" recom hot      mobile license "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 75,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>유동걸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143750952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/748.gif"/></a>
+								<dl>
+									<dt><a href="#">사람 중심의 사유를 통한 통일교육의 이해</a><span class="       policy   "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김성민&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143748952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/747.gif"/></a>
+								<dl>
+									<dt><a href="#">모두가 주인이 되는 Win-Win Class</a><span class=" recom         "></span></dt>
+									<dd><span class="label">분류</span>생활지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>엄은남&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143747952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/744.gif"/></a>
+								<dl>
+									<dt><a href="#">경제를 알아야 교사가 산다</a><span class=" recom         "></span></dt>
+									<dd><span class="label">분류</span>자기계발 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>박미정&nbsp;임주환&nbsp;김민정&nbsp;김서로&nbsp;김상암&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143744952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/743.gif"/></a>
+								<dl>
+									<dt><a href="#">청소년을 위한 흡연예방과 금연교육</a><span class="     new  policy   "></span></dt>
+									<dd><span class="label">분류</span>생활지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>정유석&nbsp;류지혜&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143743952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/742.gif"/></a>
+								<dl>
+									<dt><a href="#">사진명장 백승휴의 삶을 아름답게 바꾸는 포토테라피</a><span class=" recom hot        "></span></dt>
+									<dd><span class="label">분류</span>자기계발 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 75,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>백승휴&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143742952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/741.gif"/></a>
+								<dl>
+									<dt><a href="#">수업에 활용하는 스크래치 교육</a><span class="       policy   "></span></dt>
+									<dd><span class="label">분류</span>SW교육 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>강유진&nbsp;조순현&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143741952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/740.gif"/></a>
+								<dl>
+									<dt><a href="#">동이쌤의 비주얼씽킹</a><span class=" recom hot event      license "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 75,000원<strong>67,500원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>김해동&nbsp;호민애&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143740952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/739.gif"/></a>
+								<dl>
+									<dt><a href="#">좋은 교사, 수업으로 성장하다</a><span class=" recom hot        "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김현섭&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143739952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/738.gif"/></a>
+								<dl>
+									<dt><a href="#">깨미동의 교실이 숨 쉬는 생활교육</a><span class="          "></span></dt>
+									<dd><span class="label">분류</span>생활지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김해동&nbsp;강정훈&nbsp;김수진&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143738952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/737.gif"/></a>
+								<dl>
+									<dt><a href="#">소프트웨어 교육 직무연수 기초 과정</a><span class="       policy   "></span></dt>
+									<dd><span class="label">분류</span>SW교육 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>강성현 외 7명&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143737952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/736.gif"/></a>
+								<dl>
+									<dt><a href="#">기능성 보드 게임 활용! 교과 연계 창의 인성 활동 지도법</a><span class=" recom         "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>배지영&nbsp;정유화&nbsp;최용석&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143736952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/734.gif"/></a>
+								<dl>
+									<dt><a href="#">한 번에 끝내는 한국사</a><span class=" recom      policy   "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 60시간/4학점
+
+
+									<span class="space"></span> 120,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>서인원&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143734952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/733.gif"/></a>
+								<dl>
+									<dt><a href="#">질문이 살아있는 수업</a><span class=" recom hot event       "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+
+									<span class="space"></span> 65,000원<strong>58,500원<i>(10%)</i></strong>
+
+									</dd>
+									<dd><span class="label">강사</span>김현섭&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143733952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/732.gif"/></a>
+								<dl>
+									<dt><a href="#">진로로 풀어가는 학생지도</a><span class=" recom         "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>허은영&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143732952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/731.gif"/></a>
+								<dl>
+									<dt><a href="#">한번에 끝내는 진학지도 전략</a><span class=" recom         "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>이치우&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143731952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/730.gif"/></a>
+								<dl>
+									<dt><a href="#">성숙한 사회, 참여와 소통의 학교 민주시민교육 전문가 과정</a><span class="       policy   "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김국현&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143730952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/729.gif"/></a>
+								<dl>
+									<dt><a href="#">다문화 시대의 다문화 교육 길라잡이</a><span class=" recom      policy   "></span></dt>
+									<dd><span class="label">분류</span>생활지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>조영철&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143729952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/728.gif"/></a>
+								<dl>
+									<dt><a href="#">삶을 변화시키는 가르침 - 성품교육으로 생활지도하기</a><span class=" recom      policy   "></span></dt>
+									<dd><span class="label">분류</span>생활지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김자윤&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143728952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/727.gif"/></a>
+								<dl>
+									<dt><a href="#">학교 위기탈출 프로젝트! 교사를 위한 학교안전 매뉴얼</a><span class="  hot     policy  license "></span></dt>
+									<dd><span class="label">분류</span>생활지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김명희&nbsp;김해정&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143727952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/721.gif"/></a>
+								<dl>
+									<dt><a href="#">진로지도 실전 가이드</a><span class="       policy   "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김봉환&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143721952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/720.gif"/></a>
+								<dl>
+									<dt><a href="#">행복한 학교를 위한 건강한 성문화</a><span class="       policy   "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 40,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>정민철&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143720952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/718.gif"/></a>
+								<dl>
+									<dt><a href="#">수업공동체, 함께 배우는 우리 그리고 수업혁신!</a><span class=" recom hot        "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>류창기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143718952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/717.gif"/></a>
+								<dl>
+									<dt><a href="#">상담 능력을 향상시키는 에니어그램 이론과 활용 프로그램</a><span class=" recom         "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 100,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>이은하&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143717952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/714.gif"/></a>
+								<dl>
+									<dt><a href="#">결정적 순간의 대화</a><span class=" recom         "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>강경수&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143714952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/698.gif"/></a>
+								<dl>
+									<dt><a href="#">자녀의 미래를 위한 인성, 진로, 경제 통합형 강좌 아카데미</a><span class="          "></span></dt>
+									<dd><span class="label">분류</span>SW교육 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 55,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143698952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/695.gif"/></a>
+								<dl>
+									<dt><a href="#">말하면서 배우는 도키도키 일본어 회화 초급</a><span class="          "></span></dt>
+									<dd><span class="label">분류</span>자기계발 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김원미&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143695952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/693.gif"/></a>
+								<dl>
+									<dt><a href="#">교사가 반드시 알아야 할 학교법률</a><span class=" recom         "></span></dt>
+									<dd><span class="label">분류</span>생활지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>조상규&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143693952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/692.gif"/></a>
+								<dl>
+									<dt><a href="#">빠르게! 신나게! 신개념 창의체험활동 스포츠스태킹</a><span class=" recom hot        "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 15시간/1학점
+
+
+									<span class="space"></span> 50,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>이민표&nbsp;박진영&nbsp;강우석&nbsp;김석태&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143692952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/694.gif"/></a>
+								<dl>
+									<dt><a href="#">내공팍팍! 과학수업 전문가 과정</a><span class="  hot        "></span></dt>
+									<dd><span class="label">분류</span>교과지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>임혁 외 9명&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143694952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/691.gif"/></a>
+								<dl>
+									<dt><a href="#">미래를 준비하는 환경교육 - 창의적 체험활동에서의 환경교육 이론 및 실제</a><span class="       policy   "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김윤태&nbsp;류진수&nbsp;고영란&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143691952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/690.gif"/></a>
+								<dl>
+									<dt><a href="#">스마트한 업무처리! 컴활1급 교사되기</a><span class="new      "></span></dt>
+									<dd><span class="label">분류</span>SW교육 <span class="space"></span> 45시간/3학점
+
+
+									<span class="space"></span> 80,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143690952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/689.gif"/></a>
+								<dl>
+									<dt><a href="#">학력격차해소를 위한 학습장애, 학습부진 현장전문가 과정</a><span class=" recom hot     policy   "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김중훈&nbsp;정재석&nbsp;이대식&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143689952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/688.gif"/></a>
+								<dl>
+									<dt><a href="#">성공하는 교사를 위한 7가지 습관</a><span class=" recom         "></span></dt>
+									<dd><span class="label">분류</span>자기계발 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>홍정수&nbsp;강경수&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143688952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/687.gif"/></a>
+								<dl>
+									<dt><a href="#">Bob Pike의 교사를 위한 창의적교수법</a><span class=" recom hot        "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>주정미&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143687952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/686.gif"/></a>
+								<dl>
+									<dt><a href="#">김봉환 교수의 진로지도 Total Solution</a><span class="       policy   "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 60시간/4학점
+
+
+									<span class="space"></span> 120,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김봉환&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143686952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/684.gif"/></a>
+								<dl>
+									<dt><a href="#">학력증진 학습상담을 위한 뇌기반 자기주도학습</a><span class=" recom         "></span></dt>
+									<dd><span class="label">분류</span>학습지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>박재원&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143684952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/683.gif"/></a>
+								<dl>
+									<dt><a href="#">진로지도의 나침반을 잡아라</a><span class="       policy   "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김봉환&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143683952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/681.gif"/></a>
+								<dl>
+									<dt><a href="#">마인드 혁신과  변화를 통한 자기개발 </a><span class="new          "></span></dt>
+									<dd><span class="label">분류</span>SW교육 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 55,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143681952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/766.gif"/></a>
+								<dl>
+									<dt><a href="#">진로지도의 나침반을 잡아라(서울시교육청)</a><span class="          "></span></dt>
+									<dd><span class="label">분류</span>상담지도 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 65,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>김봉환&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143766952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+							<li>
+								<a href="#"><img width='212' height='135' style='width:212px;height:135px'
+								src="/data/content/678.gif"/></a>
+								<dl>
+									<dt><a href="#">학교수업에 프레젠테이션 활용하기</a><span class="  hot    "></span></dt>
+									<dd><span class="label">분류</span>SW교육 <span class="space"></span> 30시간/2학점
+
+
+									<span class="space"></span> 55,000원
+
+
+									</dd>
+									<dd><span class="label">강사</span>정미화( (주)영진닷컴 )&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+								</dl>
+								<div class="btns">
+									<a class="preview" href="javascript:bmpop('143678952')">미리보기</a>
+									<a class="appli" href="#">신청하기</a>
+								</div>
+							</li>
+
+
+						</ul>
+					</div>
+
+					<a class="view_more" href="#">더보기 +</a>
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+
+<script>
+function tc2namechk(_tc2){
+
+	document.getElementById("searchType").value="tc2name";
+	document.getElementById("searchKeyword").value=_tc2;
+
+
+}
+
+function ltitleltitle(){
+	if ( document.getElementById("lecture_search").value != '' ){
+
+			if ( document.getElementById("searchType").value != '' ) {
+			document.getElementById("searchKeyword").value =
+				document.getElementById("searchKeyword").value + "," + document.getElementById("lecture_search").value;
+			document.getElementById("searchType").value =
+				document.getElementById("searchType").value + "," +"ltitle,content";
+			}else{
+
+				document.getElementById("searchKeyword").value = document.getElementById("lecture_search").value;
+				document.getElementById("searchType").value = "ltitle,content";
+			}
+	}
+	else{
+
+	document.getElementById("searchType").value=document.getElementById("searchType").value.replace("ltitle,content");
+	//document.getElementById("searchKeyword").value="";
+	}
+
+}
+
+function fn_formSubmit() {
+
+		document.form1.submit();
+
+
+}
+</script>
+<script>
+			function fn_orderKey(_a) {
+				document.form1.orderKeyword.value = _a;
+				document.form1.submit();
+			}
+		</script>
+
+
+
+
+
+
+<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+
+
+<script>
+function bmpop(_lcode){
+	var winmainpp;
+	winmainpp = window.open("/mdvs/preview?lcode="+_lcode, "_blank",
+			"toolbar=no,scrollbars=no,resizable=no,top=5,left=5,width=997,height=564");
+
+}
+</script>
+</body>
+</html>
+

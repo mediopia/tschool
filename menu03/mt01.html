@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="/main/css/common.css">
+<script type="text/javascript" src="/main/js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="/main/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="/main/js/util.js"></script>
+<script type="text/javascript" src="/main/js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/main/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq3').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(0).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>연수지원</h2>
+					<ul>
+						<li><a href="./menu01.html">공지사항</a></li>
+						<li><a href="./menu02.html">묻고 답하기</a></li>
+						<li><a href="./menu03.html">연수후기</a></li>
+						<li><a href="./menu04.html">자주묻는 질문</a></li>
+						<li><a href="./menu05.html">연수자료실</a></li>
+						<li><a href="./menu06.html">연수안내</a></li>
+						<li><a href="./menu07.html">신청방법</a></li>
+						<li><a href="./menu08.html">학습방법</a></li>
+						<li><a href="./menu09.html">평가방법</a></li>
+						<li><a href="./menu10.html">시스템지원</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu01_01">
+					<div class="title">
+						<h3>공지사항</h3>
+						<p class="route">홈 &gt; 연수지원 &gt; <span>공지사항</span></p>
+					</div>
+
+					<table class="notice_table table_template01">
+						<colgroup>
+							<col class="col1"/>
+							<col class="col2"/>
+							<col class="col3"/>
+							<col class="col4"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th class="col1">번호</th>
+								<th class="col2">제목</th>
+								<th class="col3">작성일</th>
+								<th class="col4">조회</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2</td>
+								<td class="ta_l"><a href="#">공지글 입력 테스트 입니다.</a></td>
+								<td>2018-12-26 17:07:59.0</td>
+								<td>0</td>
+							</tr>
+
+							<tr>
+								<td>1</td>
+								<td class="ta_l"><a href="#">IE 첨부 파일 테스트</a></td>
+								<td>2018-12-11 11:56:35.0</td>
+								<td>3</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+				<!-- //board_wrap -->
+
+
+
+
+
+<!--  div class="pager">
+					<a class="prev" href="#">이전 페이지</a>
+					<ul>
+						<li><a class="on" href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
+					</ul>
+					<a class="next" href="#">다음 페이지</a>
+				</div -->
+
+
+<form id="form1" name="form1" method="post">
+			<input type="hidden" name="orderKeyword" id="orderKeyword"
+			value="${searchVO.orderKeyword}" />
+
+			<input type="hidden" name="searchType" id="searchType"
+			value="${searchVO.searchType}" />
+
+			<input type="hidden" name="searchKeyword" id="searchKeyword"
+			value="${searchVO.searchKeyword}" />
+
+
+				<div class="bottom_search_wrap">
+					<select name="bottom_search" id="bottom_search">
+						<option value="edu_name">교육청명</option>
+						<option value="lecture_name">연수명</option>
+					</select>
+					<input type="text" name="searchtextm" maxlength="15" itemname="검색어" required="" value="" title="검색어 입력">
+					<a class="btn_submit" href="#">검색</a>
+				</div>
+
+			</form>
+
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+
+
+
+
+
+
+
+
+<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+
+
+<script>
+function bmpop(_lcode){
+	var winmainpp;
+	winmainpp = window.open("/mdvs/preview?lcode="+_lcode, "_blank",
+			"toolbar=no,scrollbars=no,resizable=no,top=5,left=5,width=997,height=564");
+
+}
+</script>
+
+<script>
+function llnn(){
+	alert("로그인 후 이용 가능 합니다.");
+
+}
+</script>
+
+<script language="javascript" src="/js/wrest.js"></script>
+<!-- 폼 입력 필드 체크 자바스크립트 -->
+<script type="text/javascript" src="/starplayer/js/starplayer_config.js"></script>
+<script type="text/javascript" src="/starplayer/js/starplayer.js"></script>
+<script type="text/javascript" src="/starplayer/js/starplayer_popup.js"></script>
+<script type="text/javascript" src="/js/jquery.popupWindow.js"></script>
+<script language="javaScript">
+<!--
+function openCenter(strUrl, strName, nWidth, nHeight, strFeatures) {
+		var nTop  = (screen.height - nHeight) / 2;
+		var nLeft = (screen.width - nWidth) / 2;
+
+		strFeatures += ",height="+nHeight+",width="+nWidth+",top="+nTop+",status=no,location=no,left="+nLeft;
+		auto_popup(strUrl, strName, strFeatures, nWidth, nHeight);
+	}
+
+function openCenterMV(strUrl, strName, nWidth, nHeight, strFeatures) {
+	var nTop  = (screen.height - nHeight) / 2;
+	var nLeft = (screen.width - nWidth) / 2;
+
+	strFeatures += ",height="+nHeight+",width="+nWidth+",top="+nTop+",status=no,location=no,left="+nLeft;
+	auto_popup_mv(strUrl, strName, strFeatures, nWidth, nHeight);
+}
+
+
+function openCenterHTML5(strUrl, strName, nWidth, nHeight, strFeatures) {
+	var nTop  = (screen.height - nHeight) / 2;
+	var nLeft = (screen.width - nWidth) / 2;
+
+	strFeatures += ",height="+nHeight+",width="+nWidth+",top="+nTop+",status=no,location=no,left="+nLeft;
+	strUrl =  '' + '/stargate.php?starUrl=' + strUrl.replace(/&/gi,"^");
+	window.open(strUrl, strName, strFeatures);
+
+}
+
+
+function testPOP2(num,w,h,bar) {
+	openCenterHTML5(num, "1541847900", w, h, "toolbar=no,scrollbars="+bar+",titlebar=no,status=no,resizable=0");
+}
+
+
+function testPOP(num,w,h,bar) {
+		openCenter(num, "1541847900", w, h, "toolbar=no,scrollbars="+bar+",titlebar=no,status=no,resizable=0");
+}
+
+
+function auto_popup(strUrl, strName, strFeatures, nWidth, nHeight)
+{
+	strUrl = '' +strUrl.replace("../","/");
+	var isChrome = window.chrome && !navigator.userAgent.match(/Opera|OPR\//);
+	var isEdge = navigator.appVersion.indexOf("Edge/12") != -1 ? true : false;
+
+	if (isChrome || isEdge) {
+		return browser_popup(strUrl, strName, strFeatures);
+	} else {
+		return browser_popup(strUrl, strName, strFeatures);
+		}
+}
+
+
+function auto_popup_mv(strUrl, strName, strFeatures, nWidth, nHeight)
+{
+	strUrl = '' +strUrl.replace("../","/");
+	var isChrome = window.chrome && !navigator.userAgent.match(/Opera|OPR\//);
+	var isEdge = navigator.appVersion.indexOf("Edge/12") != -1 ? true : false;
+
+	if (isChrome || isEdge) {
+		return new_popup(strUrl, nWidth, nHeight);
+	} else {
+		return browser_popup(strUrl, strName, strFeatures);
+		}
+}
+
+
+function auto_popupHTML5(strUrl, strName, strFeatures)
+{
+	//alert(strUrl);
+	browser_popup(strUrl, strName, strFeatures);
+
+	$('.example').popupWindow({
+		centerBrowser:1
+	});
+}
+
+
+var new_popup = function(strUrl, nWidth, nHeight) {
+
+	strUrl =  '' + '/stargate.php?starUrl=' + strUrl.replace(/&/gi,"^");
+
+	var url = strUrl;
+	var exe = StarPlayerExe; //’변경없음’
+	exe.install = STARPLAYER_SETUP_URL; //’변경없음’
+	exe.url = strUrl; //변수 url에 적용된 값 적용
+	exe.width = nWidth;  // 스타플레이어 전용 팝업 윈도우 가로사이즈
+	exe.height = nHeight; // 스타플레이어 전용 팝업 윈도우 세로사이즈
+	exe.run();//’변경없음’(스타플레이어 전용 팝업 윈도우 실행)
+	return false;
+}
+
+var new_popup_basic= function(strUrl, nWidth, nHeight){
+	window.open(strUrl);
+	return false;
+}
+
+
+var new_popupHTML5 = function(strUrl, nWidth, nHeight, strName, strFeatures){
+
+	window.open(strUrl, strName, strFeatures);
+	return false;
+}
+
+function browser_popup(strUrl, strName, strFeatures){
+	window.open(strUrl, strName, strFeatures);
+	return false;
+}
+
+function testPOP(num,w,h,bar) {
+	openCenter(num, "1541847900", w, h, "toolbar=no,scrollbars="+bar+",titlebar=no,status=no,resizable=0");
+}
+
+function testPOPHTML5(num,w,h,bar) {
+	openCenterHTML5(num, "1541847900", w, h, "toolbar=no,scrollbars="+bar+",titlebar=no,status=no,resizable=0");
+}
+
+
+
+function checkTestPop(num,w,h,bar,lversion,lstudy,lcode,uid,gisu,cat1){
+	uid = decodeURI(uid);
+
+	num = num + '&snifcode='+cat1+"01";
+
+	openCenter(num, "1541847900", w, h, "toolbar=no,scrollbars="+bar+",titlebar=no,status=no,resizable=0");
+
+
+}
+
+
+function checkTestPopHTML5(num,w,h,bar,lversion,lstudy,lcode,uid,gisu,cat1){
+	//alert(lversion+" "+ lstudy+" "+ lcode+" "+ uid+" "+gisu+" "+cat1);
+	uid = decodeURI(uid);
+	// 오류 체크
+	//if(lcode == "" || cat1 == ""){
+
+		var params = "&lcode="+lcode+"&uid="+uid+"&gisu="+gisu+"&cat1="+cat1+"&str="+lversion;
+		$.ajax({
+			url:'./elearningAjax.php',
+			type:'post',
+			 async: false,
+			//data:{ lversion: lversion, lstudy: lstudy },
+			data:params,
+			success:function(data){
+				data = data.replace(/\n/g, "");//행바꿈제거
+				data = data.replace(/\r/g, "");//엔터제거
+				if(data=='00'){
+					num = num + '&snifcode='+cat1+"01";
+
+				}else if(data=='01'){
+					num = num + '&snifcode='+cat1+"01";
+				}
+				else{
+					if(confirm("마지막에 보셨던 <"+data+" 페이지>부터 \n이어보시겠습니까?(취소시 처음부터 진행됩니다.)")){
+						num = num + '&snifcode='+cat1+data;
+					}else{
+						num = num + '&snifcode='+cat1+"01";
+					}
+				}
+				openCenterHTML5(num, "1541847900", w, h, "toolbar=no,scrollbars="+bar+",titlebar=no,status=no,resizable=1");
+			},
+			error:function(request,status,error){
+				//alert("일시적으로 오류가 발생했습니다 다시 시도해주세요!!");
+			}
+		})
+
+
+		//openCenter(num, "1541847900", w, h, "toolbar=no,scrollbars="+bar+",titlebar=no,status=no,resizable=1");
+	//}
+
+
+}
+//-->
+</script>
+<!-- 새창 대신 사용하는 iframe -->
+<iframe width=0 height=0 name='hiddenframe' style='display: none;'></iframe>
+
+<input type="hidden" id="urlHTML5" name="urlHTML5" value="" />
+<div style="display: none">
+	<a name="windowX" title="" class="example" href="http://www.google.com"></a>
+</div>
+</body>
+</html>
+
+
+

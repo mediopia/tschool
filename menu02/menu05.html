@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq2').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(4).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+	if($('.table_history tbody tr').length == 0){
+		$('.table_history tfoot').show();
+	}
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>자율연수</h2>
+					<ul>
+						<li><a href="./menu01.html">연수신청</a></li>
+						<li><a href="./menu02.html">학부모 연수</a></li>
+						<li><a href="./menu03.html">학부모 무료 특강</a></li>
+						<li><a href="./menu04.html">집합연수신청</a></li>
+						<li><a href="./menu05.html">집합연수 결제내역</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu02_05">
+					<div class="title">
+						<h3>집합연수 결제내역</h3>
+						<p class="route">홈 &gt; 자율연수 &gt; <span>집합연수 결제내역</span></p>
+					</div>
+
+					<div class="history_wrap">
+						<table class="table_history table_template01">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>연수명</th>
+									<th>결제금액</th>
+									<th>결제수단</th>
+									<th>주문일</th>
+									<th>결제상태</th>
+									<th>영수증</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="ta_l">과정명</td>
+									<td>50,000</td>
+									<td>계좌이체</td>
+									<td>2018-11-11</td>
+									<td><a class="btn_blue" href="#">결제확인</a></td>
+									<td><a class="btn_blue" href="#">영수증</a></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr><td colspan="6">주문 내역이 없습니다.</td></tr>
+							</tfoot>
+						</table>
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

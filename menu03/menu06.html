@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq3').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(5).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+	$('.tab_btns li').on('click', function(){
+		$('.tab_btns li').removeClass('on');
+		$(this).addClass('on');
+		$('.guide_content').removeClass('on');
+		$('.' + $(this).attr('data-link')).addClass('on');
+	});
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>연수지원</h2>
+					<ul>
+						<li><a href="./menu01.html">공지사항</a></li>
+						<li><a href="./menu02.html">묻고 답하기</a></li>
+						<li><a href="./menu03.html">연수후기</a></li>
+						<li><a href="./menu04.html">자주묻는 질문</a></li>
+						<li><a href="./menu05.html">연수자료실</a></li>
+						<li><a href="./menu06.html">연수안내</a></li>
+						<li><a href="./menu07.html">시스템지원</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu03_06">
+					<div class="title">
+						<h3>연수안내</h3>
+						<p class="route">홈 &gt; 연수지원 &gt; <span>연수안내</span></p>
+					</div>
+
+					<ul class="tab_btns">
+						<li class="on" data-link="guide01">연수안내</li>
+						<li data-link="guide02">신청방법</li>
+						<li data-link="guide03">신청 시 유의사항</li>
+						<li data-link="guide04">학습방법</li>
+						<li data-link="guide05">평가방법</li>
+					</ul>
+
+					<!-- 연수안내 -->
+					<div class="guide_content guide01 on">
+						<div class="system_wrap">
+							<h5>직무연수</h5>
+							<div class="text_contents">
+								<ul class="blet_circle">
+									<li>교육과학기술부의 승인을 받아, 전국 유,초,중,고 교사 및 교육전문직(교장/교감 포함)의 승진평정과 연수학점제에 반영되는 연수입니다.</li>
+									<li>연수지명번호를 반드시 받으셔야 하며, 교원인 경우에 한해 신청 및 학점인정이 가능합니다.<br>(휴직교사, 기간제 교사 및 일반인은 연수신청은 가능하지만, 학점인정은 되지 않습니다.)</li>
+									<li>직무연수 성적은 교육과학기술부 연수규정에 따라 산출되며, 연수종료 후 소속 교육청으로 통보됩니다.</li>
+									<li>이수기준에 진도율 및 ‘온라인평가 (시험/과제)등이 포함됩니다.</li>
+								</ul>
+							</div>
+
+							<h5>자율연수</h5>
+							<div class="text_contents">
+								<ul class="blet_circle">
+									<li>자율연수는 학점인정이 되지 않습니다.</li>
+									<li>이수기준에 진도율(평가점수 80점 이상)시 수료증을 발급해 드립니다.</li>
+								</ul>
+							</div>
+						</div>
+
+						<h4>직무연수 인정 범위</h4>
+						<div class="system_wrap">
+							<h5>연수생의 지명 및 수강절차</h5>
+							<div class="text_contents">
+								<ul class="blet_circle">
+									<li>원격교육연수원의 교원 자격 및 직무연수는 반드시 사전에 연수지명번호를 지정받아 수강신청을 함.<br>다만 교원이 아닌 일반인 연수생은 연수원 규칙에 의거 자유롭게 수강함</li>
+								</ul>
+							</div>
+
+							<div class="caution_box">
+								<ul class="blet_alert">
+									<li>
+										원격연수와 집합연수의 중복허용 범위(예외적인 허용사항임)
+										<ul class="blet_circle">
+											<li>
+												평일 : 원격연수와 집합연수의 중복을 원칙적으로 허용하지 않음<br>
+												단, 원격연수와 집합연수의 중복 시 연수기간이 짧은 연수의 기간을 기준으로 연수기간의 1/4이하인 경우에는 인정<br><br>
+												예) 원격연수 3주, 집합(출석)연수 2주(10일)의 경우 중복허용 기간 2일<br>
+												· 방학기간 : 원격연수와 집합(원격)연수 수강 시 2강좌 중복 허용<br><br>
+												예) 원격연수 1강좌 + 집합(원격)연수 1강좌 = 2강좌 인정<br>
+												* 참고 : 집합연수와 집합연수의 기간 중복 불인정(1강좌만 인정)
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+
+							<h5>동일기간 중복 수강의 금지</h5>
+							<div class="text_contents">
+								<ul class="blet_circle">
+									<li>평일연수는 원칙적으로 연수실적인정 대상 연수와 다른 연수의 기간 중복이 될 경우 연수실적으로 인정하지 아니함.</li>
+									<li>모든 연수 참가시 충실하게 연수를 수료할 수 있도록 연수기간이 중복되지 않도록 지명해야 함.</li>
+								</ul>
+							</div>
+
+							<h5>동일과정 재이수 여부</h5>
+							<div class="text_contents">
+								<ul class="blet_circle">
+									<li>본 연수원에서 이수한 동일과정은 2~3년 이내에 재 이수하실 수 없습니다.<br>(각 교육청 별로 재이수할 수 있는 기간과 제한 조건이 다릅니다.)</li>
+									<li>동일한 분야에 대한 연수과정이라도 연수기관, 연수제목이 다를 경우 수강이 가능합니다.<br>(연수 신청 전 해당 시도교육청에 문의하여 이수학점 인정여부를 확인하시기 바랍니다.)</li>
+								</ul>
+							</div>
+						</div>
+
+						<h4>연수지명번호</h4>
+						<div class="system_wrap">
+							<p class="plain_text">
+								2007년 3월 1일 이후 <strong>'학교장 추천서' 폐지</strong>하고<br>
+								학교별 「연수 지명 명부」를 비치하여 연수지명절차로 갈음하고<br>
+								연수 이수 후에는 학교장이 <span>연수이수증으로<br>
+								연수인정 여부를 결정하게 변경</span>되었습니다.
+							</p>
+
+							<h5>입력방법</h5>
+							<div class="text_contents">
+								<ul class="blet_circle">
+									<li>[나의 강의실] → 연수지명번호 입력/수정을 클릭하신 후 입력하시면 됩니다.<br>지명번호는 연수신청시~연수종료시까지 입력 및 수정이 가능합니다.</li>
+								</ul>
+							</div>
+
+							<h5>지명번호 취득방법</h5>
+							<div class="text_contents">
+								<ul class="text_indent_num">
+									<li>1. 교무부(교무부장) / 연구부(연구부장) 선생님께 연수관리대장 혹은 연수지명 명부를 요청합니다.</li>
+									<li>2. 연수자는 &lt;연수지명 명부&gt;에 연수내용과/기관/연수기간 등 관련사항을 기재합니다.</li>
+									<li>3. 이 과정에서 연수지명번호가 확정됩니다.<br>Ex) 서울교육청 - 성신여자중학교 인경우 =&gt; 서울-성신여중-년도-누적번호</li>
+									<li>4. 교육전문직의 경우 ‘서울-(동부청, 수원청, 연수원, 정보원, 단위부서명)-07-001’ 등의 형식으로 작성합니다.</li>
+									<li>5. 학교 “연수지명명부”에서 확정된 연수지명번호는 강좌 신청 시 입력합니다.</li>
+									<li>6. 신청 후~연수종료시까지 나의 강의실에서도 입력, 및 수정 가능합니다.</li>
+									<li>7. 연수 지명번호 부여 없이 연수를 실시했을 경우 연수이수 학점(성적) 및 승진규정상의 가산점이 불인정됩니다.</li>
+								</ul>
+							</div>
+						</div>
+
+						<h4>연수 지명 명부 서식(예시)</h4>
+						<table class="ex_table table_template01">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+								<col class="col9">
+								<col class="col10">
+								<col class="col11">
+							</colgroup>
+							<thead>
+								<tr>
+									<th rowspan="2">연번</th>
+									<th rowspan="2">직명</th>
+									<th rowspan="2">성명<br>(생년월일)</th>
+									<th rowspan="2">지명번호</th>
+									<th rowspan="2">연수과정명</th>
+									<th rowspan="2">연수번호</th>
+									<th rowspan="2">연수시간<br>(기간)</th>
+									<th rowspan="2">지명사유</th>
+									<th rowspan="2">결재<br>(교감확인)</th>
+									<th colspan="2">비고</th>
+								</tr>
+								<tr>
+									<th>이수</th>
+									<th>미이수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>교감</td>
+									<td>이연수<br><em>(1955.8.1)</em></td>
+									<td>서울-중광초-07-001</td>
+									<td>인사<br>행정과정</td>
+									<td>서울초등교육행정연구회<br><em>(특수분야연구)</em></td>
+									<td>30시간<br><em>(1.15~1.19)</em></td>
+									<td>인사행정<br>능력 향상</td>
+									<td></td>
+									<td>O</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>교사</td>
+									<td>홍길동<br><em>(1956.2.12)</em></td>
+									<td>부산-부산고-07-001</td>
+									<td>과학교과<br>심화연수</td>
+									<td>○○○<br>원격연수원</td>
+									<td>60시간<br><em>(7.1~7.30)</em></td>
+									<td>과학교과<br>전문성 신장</td>
+									<td></td>
+									<td>O</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>장학사</td>
+									<td>김장학<br><em>(1942.2.25)</em></td>
+									<td>충북-충북고-07-001</td>
+									<td>리더십<br>관리자과정</td>
+									<td>한국리더십개발연구회<br><em>(특수분야연구)</td>
+									<td>30시간<br><em>(8.1~8.5)</em></td>
+									<td>장학사의<br>업무수행<br>능력향상</td>
+									<td></td>
+									<td>O</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //연수안내 -->
+
+
+					<!-- 신청방법 -->
+					<div class="guide_content guide02">
+						<ul class="appli_how">
+							<li>
+								<h4><span>● 개인신청</span><strong></strong></h4>
+								<div class="text_contents mt10">
+									<img src="../image/appli_how/step01_01.jpg"/>
+								</div>
+							</li>
+
+							<li>
+								<div class="text_contents">
+									<img src="../image/appli_how/step01_02.jpg"/>
+								</div>
+							</li>
+
+							<li>
+								<div class="text_contents">
+									<img src="../image/appli_how/step01_03.jpg"/>
+								</div>
+								<div class="caution_box mt30">
+									<ul class="text_indent_num">
+										<li>1. 직무연수 / 자율연수에서 원하시는 연수를 선택하시어 결제를 진행해주세요.</li>
+										<li>2. 나의 강의실&gt;나의 수강현황으로 접속하시어 학교에서 부여 받은 지명번호를 입력하시고 정보를 저장해주세요.<br>(지명번호가 없는 경우 [연수 지명번호가 없습니다.] 에 체크 후 정보를 저장해주세요.)</li>
+										<li>3. 연수 시작일자에 접속하시어 수강해주세요.</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+
+						<ul class="appli_how">
+							<li>
+								<h4><span>● 단체신청</span> <strong>(장바구니로 신청)</strong></h4>
+								<div class="text_contents mt10">
+									<img src="../image/appli_how/step02_01.jpg"/>
+								</div>
+							</li>
+
+							<li>
+								<div class="text_contents">
+									<img src="../image/appli_how/step02_02.jpg"/>
+								</div>
+							</li>
+
+							<li>
+								<div class="text_contents">
+									<img src="../image/appli_how/step02_03.jpg"/>
+								</div>
+								<div class="caution_box mt30">
+									<ul class="text_indent_num">
+										<li>1. 직무연수에서 원하시는 연수를 선택하시어 장바구니로 이동해 주세요.</li>
+										<li>2. [단체신청하기]버튼 클릭하시면 단체 구성원들의 아이디, 연수를 신청하실 수 있는 페이지로 이동합니다.</li>
+										<li>3. [인원추가] 버튼을 클릭하시어 구성원 아이디를 입력해주시고 각 아이디에 연수를 등록해주세요.</li>
+										<li>4. 연수 등록이 완료된 후에는 [저장/다음단계로] 버튼을 클릭 후 할인혜택을 선택하시고 결제를 진행해주세요.</li>
+										<li>5. 단체대표 결제 완료 후 구성원들은 나의 강의실&gt;나의 수강현황으로 접속하시어 학교에서 부여 받은 지명번호를 입력하시고 정보를 저장해주세요.<br>(지명번호가 없는 경우 [연수 지명번호가 없습니다.] 에 체크 후 정보를 저장해주세요.)</li>
+										<li>6. 연수 시작일자에 접속하시어 수강해주세요.</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+
+						<ul class="appli_how">
+							<li>
+								<h4><span>● 단체신청</span> <strong>(게시판으로 신청)</strong></h4>
+								<div class="text_contents mt10">
+									<img src="../image/appli_how/step03_01.jpg"/>
+								</div>
+							</li>
+
+							<li>
+								<div class="text_contents">
+									<img src="../image/appli_how/step03_02.jpg"/>
+								</div>
+
+								<div class="caution_box mt30">
+									<ul class="text_indent_num">
+										<li>1. 직무연수&gt;단체신청 페이지로 접속하시어 단체신청서를 다운로드 해주세요.</li>
+										<li>2. 단체신청서를 작성해주시고 게시판에 업로드 해주시면 신청서 확인하여 대표 선생님께 개별 연락 드립니다.</li>
+										<li>3. 연락을 통해 단체신청 혜택 및 결제방법 안내 후 연수비 입금이 완료되면 수강 등록이 진행됩니다.</li>
+										<li>4. 수강 등록 완료 후 단체 구성원들에게 안내 문자가 발송됩니다.</li>
+										<li>5. 문자 확인 후 나의 강의실&gt;나의 수강현황으로 접속하시어 학교에서 부여 받은 지명번호를 입력하시고 정보를 저장해주세요.<br>(지명번호가 없는 경우 [연수 지명번호가 없습니다.] 에 체크 후 정보를 저장해주세요.)</li>
+										<li>6. 연수 시작일자에 접속하시어 수강해주세요.</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--// 신청방법 -->
+
+					<!-- 신청 시 유의사항 -->
+					<div class="guide_content guide03">
+						<h4><span>● 유의사항</span></h4>
+						<div class="caution_box">
+							<div class="text_contents">
+								<p class="blet_circle">연수대상</p>
+								<ul class="text_indent_hyphen">
+									<li>- 전국 17개 시도교육청 소속 유, 초, 중등교사 및 교육 공무원</li>
+									<li>- 휴직교사, 일반인은 연수를 수강할 수 있으나 학점은 인정되지 않습니다.</li>
+								</ul>
+							</div>
+
+							<div class="text_contents">
+								<p class="blet_circle">연수 기간 중복 허용</p>
+								<ul class="text_indent_hyphen">
+									<li>- 같은 기간 동안 2개 이상 연수과정을 이수하여도 인정됩니다.<br>(2014년도 교원 연수 중점 추진 방향)</li>
+								</ul>
+							</div>
+
+							<div class="text_contents">
+								<p class="blet_circle">동일·유사 과정 중복</p>
+								<ul class="text_indent_hyphen">
+									<li>- 강좌명이 동일·유사하여도 해당 연수과정표 등을 통해 과목의 70% 이상 다른 과정임을 증명할 경우 2강좌 모두 인정됩니다. (연수생 입증책임)</li>
+								</ul>
+							</div>
+
+							<div class="text_contents">
+								<p class="blet_circle">연수지명번호</p>
+								<ul class="text_indent_hyphen">
+									<li>- 학교에 비치되어 있는 연수지명명부를 작성하시고 기재된 연수지명번호를 입력해주세요.</li>
+									<li>- 연수지명번호는 연수종료 전까지 [나의 강의실]에서 수정하실 수 있습니다.<br><a class="btn_white" href="./menu06.html">연수지명번호 자세히 보기</a></li>
+								</ul>
+							</div>
+
+							<div class="text_contents">
+								<p class="blet_circle">NEIS개인번호</p>
+								<ul class="text_indent_hyphen">
+									<li>- 교육부 및 KERIS '원격교육연수 이수자 통보 업무 개선(2014.02)' 지침에 따라 NEIS 개인번호를 취합하고 있습니다.</li>
+									<li>- NEIS 개인번호는 연수 결과 보고를 위해서만 사용되며 NEIS 번호를 잘못 입력하신 경우에는 등재되지 않습니다.<br><a class="btn_white" href="javascript:popimage('../image/common/neis.jpg',700,717);">NEIS 개인번호 자세히 보기</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<h4><span>● 수강 연기/취소/환불</span></h4>
+						<div class="caution_box">
+							<div class="text_contents">
+								<p class="blet_circle">수강 연기</p>
+								<ul class="text_indent_hyphen">
+									<li>- 수강 연기 시에는 동일과정으로 연기 신청이 가능하며, 교육청 단체연수는 게시판으로만 신청이 가능합니다.</li>
+									<li>- 수강 연기는 연수 종료일 전 총 3회 까지만 가능하며, 환불은 불가합니다.</li>
+									<li>- 수강 연기 후에는 진도/과제/시험 응시 내역이 모두 초기화되오니 주의해주시기 바랍니다.<br><a class="btn_white" href="../menu04/menu06.html">수강 연기 바로 가기</a></li>
+								</ul>
+							</div>
+
+							<div class="text_contents">
+								<p class="blet_circle">수강 취소/환불</p>
+								<ul class="text_indent_hyphen">
+									<li>- 개강일로부터 7일 이내에 취소 가능합니다.</li>
+									<li>- 교재를 받으신 경우 교재 반송 확인 후 환불이 진행됩니다.<br><a class="btn_white" href="javascript:open_window('../popup/popup_refund.html', '', 'width=600, height=600');">NEIS 개인번호 자세히 보기</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--// 신청 시 유의사항 -->
+
+					<!-- 학습방법 -->
+					<div class="guide_content guide04">
+						<ul class="study_how">
+							<li>
+								<img src="../image/study_how/process.jpg" alt="로그인 - 강의실 입장하기 - 연수일정, 평가항목 확인 - 진도/시험/과제 응시 - 연수 종료 - 결과 확인/이수증 출력"/>
+								<ul class="text_indent_num mt50 mb20">
+									<li>
+										1. 로그인 후 사이버 강의실로 입장해주세요.
+										<ul class="text_indent_hyphen">
+											<li>- 방법1) 로그인 창 [과목선택] 클릭 → 사이버 강의실 입장</li>
+											<li>- 방법2) [나의 강의실] 메뉴 → [강의실 입장하기] 클릭 → 사이버 강의실 입장</li>
+										</ul>
+									</li>
+								</ul>
+								<img src="../image/study_how/step01.jpg" alt=""/>
+							</li>
+							<li>
+								<ul class="text_indent_num mt20 mb20">
+									<li>2. 나의 연수 일정과 평가 항목을 확인해주세요.</li>
+								</ul>
+								<img src="../image/study_how/step02.jpg" alt=""/>
+							</li>
+							<li>
+								<ul class="text_indent_num mt20 mb20">
+									<li>3. 수강하는 연수의 진도/시험/과제 제출 여부를 확인하신 후 연수 종료 기간 내 완료해주세요.</li>
+								</ul>
+								<img src="../image/study_how/step03.jpg" alt=""/>
+							</li>
+							<li>
+								<ul class="text_indent_num mt20 mb20">
+									<li>4. 이수 결과를 확인하시고 이수증을 출력해주세요.</li>
+								</ul>
+								<img src="../image/study_how/step04.jpg" alt=""/>
+							</li>
+						</ul>
+
+						<div class="caution_box">
+							<ul class="blet_alert">
+								<li>
+									참고사항
+									<div class="text_contents">
+										<ul class="test_indent_num">
+											<li>1. 연수는 수강 기간 내 자유롭게 학습하실 수 있으며, 진도는 매 차시 마다 누적되기 때문에 매일 접속하지 않으셔도 됩니다.</li>
+											<li>2. 1일 평균 학습시간은 1~2시간 정도입니다. (2~3강 정도가 적당합니다.)</li>
+											<li>3. 강의 교안은 다운로드용 파일 형태로 제공되며, 학습 영상에서 다운로드가 가능합니다.</li>
+											<li>4. 청강 기간은 연수 종료 후부터 1년까지로 추가로 학습하실 수 있습니다.</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--// 학습방법 -->
+
+					<!-- 평가방법 -->
+					<div class="guide_content guide05">
+						<div class="text_contents">
+							<p class="plain_text">직무연수 평가 프로세스 <span>직무연수 성적은 교육부 연수규정에 따라 산출됩니다.</span></p>
+
+							<h4>연수시간별 평가 계획 <span>1학점 과정</span></h4>
+							<table class="qna_table_template">
+								<thead>
+									<tr>
+										<th colspan="2">항목</th>
+										<th>배점</th>
+										<th>평가횟수</th>
+										<th>이수기준</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="2">온라인평가<br>(100%)</td>
+										<td>참여점수(진도)</td>
+										<td><span>50</span>점</td>
+										<td></td>
+										<td rowspan="3">
+											진도율 80% 이상 &amp;<br>
+											시험 필수 응시 &amp;<br>
+											총점 60점 이상
+										</td>
+									</tr>
+									<tr>
+										<td>시험</td>
+										<td><span>50</span>점</td>
+										<td>1회</td>
+									</tr>
+									<tr class="total">
+										<td colspan="2">합계</td>
+										<td><span>100</span>점</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<h4>연수시간별 평가 계획 <span>2학점 과정</span></h4>
+							<table class="qna_table_template">
+								<thead>
+									<tr>
+										<th colspan="2">항목</th>
+										<th>배점</th>
+										<th>평가횟수</th>
+										<th>이수기준</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="3">온라인평가<br>(100%)</td>
+										<td>참여점수(진도)</td>
+										<td><span>30</span>점</td>
+										<td></td>
+										<td rowspan="4">
+											진도율 80% 이상 &amp;<br>
+											시험 필수 응시 &amp;<br>
+											과제 필수 제출 &amp;<br>
+											총점 60점 이상
+										</td>
+									</tr>
+									<tr>
+										<td>시험</td>
+										<td><span>40</span>점</td>
+										<td>1회</td>
+									</tr>
+									<tr>
+										<td>과제</td>
+										<td><span>30</span>점</td>
+										<td>1회</td>
+									</tr>
+									<tr class="total">
+										<td colspan="2">합계</td>
+										<td><span>100</span>점</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<h4>연수시간별 평가 계획 <span>4학점 과정</span></h4>
+							<table class="qna_table_template">
+								<thead>
+									<tr>
+										<th colspan="2">항목</th>
+										<th>배점</th>
+										<th>평가횟수</th>
+										<th>이수기준</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="3">온라인평가<br>(100%)</td>
+										<td>참여점수(진도)</td>
+										<td><span>20</span>점</td>
+										<td></td>
+										<td rowspan="5">
+											진도율 80% 이상 &amp;<br>
+											시험 필수 응시 &amp;<br>
+											과제 필수 제출 &amp;<br>
+											출석고사 필수 응시 &amp;<br>
+											총점 60점 이상
+										</td>
+									</tr>
+									<tr>
+										<td>시험</td>
+										<td><span>10</span>점</td>
+										<td>1회</td>
+									</tr>
+									<tr>
+										<td>과제</td>
+										<td><span>10</span>점</td>
+										<td>1회</td>
+									</tr>
+									<tr>
+										<td>오프라인 평가<br>(60%)</td>
+										<td>출석시험(지필평가)</td>
+										<td><span>60</span>점</td>
+										<td>1회</td>
+									</tr>
+									<tr class="total">
+										<td colspan="2">합계</td>
+										<td><span>100</span>점</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<h4>4학점 연수 성적분포 조견표</h4>
+							<table class="qna_table_template">
+								<thead>
+									<tr>
+										<th>점수</th>
+										<th>백분율</th>
+										<th>점수</th>
+										<th>백분율</th>
+										<th>점수</th>
+										<th>백분율</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>100</td>
+										<td>2.0</td>
+										<td>93</td>
+										<td>6.2</td>
+										<td>86</td>
+										<td>5.7</td>
+									</tr>
+									<tr>
+										<td>99</td>
+										<td>2.6</td>
+										<td>92</td>
+										<td>6.6</td>
+										<td>85</td>
+										<td>5.1</td>
+									</tr>
+									<tr>
+										<td>98</td>
+										<td>3.2</td>
+										<td>91</td>
+										<td>6.8</td>
+										<td>84</td>
+										<td>4.5</td>
+									</tr>
+									<tr>
+										<td>97</td>
+										<td>3.8</td>
+										<td>90</td>
+										<td>7.0</td>
+										<td>83</td>
+										<td>3.8</td>
+									</tr>
+									<tr>
+										<td>96</td>
+										<td>4.5</td>
+										<td>89</td>
+										<td>6.8</td>
+										<td>82</td>
+										<td>3.2</td>
+									</tr>
+									<tr>
+										<td>95</td>
+										<td>5.1</td>
+										<td>88</td>
+										<td>6.6</td>
+										<td>81</td>
+										<td>2.6</td>
+									</tr>
+									<tr>
+										<td>94</td>
+										<td>5.7</td>
+										<td>87</td>
+										<td>6.2</td>
+										<td>80</td>
+										<td>2.0</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<h4>상대평가 동점자 처리 기준</h4>
+							<div class="caution_box">
+								<ul class="blet_circle">
+									<li>출석고사 점수</li>
+									<li>온라인 시험 점수</li>
+									<li>과제 점수</li>
+									<li>학습 진도율</li>
+									<li>발표 점수 순으로 점수가 높은 학습자부터 순위 배정</li>
+								</ul>
+							</div>
+
+							<h4>이수증 발급</h4>
+							<div class="caution_box">
+								<ul class="blet_circle">
+									<li>이수증은 우편 발송되지 않으며, 온라인 발급을 원칙으로 합니다.</li>
+									<li>이수증은 [나의 강의실] &gt; <a class="link" href="../menu04/menu05.html">[성적/이수증/이수통보]</a> 메뉴에서 확인이 가능합니다.</li>
+									<li>이수증 발급은 연수종료 후, 2일~5일 후 부터 발급이 가능합니다.</li>
+								</ul>
+							</div>
+
+							<h4>연수 결과 통보</h4>
+							<div class="caution_box">
+								<ul class="blet_circle">
+									<li>연수 결과는 연수 종료 후 10일 이내로 각 시도교육청에 이수자 명단을 통보합니다.</li>
+									<li>이수통보 결과는 [나의 강의실] &gt; <a class="link" href="../menu04/menu05.html">[성적/이수증/이수통보]</a> 메뉴에서 확인이 가능합니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

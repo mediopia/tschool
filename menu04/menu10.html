@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq4').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(9).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>나의강의실</h2>
+					<ul>
+						<li><a href="./menu01.html">나의 수강 현황</a></li>
+						<li><a href="./menu02.html">장바구니</a></li>
+						<li><a href="./menu03.html">결제내역</a></li>
+						<li><a href="./menu04.html">단체연수 결제내역</a></li>
+						<li><a href="./menu05.html">성적/이수증/이수통보</a></li>
+						<li><a href="./menu06.html">수강연기</a></li>
+						<li><a href="./menu07.html">포인트/쿠폰</a></li>
+						<li><a href="./menu08.html">회원정보수정</a></li>
+						<li><a href="./menu09.html">나의 문의 글</a></li>
+						<li><a href="./menu10.html">회원탈퇴</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu04_10">
+					<div class="title">
+						<h3>회원탈퇴</h3>
+						<p class="route">홈 &gt; 나의강의실 &gt; <span>회원탈퇴</span></p>
+					</div>
+
+					<form class="guide_wrap">
+						<h4>탈퇴안내</h4>
+						<p class="plain_text">안녕하세요?<br>티스쿨 원격교육 연수원 입니다.<br>회원 탈퇴 시, 꼭 확인해주세요</p>
+						<div class="text_contents">
+							<h5>회원 탈퇴 하시면</h5>
+							<ul class="blet_circle">
+								<li>티스쿨 사이트의 연수 서비스(수강신청/영수증/이수증 출력 등) 및 모든 로그인이 필요한 서비스를 이용하실 수 없습니다.</li>
+								<li>과거의 연수 내역, 구매 내역, 게시글 기록 내용을 조회하실 수 없습니다.</li>
+								<li>동일한 아이디로 재가입이 불가능 하며, 사이트 이용을 다시 원하실 경우 7일 후 신규회원으로 다시 가입하실 수 있습니다.</li>
+							</ul>
+							<h5>탈퇴 후 삭제 내역</h5>
+							탈퇴 후 회원정보와 서비스가 아래와 같이 삭제되며 삭제된 데이터는 복구되지 않습니다.
+							<ul class="blet_circle">
+								<li>포인트 : 저장된 포인트 전체 삭제</li>
+								<li>쿠폰 : 저장된 쿠폰내역 전체 삭제</li>
+								<li>기타 : 아이디에 연계된 개인적 영역의 정보 등 삭제</li>
+							</ul>
+							<h5>탈퇴 후 유지 내역</h5>
+							운영지침에 따라 아래와 같이 유지됩니다.
+							<ul class="blet_circle">
+								<li>이수내역 요청 시 본인확인을 위한 기본정보 ( ID, 성명, 생년월일 )</li>
+								<li>수강내역 및 이수내역 교육청 보고 정보<br>(시험응시 결과, 과제 내용, 최종 성적, 소속학교, 나이스 개인번호 , 지명번호 등 )</li>
+								<li>결제, 구매내역 (5년간 보유)</li>
+								<li>각종 게시판의 게시글<br>회원탈퇴를 하시면 삭제되신 아이디로 재가입이 불가능 하오니 신중히 고려하여 주시기 바랍니다.<br>탈퇴를 원하시면 아래 회원정보를 정확히 입력해 주시기 바랍니다.</li>
+							</ul>
+						</div>
+						<div class="confirm_password">
+							<p class="hide">개인정보보호를 위해 비밀번호를 다시 한번 입력해 주세요.</p>
+							<fieldset>
+								<label for="pass">비밀번호</label><input type="password" name="member_password" id="member_password"><a id="btn_submit" class="btn_grey" href="#">확인</a>
+							</fieldset>
+						</div>
+					</form>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

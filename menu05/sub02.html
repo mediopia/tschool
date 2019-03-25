@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq5').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(1).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>집합연수신청</h2>
+					<ul>
+						<li><a href="./menu01.html">이벤트</a></li>
+						<li><a href="./menu02.html">교육설문</a></li>
+						<li><a href="./menu03.html">월간T스토리</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu05_02">
+					<div class="title">
+						<h3>교육설문</h3>
+						<p class="route">홈 &gt; 이벤트 &gt; <span>교육설문</span></p>
+					</div>
+
+					<div class="board_content_wrap">
+
+						<table class="board_table_template">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="ta_l" colspan="6">왜 우리는 계속 관계에서 스트레스를 받을까?</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="title">
+									<th class="ta_l">설문조사 기간</th>
+									<td class="ta_l">2018-09-03 ~ 2018-10-03</td>
+								</tr>
+								<tr class="content">
+									<td colspan="6">
+										<div class="lecture_poster">
+											<img alt="왜 우리는 계속 관계에서 스트레스를 받을까?" src="../image/data/poster_survey/poster_001.png" usemap="#map">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th class="ta_l">이전글</th>
+									<td colspan="5"><a href="#">교육과정 수업-평가-기록 일체화 관점에서 학생평가 바라보기 오프라인 연수</a></td>
+								</tr>
+								<tr>
+									<th class="ta_l">다음글</th>
+									<td colspan="5"><a href="#">[라파에니어그램연수] 나를 찾아가는 여정</a></td>
+								</tr>
+							</tfoot>
+						</table>
+
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

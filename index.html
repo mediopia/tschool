@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="./js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="./js/util.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+var $top_banner;
+var $edu_tab_btns;
+var $edu_wrap;
+var $subject_tab_btns;
+var $subject_list;
+var $lecture_banner;
+var $bottom_banner;
+var $notice_wrap;
+
+function setDOMS_page(){
+	$top_banner = $('#top_banner .banner_wrap ul');
+	$edu_tab_btns = $('.edu_wrap .tab_btns');
+	$edu_wrap = $('.edu_wrap');
+	$subject_tab_btns = $('.subject_wrap .tab_btns');
+	$subject_list = $('.subject_list');
+	$lecture_banner = $('.lecture_banner .right ul');
+	$bottom_banner = $('.bottom_banner .banner_wrap ul');
+	$notice_wrap = $('.notice_wrap');
+	$notice_btns = $('.notice_wrap .tab_btns');
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(480);
+	});
+	//
+
+	//탑 메인 배너
+	$top_banner.bxSlider({
+		auto : true,
+		pager : true,
+		useCSS : true,
+		mode : 'fade',
+		easing : 'easeout',
+		speed : 500,
+		pause : 10000
+	});
+	//-- 탑 메인 배너
+
+	//메인연수
+	$('.subject_list .explain').ellipsis();
+	//-- 메인연수
+
+	//테마연수 배너
+	$lecture_banner.bxSlider({
+		auto : true,
+		pager : true,
+		useCSS : true,
+		mode : 'fade',
+		easing : 'easeout',
+		speed : 500,
+		pause : 10000
+	});
+	//-- 테마연수 배너
+
+	// 베스트 후기
+	$('.review_list li p').ellipsis();
+	//-- 베스트 후기
+
+	//하단 배너
+	$bottom_banner.bxSlider({
+		auto : true,
+		pager : true,
+		useCSS : true,
+		mode : 'fade',
+		easing : 'easeout',
+		speed : 500,
+		pause : 10000
+	});
+	//-- 하단 배너
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+    <script>
+        $(function(){
+            $("#header").load("./inc/header.html");
+            $("#footer").load("./inc/footer.html");
+            $("#nav").load("./inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- top_banner -->
+		<div id="top_banner">
+			<div class="banner_wrap">
+				<ul>
+					<li style="background:#a6dce4;"><a href="#"><img src="./image/banner/top_banner_01.png"/></a></li>
+					<li style="background:#b6e2ef;"><a href="#"><img src="./image/banner/top_banner_02.png"/></a></li>
+					<li style="background:#fcd0d1;"><a href="#"><img src="./image/banner/top_banner_03.png"/></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //top_banner -->
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 교육청 -->
+			<div id="aside">
+				<div class="edu_wrap">
+					<ul class="tab_btns">
+						<li class="first"><a class="on" href="javascript:tab_btn('all', 'edu', '0');">전체 교육청</a></li>
+						<li class=""><a href="javascript:tab_btn('my', 'edu', '1');">나의 교육청</a></li>
+					</ul>
+					<ul class="edu_banner all on">
+						<li class="edu_thumb">
+							<a href="./menu01/sub01.html">
+								<i><img src="./image/data/edu/jb_i.png" alt="2018 유아교육 핵심 역량강화 원격 직무연수"/></i>
+								<strong>전라북도 유아교육진흥원</strong>
+								<p>2018 유아교육 핵심 역량강화 원격 직무연수</p>
+								<span class="label ing">진행</span>
+							</a>
+						</li>
+
+						<li class="edu_thumb">
+							<a href="./menu01/sub01.html">
+								<i><img src="./image/data/edu/gb_e.png" alt="2018 유아교육 핵심 역량강화 원격 직무연수"/></i>
+								<strong>경상북도 문경교육지원청</strong>
+								<p>자유학기제 및 진로지도 역량강화</p>
+								<span class="label ing">진행</span>
+							</a>
+						</li>
+
+						<li class="edu_thumb">
+							<a href="./menu01/sub01.html">
+								<i><img src="./image/data/edu/cn_e.png" alt="2018 유아교육 핵심 역량강화 원격 직무연수"/></i>
+								<strong>충청남도 교육연구정보원</strong>
+								<p>교원 정보교육 원격연수</p>
+								<span class="label wait">대기</span>
+							</a>
+						</li>
+
+						<li class="edu_thumb">
+							<a href="./menu01/sub01.html">
+								<i><img src="./image/data/edu/cb_i.png" alt="2018 유아교육 핵심 역량강화 원격 직무연수"/></i>
+								<strong>충청북도 단재교육연수원</strong>
+								<p>2018 교원능력개발 평가 원격직무연수</p>
+								<span class="label end">마감</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="edu_banner my">
+						<!-- 로그인 후에 이용하세요 -->
+					</ul>
+					<a class="view_all" href="#">전체 보기</a>
+				</div>
+				<ul class="aside_banner">
+					<li><a href="http://www.vivasam.com?utm_source=ad&utm_medium=online&utm_campaign=Tschool&utm_content=T%5Ftop" target="_blank"><img src="./image/banner/aside_viva.png"/></a></li>
+					<li><a href="https://blog.naver.com/vstschool?utm_source=banner&utm_medium=main&utm_campaign=blogbn&utm_content=tschoolblog" target="_blank"><img src="./image/banner/aside_blog.png"/></a></li>
+				</ul>
+			</div>
+			<!-- //좌측 교육청 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- 과정 리스트 -->
+				<div class="subject_wrap">
+					<ul class="tab_btns">
+						<li class="first"><a class="on" href="javascript:tab_btn('all', 'subject_category', '0');">전체</a></li>
+						<li><a href="javascript:tab_btn('new', 'subject_category', '1');">신규</a></li>
+						<li><a href="javascript:tab_btn('hot', 'subject_category', '2');">인기</a></li>
+						<li><a href="javascript:tab_btn('credit1', 'subject_category', '3');">1학점</a></li>
+						<li><a href="javascript:tab_btn('credit2', 'subject_category', '4');">2학점</a></li>
+						<li><a href="javascript:tab_btn('credit4', 'subject_category', '5');">4학점</a></li>
+						<li><a href="javascript:tab_btn('mobile', 'subject_category', '6');">모바일</a></li>
+						<li><a href="javascript:tab_btn('license', 'subject_category', '7');">자격증</a></li>
+						<li><a href="javascript:tab_btn('learn_guide', 'subject_category', '8');">학습지도</a></li>
+						<li><a href="javascript:tab_btn('subject_guide', 'subject_category', '9');">교과지도</a></li>
+						<li><a href="javascript:tab_btn('counsel_guide', 'subject_category', '10');">상담지도</a></li>
+						<li><a href="javascript:tab_btn('life_guide', 'subject_category', '11');">생활지도</a></li>
+						<li><a href="javascript:tab_btn('future_guide', 'subject_category', '12');">미래교육</a></li>
+						<li><a href="javascript:tab_btn('healing', 'subject_category', '13');">자기계발/힐링</a></li>
+						<li><a href="javascript:tab_btn('policy', 'subject_category', '14');">정책연수</a></li>
+					</ul>
+
+					<ul class="subject_list">
+	<!--
+	!! 상단 탭버튼에 따른 클래스 분류 ::
+		신규 - new
+		인기 - hot
+		1학점 - credit1
+		2학점 - credit2
+		4학점 - credit4
+		모바일 - mobile
+		자격증 - license
+		학습지도 - learn_guide
+		교과지도 - subject_guide
+		상담지도 - counsel_guide
+		생활지도 - life_guide
+		미래교육 - future_guide
+		자기계발/힐링 - healing
+		정책연수 - policy
+	!! 템플릿 ::
+		<li class="' + 과정분류 + '""><div class="thumbnail"><img src="./image/subject/' + 이미지명 + '.png"/><span class="label + ' + 신규면 new, 인기면 hot 클래스 추가 + '"></span><span class="info">' + 학점 + '학점/' + 가격 + '원</span><div class="detail"><p class="explain multiline">' + 과정 소개 멘트 + '</p><a class="view" href="#">+ 미리보기</a></div></div><div class="subject_name"><p>' + 과정명 +'</p></div></li>
+	-->
+						<li class="hot">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>VR AR 로봇을 활용한 수업 기술과 교육의 융합시대!</p>
+							</div>
+						</li>
+
+						<li class="new">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label new"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>신규</p>
+							</div>
+						</li>
+
+						<li class="credit1">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>1학점</p>
+							</div>
+						</li>
+
+						<li class="credit2">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>2학점</p>
+							</div>
+						</li>
+
+						<li class="credit4">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>4학점</p>
+							</div>
+						</li>
+
+						<li class="credit4 hot">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>4학점 + 인기</p>
+							</div>
+						</li>
+
+						<li class="mobile">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>모바일</p>
+							</div>
+						</li>
+
+						<li class="mobile new">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>모바일 + 인기</p>
+							</div>
+						</li>
+
+						<li class="license">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>자격증</p>
+							</div>
+						</li>
+
+						<li class="learn_guide">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>학습지도</p>
+							</div>
+						</li>
+
+						<li class="subject_guide">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>교과지도</p>
+							</div>
+						</li>
+
+						<li class="counsel_guide">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>상담지도</p>
+							</div>
+						</li>
+
+						<li class="life_guide">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>생활지도</p>
+							</div>
+						</li>
+
+						<li class="future_guide">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>미래교육</p>
+							</div>
+						</li>
+
+						<li class="healing">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>자기계발/힐링</p>
+							</div>
+						</li>
+
+						<li class="policy">
+							<div class="thumbnail">
+								<img src="./image/data/thumbnail_job/thumb_001.png"/>
+								<span class="label hot"></span>
+								<span class="info">2학점 / 65,000원</span>
+								<div class="detail">
+									<p class="explain multiline">VR AR 기술과 교육의 융합시대! 얼마나 준비하고 계신가요? 아직도 교과서 이미지로만 수업하십니까?</p>
+									<a class="view" href="#">+ 미리보기</a>
+								</div>
+							</div>
+							<div class="subject_name">
+								<p>정책연수</p>
+							</div>
+						</li>
+					</ul>
+
+					<a class="view_more" href="#">더보기 +</a>
+				</div>
+				<!-- //과정 리스트 -->
+
+				<!-- 과정 홍보 배너 -->
+				<div class="lecture_banner">
+					<div class="left"><a href="#"><img src="./image/banner/lecture01.png"/></a></div>
+					<div class="left"><a href="#"><img src="./image/banner/lecture02.png"/></a></div>
+
+					<div class="right_wrap">
+						<div class="right right_banner01 first">
+							<ul>
+								<li><a href="#"><img src="./image/banner/lecture03.png"/></a></li>
+								<li><a href="#"><img src="./image/banner/lecture04.png"/></a></li>
+							</ul>
+						</div>
+						<div class="right right_banner02">
+							<ul>
+								<li><a href="#"><img src="./image/banner/lecture04.png"/></a></li>
+								<li><a href="#"><img src="./image/banner/lecture03.png"/></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //과정 홍보 배너 -->
+
+				<!-- 연수후기 -->
+				<div class="review_wrap board">
+					<h2>금주 BEST 연수후기</h2>
+					<a class="view_more" href="./menu03/menu03.html">더보기 +</a>
+					<ul class="content review_list">
+						<li class="first">
+							<a href="#">
+								<i><img src="./image/common/label_person.png"/></i>
+								<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
+								<p class="multiline">그 동안 잊고 있던 우리의 역사를 다시 생각해보고 알아가는 시간이 되었습니다. 우리 민족이 얼마나 열심히 또 얼마나 힘들게 지켜왔는지.. 현재 우리의 삶에 감사하고, '대한민국'이라는 이름의 소중함을 느낄 수 있었습니다. 우리의 역사에 대해 꾸준히 공부해야 할 것 같아요. 소중한 시간이었습니다.</p>
+								<em>yes****선생님</em>
+								<span class="label best">BEST 연수후기</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i><img src="./image/common/label_person.png"/></i>
+								<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
+								<p class="multiline">그 동안 잊고 있던 우리의 역사를 다시 생각해보고 알아가는 시간이 되었습니다. 우리 민족이 얼마나 열심히 또 얼마나 힘들게 지켜왔는지.. 현재 우리의 삶에 감사하고, '대한민국'이라는 이름의 소중함을 느낄 수 있었습니다. 우리의 역사에 대해 꾸준히 공부해야 할 것 같아요. 소중한 시간이었습니다.</p>
+								<em>yes****선생님</em>
+								<span class="label best">BEST 연수후기</span>
+							</a>
+						</li>
+						<li class="last">
+							<a href="#">
+								<i><img src="./image/common/label_person.png"/></i>
+								<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
+								<p class="multiline">그 동안 잊고 있던 우리의 역사를 다시 생각해보고 알아가는 시간이 되었습니다. 우리 민족이 얼마나 열심히 또 얼마나 힘들게 지켜왔는지.. 현재 우리의 삶에 감사하고, '대한민국'이라는 이름의 소중함을 느낄 수 있었습니다. 우리의 역사에 대해 꾸준히 공부해야 할 것 같아요. 소중한 시간이었습니다.</p>
+								<em>yes****선생님</em>
+								<span class="label best">BEST 연수후기</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //연수후기 -->
+
+				<!-- 하단배너 -->
+				<div class="bottom_banner">
+					<div class="banner_wrap">
+						<ul>
+							<li><a href="#"><img src="./image/banner/bottom_banner_01.png"/></a></li>
+							<li><a href="#"><img src="./image/banner/bottom_banner_02.png"/></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //하단배너 -->
+
+				<!-- 공지사항, 이벤트 -->
+				<div class="board_group">
+					<div class="notice_wrap board">
+						<ul class="tab_btns">
+							<li class="first"><a class="on" href="javascript:tab_btn('notice', 'notice_board', '0');">공지사항</a></li>
+							<li><span class="space"></span></li>
+							<li class=""><a href="javascript:tab_btn('event', 'notice_board', '1');">이벤트</a></li>
+						</ul>
+						<a class="view_more" href="#">더보기 +</a>
+						<ul class="content notice list on">
+							<li><a href="#">* [공지] 교육부 공시 안전연수 운영안</a><span class="new">N</span></li>
+							<li><a href="#">* [대기] 경상남도거제교육지원청 단체연수 신청 안내</a><span class="new">N</span></li>
+							<li><a href="#">* [마감] 전라남도교육청 단체연수 신청 안내</a></li>
+							<li><a href="#">* [조기마감] 부산광역시교육연수원 관내 교직원 대상 단체연수 신청 안내</a></li>
+							<li><a href="#">* [마감] 충청북도유아교육진흥원 단체연수 신청 안내</a></li>
+						</ul>
+						<ul class="content event list">
+							<li><a href="#">따끈따끈 신규 연수 신청하고! 10% 할인 받GO!</a><span class="new">N</span></li>
+							<li><a href="#">12월에도 혜택은 계속! 연수 신청하면 선물을 드립니다★</a></li>
+							<li><a href="#">12월에도! 꼭 필요한 11개 정책연수 체크하고 최대 30% 할인받자!</a></li>
+						</ul>
+					</div>
+
+					<div class="client_wrap board">
+						<h2>고객센터</h2>
+						<ul class="content">
+							<li><span class="tel">1544-9044</span><span>대표번호</span></li>
+							<li><strong>상담(평일)</strong><p>09:00 ~ 18:00 (점심시간 12:30 ~ 13:30)</p></li>
+							<li><strong>FAX</strong><p>02-6970-6179</p></li>
+							<li><strong>Email</strong><p>tschool@tschool.net</p><a href="#">콘텐츠 제휴문의</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //공지사항, 이벤트 -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq3').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(7).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>연수지원</h2>
+					<ul>
+						<li><a href="./menu01.html">공지사항</a></li>
+						<li><a href="./menu02.html">묻고 답하기</a></li>
+						<li><a href="./menu03.html">연수후기</a></li>
+						<li><a href="./menu04.html">자주묻는 질문</a></li>
+						<li><a href="./menu05.html">연수자료실</a></li>
+						<li><a href="./menu06.html">연수안내</a></li>
+						<li><a href="./menu07.html">신청방법</a></li>
+						<li><a href="./menu08.html">학습방법</a></li>
+						<li><a href="./menu09.html">평가방법</a></li>
+						<li><a href="./menu10.html">시스템지원</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu03_08">
+					<div class="title">
+						<h3>학습방법</h3>
+						<p class="route">홈 &gt; 연수지원 &gt; <span>학습방법</span></p>
+					</div>
+
+					<ul class="study_how">
+						<li>
+							<img src="../image/study_how/process.jpg" alt="로그인 - 강의실 입장하기 - 연수일정, 평가항목 확인 - 진도/시험/과제 응시 - 연수 종료 - 결과 확인/이수증 출력"/>
+
+							<ul class="text_indent_num mt50 mb20">
+								<li>
+									1. 로그인 후 사이버 강의실로 입장해주세요.
+									<ul class="text_indent_hyphen">
+										<li>- 방법1) 로그인 창 [과목선택] 클릭 → 사이버 강의실 입장</li>
+										<li>- 방법2) [나의 강의실] 메뉴 → [강의실 입장하기] 클릭 → 사이버 강의실 입장</li>
+									</ul>
+								</li>
+							</ul>
+
+							<img src="../image/study_how/step01.jpg" alt=""/>
+						</li>
+
+						<li>
+							<ul class="text_indent_num mt20 mb20">
+								<li>2. 나의 연수 일정과 평가 항목을 확인해주세요.</li>
+							</ul>
+							<img src="../image/study_how/step02.jpg" alt=""/>
+						</li>
+
+						<li>
+							<ul class="text_indent_num mt20 mb20">
+								<li>3. 수강하는 연수의 진도/시험/과제 제출 여부를 확인하신 후 연수 종료 기간 내 완료해주세요.</li>
+							</ul>
+							<img src="../image/study_how/step03.jpg" alt=""/>
+						</li>
+
+						<li>
+							<ul class="text_indent_num mt20 mb20">
+								<li>4. 이수 결과를 확인하시고 이수증을 출력해주세요.</li>
+							</ul>
+							<img src="../image/study_how/step04.jpg" alt=""/>
+						</li>
+
+					</ul>
+
+					<div class="caution_box">
+						<ul class="blet_alert">
+							<li>
+								참고사항
+								<div class="text_contents">
+									<ul class="test_indent_num">
+										<li>1. 연수는 수강 기간 내 자유롭게 학습하실 수 있으며, 진도는 매 차시 마다 누적되기 때문에 매일 접속하지 않으셔도 됩니다.</li>
+										<li>2. 1일 평균 학습시간은 1~2시간 정도입니다. (2~3강 정도가 적당합니다.)</li>
+										<li>3. 강의 교안은 다운로드용 파일 형태로 제공되며, 학습 영상에서 다운로드가 가능합니다.</li>
+										<li>4. 청강 기간은 연수 종료 후부터 1년까지로 추가로 학습하실 수 있습니다.</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	$('.gnb_main .eq4').addClass('on');
+	$('.tab_btns li').eq(1).find('a').addClass('on');
+
+	$('.subject_info .title').ellipsis();
+});
+
+function tab_btns(common, target, eqNum){
+	$('.tab_btns li a').removeClass('on');
+	$('.tab_btns li').eq(eqNum).find('a').addClass('on');
+	$('.' + common).removeClass('on');
+	$('.' + target).addClass('on');
+}
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<div id="header">
+		<div class="header_container">
+			<div class="header_top">
+				<a class="aside_toggle" href="javascript:aside_toggle();"><img src="../image/common/header_menu.png" alt="메뉴 열기"/></a>
+				<h1><a class="logo_tschool" href="../"><img src="../image/common/header_logo_tschool.png" alt="티스쿨 원격교육연수원"/></a></h1>
+				<ul class="member_content not_login"> <!-- member_content :: 임시로 비로그인 시에는 not_login클래스, 로그인 시에는 login클래스를 붙여 분기처리 -->
+					<li class="con login"><a class="logout" href="#">로그아웃</a></li>
+					<li class="con not_login"><a class="login" href="./login.html">로그인</a></li>
+				</ul>
+			</div>
+			<form name="search_form" class="search_form" action="">
+				<fieldset>
+					<legend>강좌검색</legend>
+					<input type="text" name="search" value="" id="search_text" placeholder="검색어를 입력해 주세요" alt="검색어를 입력해 주세요" onclick="">
+					<button class="btn_search" type="submit">검색</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- //header 공통 -->
+
+	<!-- nav 공통(상단 메뉴) -->
+	<div id="nav">
+		<ul class="gnb_main">
+			<li class="eq1"><a href="../">홈</a></li>
+			<li class="eq2"><a href="../menu01/menu01.html">직무연수</a></li>
+			<li class="eq3"><a href="../menu02/menu01.html">자율연수</a></li>
+			<li class="eq4"><a href="../menu01.html">연수지원</a></li>
+			<li class="eq5"><a href="../menu04/menu01.html">나의강의실</a></li>
+		</ul>
+	</div>
+	<!-- //nav 공통(상단 메뉴) -->
+
+	<!-- aside 공통(좌측 숨김메뉴) -->
+	<div id="aside">
+		<div class="gnb_sub_bg"></div>
+		<ul class="gnb_sub">
+			<li class="close">
+				<a href="javascript:aside_toggle();">닫기 X</a>
+			</li>
+			<li class="sub" data-eq="eq4">
+				<dl>
+					<dt><a href="../menu04/menu01.html">나의강의실</a></dt>
+				</dl>
+			</li>
+			<li class="sub" data-eq="eq1">
+				<dl>
+					<dt><a href="./menu01.html">직무연수</a></dt>
+				</dl>
+			</li>
+			<li class="sub" data-eq="eq2">
+				<dl>
+					<dt><a href="../menu02/menu01.html">자율연수</a></dt>
+				</dl>
+			</li>
+			<li class="sub" data-eq="eq3">
+				<dl>
+					<dt><a href="../menu03/menu01.html">연수지원</a></dt>
+					<dd><a href="../menu03/menu01.html">공지사항</a></dd>
+					<dd><a href="../menu03/menu02.html">이벤트</a></dd>
+					<dd><a href="../menu03/menu03.html">Q&amp;A</a></dd>
+					<dd><a href="../menu03/menu04.html">FAQ</a></dd>
+					<dd><a href="../menu03/menu05.html">연수후기</a></dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	<!-- //aside 공통(좌측 숨김메뉴) -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- section -->
+		<div id="section">
+			<div id="article" class="page03 sub05">
+
+				<ul class="tab_btns">
+					<li><a href="./menu01.html">공지사항</a></li>
+					<li><a href="./menu02.html">이벤트</a></li>
+					<li><a href="./menu03.html">Q&amp;A</a></li>
+					<li><a href="./menu04.html">FAQ</a></li>
+					<li><a href="./menu05.html">연수후기</a></li>
+				</ul>
+
+				<div class="board_wrap">
+					<div class="title">
+						<h2>이벤트</h2>
+					</div>
+
+					<table class="mobile_table_template01">
+						<colgroup>
+							<col style="width:45%;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td class="va_t">
+									<a href="#"><img src="../image/data/thumbnail_event/thumb_001.png"/></a>
+								</td>
+								<td class="ta_l pl10 va_t">
+									<p><i class="label_event_ing">진행중</i></p>
+									<p class="title"><a href="#">Welcome 2019! 신년감사 연수신청 이벤트</a></p>
+									<p class="sub">2019.01.01~2019.02.28<span class="div_line">/</span>348</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="va_t">
+									<a href="#"><img src="../image/data/thumbnail_event/thumb_001.png"/></a>
+								</td>
+								<td class="ta_l pl10 va_t">
+									<p><i class="label_event_ing">진행중</i></p>
+									<p class="title"><a href="#">Welcome 2019! 신년감사 연수신청 이벤트</a></p>
+									<p class="sub">2019.01.01~2019.02.28<span class="div_line">/</span>348</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="va_t">
+									<a href="#"><img src="../image/data/thumbnail_event/thumb_001.png"/></a>
+								</td>
+								<td class="ta_l pl10 va_t">
+									<p><i class="label_event_end">종료</i></p>
+									<p class="title"><a href="#">Welcome 2019! 신년감사 연수신청 이벤트</a></p>
+									<p class="sub">2019.01.01~2019.02.28<span class="div_line">/</span>348</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="va_t">
+									<a href="#"><img src="../image/data/thumbnail_event/thumb_001.png"/></a>
+								</td>
+								<td class="ta_l pl10 va_t">
+									<p><i class="label_event_end">종료</i></p>
+									<p class="title"><a href="#">Welcome 2019! 신년감사 연수신청 이벤트</a></p>
+									<p class="sub">2019.01.01~2019.02.28<span class="div_line">/</span>348</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="va_t">
+									<a href="#"><img src="../image/data/thumbnail_event/thumb_001.png"/></a>
+								</td>
+								<td class="ta_l pl10 va_t">
+									<p><i class="label_event_end">종료</i></p>
+									<p class="title"><a href="#">Welcome 2019! 신년감사 연수신청 이벤트</a></p>
+									<p class="sub">2019.01.01~2019.02.28<span class="div_line">/</span>348</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="pager">
+					<div class="prev_btns">
+						<a class="prev_end" href="#">첫 페이지</a>
+						<a class="prev" href="#">이전 페이지</a>
+					</div>
+					<p class="current_page">1/40</p>
+					<div class="next_btns">
+						<a class="next" href="#">다음 페이지</a>
+						<a class="next_end" href="#">끝 페이지</a>
+					</div>
+				</div>
+
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer">
+		<div class="footer_container">
+			<ul class="content">
+				<li class="btns">
+					<a href="./login.html">로그인</a>
+					<a href="../../">PC버전</a>
+				</li>
+				<li class="link">
+					<ul>
+						<li><a href="../../info/info01.html">연수원소개</a></li>
+						<li class="space">I</li>
+						<li><a href="#">멤버십</a></li>
+						<li class="space">I</li>
+						<li><a href="../../info/info03.html">사이트맵</a></li>
+						<li class="space">I</li>
+						<li><a href="../../info/rule.html">이용약관</a></li>
+						<li class="space">I</li>
+						<li><a href="../../info/policy.html">개인정보처리방침</a></li>
+						<li class="space">I</li>
+						<li><a href="../../info/email.html">이메일 무단 수집거부</a></li>
+					</ul>
+				</li>
+				<li class="logo">
+					<img src="../image/common/footer_logo_tschool.png" alt="티스쿨 원격교육연수원"/>
+				</li>
+				<li class="client">
+<p><strong>㈜티스쿨이앤씨</strong></p>
+<p><span>티스쿨 고객센터 : 1544-9044</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAX : 02-6970-6179</p>
+<p>메일 : tschool@tschool.net</p>
+				</li>
+				<li class="copyright">
+<p>㈜티스쿨이앤씨 | 서울시 구로구 디지털로 33길 48 대륭포스트타워 7차 | 대표이사:박병근</p>
+<p>사업자 등록번호 : 214-87-33789 | 연수원 인가: 제02-9호 | 통신판매업신고 제 2013-서울구로-0983호 <a href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2013316015930200983&area1=&area2=&currpage=1&searchKey=04&searchVal=2148733789&stdate=&enddate=">사업자 정보 확인</a></p>
+<p>COPYRIGHT 2013 TSCHOOL ALLRIGHTS RESERVED.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>
