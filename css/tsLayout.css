@@ -15,14 +15,14 @@
 #header{width:100%;}
 /* 최상단 광고 영역 */
 .ad_container{position:releative; display:none; width:100%; height:80px; background:#fea500;}
-.ad_container .content{position:relative; display:block; width:1300px; height:100%; margin:0 auto;}
+.ad_container .content{position:relative; display:block; width:1116px; height:100%; margin:0 auto;}
 .ad_container .content .ad_img{display:block; width:100%; height:100%; background:url(../image/common/header_ad.png) no-repeat;}
 .ad_container .content .ad_close{position:absolute; display:inline-block; width:36px; height:36px; right:25px; bottom:15px; color:#000; font-size:36px; font-weight:500; line-height:36px; text-align:center; cursor:pointer}
 /* --최상단 광고 영역-- */
 
 /* 상단 소셜, 로고, 검색, 회원 영역 */
 .header_container{z-index:56; position:relative; width:100%; height:66px; margin:0 auto; background:#f3f3f3;}
-.header_container .content{position:relative; width:1300px; height:100%; margin:0 auto;}
+.header_container .content{position:relative; width:1116px; height:100%; margin:0 auto;}
 /* 로고 및 소셜 */
 .header_container .keris{display:inline-block; margin-top:6px; width:169px; height:55px; background:url(../image/common/header_keris.png) no-repeat; vertical-align:top; text-indent:-9999px;}
 .header_container .social{display:inline-block; margin:21px 0 0 30px; font-size:0; vertical-align:top;}
@@ -83,7 +83,7 @@
 
 /* 메인, 서브메뉴 영역 */
 .gnb_container{z-index:55; position:relative; width:100%; height:110px; margin:0 auto; background:#fff; font-size:0;}
-.gnb_container .content{width:1300px; height:100%; margin:0 auto;}
+.gnb_container .content{width:1116px; height:100%; margin:0 auto;}
 .gnb_container h1{display:inline-block; padding:31px 30px; width:334px; height:110px; box-sizing:border-box;}
 .gnb_container h1 .logo_tschool{display:inline-block; width:274px; height:48px; background:url(../image/common/header_logo_tschool.png) no-repeat; vertical-align:top; text-indent:-9999px;}
 .gnb_container .gnb{display:inline-block; width:966px; height:110px; vertical-align:top;}
@@ -96,7 +96,7 @@
 .gnb_container .gnb .gnb_main li a.on .blet{display:inline-block;}
 
 .gnb_container .gnb_sub_container{display:none; margin-top:-1px; width:100%; height:300px; background:#fff; border-top:1px solid #ccc;}
-.gnb_container .gnb_sub_container .gnb_sub{display:block; margin:0 auto; width:1300px; height:100%;}
+.gnb_container .gnb_sub_container .gnb_sub{display:block; margin:0 auto; width:1116px; height:100%;}
 .gnb_container .gnb_sub_container .ad{display:inline-block; width:417px; height:100%; border-right:1px solid #ccc; box-sizing:border-box;}
 .gnb_container .gnb_sub_container .ad .ad_img{display:inline-block; margin:60px 0 0 33px; width:350px; height:180px; background:url(../image/common/header_gnb_ad.png) no-repeat;}
 .gnb_container .gnb_sub_container .sub{display:inline-block; padding-top:10px; width:165px; height:100%; border-right:1px solid #ccc; vertical-align:top; box-sizing:border-box;}
@@ -121,7 +121,7 @@
 #top_banner .bx-pager-item a.active{background:url(../image/banner/top_banner_pager_on.png) no-repeat;}
 /* --상단 배너 영역-- */
 
-#section_wrap{position:relative; display:block; padding-left:229px; width:1300px; margin:0 auto; box-sizing:border-box;}
+#section_wrap{position:relative; display:block; padding-left:229px; width:1116px; margin:0 auto; box-sizing:border-box;}
 
 #quick_wrap{z-index:55; position:absolute; right:0; top:453px; width:175px; height:500px; transition:0.3s ease-out right;}
 #quick_wrap.close{right:-175px;}
@@ -258,7 +258,7 @@
 
 /* 하단 영역 */
 #footer{width:100%; height:300px; background:#555;}
-.footer_container{position:relative; width:1300px; padding-top:50px; margin:0 auto; color:#fff;}
+.footer_container{position:relative; width:1116px; padding-top:50px; margin:0 auto; color:#fff;}
 .footer_container a{color:#fff;}
 .footer_container .logo_tschool{display:inline-block; margin:70px 45px 0; width:155px; height:96px; background:url(../image/common/footer_logo_tschool.png) no-repeat; vertical-align:top;}
 .footer_container .content{display:inline-block; vertical-align:top;}

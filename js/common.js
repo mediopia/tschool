@@ -32,20 +32,26 @@ $(window).load(function(){
 	//--최상단 광고 관련
 
 	//검색창 관련
-	$('.search_form .category').on('click', function(){
-		var $this = $(this);
-		if($this.hasClass('open')){
-			$this.removeClass('open');
-		}else{
-			$this.addClass('open');
-		}
-	});
-
-	$('.search_form .category li').on('click', function(){
-		$this = $(this);
-		$cur_category.html($this.html());
-	});
+//	$('.search_form .category').on('click', function(){
+//		var $this = $(this);
+//		if($this.hasClass('open')){
+//			$this.removeClass('open');
+//		}else{
+//			$this.addClass('open');
+//		}
+//	});
+//
+//	$('.search_form .category li').on('click', function(){
+//		$this = $(this);
+//		$cur_category.html($this.html());
+//	});
 	//--검색창 관련
+
+    //검색창 관련
+    $('.search').click(function(){
+        $(this).toggleClass('on');
+        $(this).parents().find('.search_areaW').slideToggle(200);
+    });
 
 	//회원 정보 - 수강 과정 목록 관련
 	$('.member_content .subject').on('click', function(){
@@ -77,24 +83,24 @@ $(window).load(function(){
 	//--메인, 서브메뉴 관련
 });
 
-function quick_toggle(){
-	if($nav.hasClass('close')){
-		$nav.removeClass('close');
-	}else{
-		$nav.addClass('close');
-	}
-}
-
-function nav_fix(top){
-	var scroll = $window.scrollTop();
-
-	if(scroll >= top){
-		$nav.css({
-			'top' : scroll - top
-		});
-	}else{
-		$nav.css({
-			'top' : '0'
-		});
-	}
-}
+//function quick_toggle(){
+//	if($nav.hasClass('close')){
+//		$nav.removeClass('close');
+//	}else{
+//		$nav.addClass('close');
+//	}
+//}
+//
+//function nav_fix(top){
+//	var scroll = $window.scrollTop();
+//
+//	if(scroll >= top){
+//		$nav.css({
+//			'top' : scroll - top
+//		});
+//	}else{
+//		$nav.css({
+//			'top' : '0'
+//		});
+//	}
+//}

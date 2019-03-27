@@ -1,20 +1,60 @@
 <div class="ad_container">
     <div class="content">
         <a class="ad_img" href="#"></a>
-        <span class="ad_close">X</span>
+        <div class="ad_clase_box">
+            <label><input type="checkbox" name="checkbox"> 다시보지않기</label>
+            <span class="ad_close">창닫기</span>
+        </div>
     </div>
 </div>
 
 <div class="header_container">
     <div class="content">
+        <h1><a class="logo_tschool" href="../">티스쿨 원격교육연수원</a></h1>
         <span class="keris">케리스 연수원 평가 우수 기관 선정</span>
-        <ul class="social">
-            <li><a class="facebook" href="https://www.facebook.com/tschool.net/?utm_source=banner&utm_medium=main&utm_campaign=snsikon&utm_content=facebook" target="_blank" title="티스쿨원격교육연수원 페이스북"></a></li>
-            <li><a class="blog" href="http://blog.naver.com/vstschool?utm_source=banner&utm_medium=main&utm_campaign=snsikon&utm_content=blog" target="_blank" title="티스쿨원격교육연수원 공식 블로그"></a></li>
-            <li><a class="youtube" href="https://www.youtube.com/channel/UCZIN4TvOHtyD8ifMeHsGOtA/?utm_source=banner&utm_medium=main&utm_campaign=snsikon&utm_content=youtube" target="_blank" title="티스쿨원격교육연수원 유튜브"></a></li>
-            <li><a class="bookmark" href="javascript:window.external.AddFavorite('http://www.tschool.net/', '티스쿨원격교육연수원');" title="티스쿨원격교육연수원 즐겨찾기"></a></li>
-        </ul>
-
+        <div class="util">
+            <div class="social-box">
+                <ul class="social">
+                    <li><a class="bookmark" href="javascript:window.external.AddFavorite('http://www.tschool.net/', '티스쿨원격교육연수원');" title="티스쿨원격교육연수원 즐겨찾기"></a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/tschool.net/?utm_source=banner&utm_medium=main&utm_campaign=snsikon&utm_content=facebook" target="_blank" title="티스쿨원격교육연수원 페이스북"></a></li>
+                    <li><a class="blog" href="http://blog.naver.com/vstschool?utm_source=banner&utm_medium=main&utm_campaign=snsikon&utm_content=blog" target="_blank" title="티스쿨원격교육연수원 공식 블로그"></a></li>
+                    <li><a class="youtube" href="https://www.youtube.com/channel/UCZIN4TvOHtyD8ifMeHsGOtA/?utm_source=banner&utm_medium=main&utm_campaign=snsikon&utm_content=youtube" target="_blank" title="티스쿨원격교육연수원 유튜브"></a></li>
+                </ul>
+            </div>
+            <ul class="member_content not_login"> <!-- member_content :: 임시로 비로그인 시에는 not_login클래스, 로그인 시에는 login클래스를 붙여 분기처리 -->
+                <li class="con login">
+                    <div class="member_wrap">
+                        <p class="member_str"><span class="member_name"><!-- 이름 -->홍길동</span>선생님</p>
+                        <div class="member_box_wrap">
+                            <div class="member_box">
+                                <span class="member_box_tail"></span>
+                                <div class="member_info">
+                                    <div class="info"><p class="school"><!-- 학교 이름 -->평촌고등학교</p> / <p class="address">경기도 안양시 동안구<!-- 지역 --></p></div>
+                                    <div class="point"><p class="static_txt">포인트 </p><div class="dynamic_txt"><!-- 포인트 -->999,999<p>점</p></div></div>
+                                    <div class="coupon"><p class="static_txt">쿠폰 </p><div class="dynamic_txt"><!-- 쿠폰 개수 -->999,999<p>개</p></div></div>
+                                </div>
+                                <div class="btns">
+                                    <a class="edit_member_info" href="#">회원정보수정</a>
+                                    <a class="logout" href="#">로그아웃</a>
+                                </div>
+                                <div class="subject">
+                                    <div class="cur_value">과정을 선택해 주세요</div>
+                                    <ul class="list">
+                                        <li><a href="#">VR AR 로봇을 활용한 수업 기술과 교육의 융합시대!<!-- 과정 명 --></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="con not_login"><a class="login" href="../member/login.html">로그인</a></li>
+                <li class="con not_login"><a href="../member/join.html">회원가입</a></li>
+                <li class="con"><a href="../menu03/menu02.html">묻고답하기</a></li>
+                <li class="con"><a class="shopping" href="./menu04/menu02.html">장바구니</a></li>
+                <li class="con"><a class="search" href="#0">검색</a></li>
+            </ul>
+        </div>
+<!--
         <form name="search_form" class="search_form" action="">
             <fieldset>
                 <legend>강좌검색</legend>
@@ -30,52 +70,22 @@
                 <button class="btn_search" type="submit">검색</button>
             </fieldset>
         </form>
-
-        <ul class="member_content not_login"> <!-- member_content :: 임시로 비로그인 시에는 not_login클래스, 로그인 시에는 login클래스를 붙여 분기처리 -->
-            <li class="con login">
-                <div class="member_wrap">
-                    <p class="member_str"><span class="member_name"><!-- 이름 -->홍길동</span>선생님</p>
-                    <div class="member_box_wrap">
-                        <div class="member_box">
-                            <span class="member_box_tail"></span>
-                            <div class="member_info">
-                                <div class="info"><p class="school"><!-- 학교 이름 -->평촌고등학교</p> / <p class="address">경기도 안양시 동안구<!-- 지역 --></p></div>
-                                <div class="point"><p class="static_txt">포인트 </p><div class="dynamic_txt"><!-- 포인트 -->999,999<p>점</p></div></div>
-                                <div class="coupon"><p class="static_txt">쿠폰 </p><div class="dynamic_txt"><!-- 쿠폰 개수 -->999,999<p>개</p></div></div>
-                            </div>
-                            <div class="btns">
-                                <a class="edit_member_info" href="#">회원정보수정</a>
-                                <a class="logout" href="#">로그아웃</a>
-                            </div>
-                            <div class="subject">
-                                <div class="cur_value">과정을 선택해 주세요</div>
-                                <ul class="list">
-                                    <li><a href="#">VR AR 로봇을 활용한 수업 기술과 교육의 융합시대!<!-- 과정 명 --></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="con not_login"><a class="login" href="./member/login.html">로그인</a></li>
-            <li class="con not_login"><a href="./member/join.html">회원가입</a></li>
-            <li class="con"><a href="./menu03/menu04.html">FAQ</a></li>
-            <li class="con"><a href="./menu03/menu02.html">묻고답하기</a></li>
-            <li class="con"><a class="shopping" href="./menu04/menu02.html">장바구니</a></li>
-        </ul>
+-->
     </div>
 </div>
 
 <div class="gnb_container">
     <div class="content">
-        <h1><a class="logo_tschool" href="./">티스쿨 원격교육연수원</a></h1>
+        <div class="quick-info">
+            <a href="#0">빠른연수 : 2019년 02월 20일 종료</a>
+        </div>
         <div class="gnb">
             <ul class="gnb_main">
-                <li class="eq1"><a href="./menu01/menu01.html">직무연수<span class="blet"></span></a></li>
-                <li class="eq2"><a href="./menu02/menu01.html">자율연수<span class="blet"></span></a></li>
-                <li class="eq3"><a href="./menu03/menu01.html">연수지원<span class="blet"></span></a></li>
-                <li class="eq4"><a href="./menu04/menu01.html">나의강의실<span class="pencil"></span><span class="blet"></span></a></li>
-                <li class="eq5"><a href="./menu05/menu01.html">이벤트<span class="blet"></span></a></li>
+                <li class="eq1"><a href="../menu01/menu01.html">직무연수<span class="blet"></span></a></li>
+                <li class="eq2"><a href="../menu02/menu01.html">자율연수<span class="blet"></span></a></li>
+                <li class="eq3"><a href="../menu03/menu01.html">연수지원<span class="blet"></span></a></li>
+                <li class="eq4"><a href="../menu04/menu01.html">나의강의실<span class="blet"></span></a></li>
+                <li class="eq5"><a href="../menu05/menu01.html">이벤트<span class="blet"></span></a></li>
             </ul>
         </div>
     </div>
@@ -86,48 +96,48 @@
             </li>
             <li class="sub" data-eq="eq1">
                 <ul>
-                    <li><a href="./menu01/menu01.html">연수신청</a></li>
-                    <li><a href="./menu01/menu02.html">교육청연수</a></li>
-                    <li><a href="./menu01/menu03.html">단체신청</a></li>
-                    <li><a href="./menu01/menu04.html">테마연수</a></li>
-                    <li><a href="./menu01/menu05.html">연수일정</a></li>
+                    <li><a href="../menu01/menu01.html">연수신청</a></li>
+                    <li><a href="../menu01/menu02.html">교육청연수</a></li>
+                    <li><a href="../menu01/menu03.html">단체신청</a></li>
+                    <li><a href="../menu01/menu04.html">테마연수</a></li>
+                    <li><a href="../menu01/menu05.html">연수일정</a></li>
                 </ul>
             </li>
             <li class="sub" data-eq="eq2">
                 <ul>
-                    <li><a href="./menu02/menu01.html">연수신청</a></li>
-                    <li><a href="./menu02/menu02.html">무료특강</a></li>
-                    <li><a href="./menu02/menu03.html">집합연수</a></li>
+                    <li><a href="../menu02/menu01.html">연수신청</a></li>
+                    <li><a href="../menu02/menu02.html">무료특강</a></li>
+                    <li><a href="../menu02/menu03.html">집합연수</a></li>
                 </ul>
             </li>
             <li class="sub" data-eq="eq3">
                 <ul>
-                    <li><a href="./menu03/menu01.html">공지사항</a></li>
-                    <li><a href="./menu03/menu02.html">묻고 답하기</a></li>
-                    <li><a href="./menu03/menu03.html">연수후기</a></li>
-                    <li><a href="./menu03/menu04.html">자주묻는 질문</a></li>
-                    <li><a href="./menu03/menu05.html">연수자료실</a></li>
-                    <li><a href="./menu03/menu06.html">연수안내</a></li>
-                    <li><a href="./menu03/menu07.html">시스템지원</a></li>
+                    <li><a href="../menu03/menu01.html">공지사항</a></li>
+                    <li><a href="../menu03/menu02.html">묻고 답하기</a></li>
+                    <li><a href="../menu03/menu03.html">연수후기</a></li>
+                    <li><a href="../menu03/menu04.html">자주묻는 질문</a></li>
+                    <li><a href="../menu03/menu05.html">연수자료실</a></li>
+                    <li><a href="../menu03/menu06.html">연수안내</a></li>
+                    <li><a href="../menu03/menu07.html">시스템지원</a></li>
                 </ul>
             </li>
             <li class="sub" data-eq="eq4">
                 <ul>
-                    <li><a href="./menu04/menu01.html">수강현황</a></li>
-                    <li><a href="./menu04/menu02.html">장바구니</a></li>
-                    <li><a href="./menu04/menu03.html">결제내역</a></li>
-                    <li><a href="./menu04/menu04.html">성적/이수</a></li>
-                    <li><a href="./menu04/menu05.html">수강연기</a></li>
-                    <li><a href="./menu04/menu06.html">포인트/쿠폰</a></li>
-                    <li><a href="./menu04/menu07.html">회원정보수정</a></li>
-                    <li><a href="./menu04/menu08.html">나의 문의 글</a></li>
+                    <li><a href="../menu04/menu01.html">수강현황</a></li>
+                    <li><a href="../menu04/menu02.html">장바구니</a></li>
+                    <li><a href="../menu04/menu03.html">결제내역</a></li>
+                    <li><a href="../menu04/menu04.html">성적/이수</a></li>
+                    <li><a href="../menu04/menu05.html">수강연기</a></li>
+                    <li><a href="../menu04/menu06.html">포인트/쿠폰</a></li>
+                    <li><a href="../menu04/menu07.html">회원정보수정</a></li>
+                    <li><a href="../menu04/menu08.html">나의 문의 글</a></li>
                 </ul>
             </li>
             <li class="sub" data-eq="eq5">
                 <ul>
-                    <li><a href="./menu05/menu01.html">이벤트</a></li>
-                    <li><a href="./menu05/menu02.html">교육설문</a></li>
-                    <li><a href="./menu05/menu03.html">월간T스토리</a></li>
+                    <li><a href="../menu05/menu01.html">이벤트</a></li>
+                    <li><a href="../menu05/menu02.html">교육설문</a></li>
+                    <li><a href="../menu05/menu03.html">월간T스토리</a></li>
                 </ul>
             </li>
         </ul>
