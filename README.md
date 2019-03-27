@@ -1,2 +1,2 @@
-# PUTS
-http://210.101.173.239:8080/design/puts/html/
+# Tschool
+http://www.irchain.co.kr:8088/new_main/
