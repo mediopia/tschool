@@ -21,7 +21,7 @@
                     <li><a class="youtube" href="https://www.youtube.com/channel/UCZIN4TvOHtyD8ifMeHsGOtA/?utm_source=banner&utm_medium=main&utm_campaign=snsikon&utm_content=youtube" target="_blank" title="티스쿨원격교육연수원 유튜브"></a></li>
                 </ul>
             </div>
-            <ul class="member_content not_login"> <!-- member_content :: 임시로 비로그인 시에는 not_login클래스, 로그인 시에는 login클래스를 붙여 분기처리 -->
+            <ul class="member_content"> <!-- member_content :: 임시로 비로그인 시에는 not_login클래스, 로그인 시에는 login클래스를 붙여 분기처리 -->
                 <li class="con login">
                     <div class="member_wrap">
                         <p class="member_str"><span class="member_name"><!-- 이름 -->홍길동</span>선생님</p>
@@ -47,30 +47,25 @@
                         </div>
                     </div>
                 </li>
-                <li class="con not_login"><a class="login" href="../member/login.html">로그인</a></li>
-                <li class="con not_login"><a href="../member/join.html">회원가입</a></li>
-                <li class="con"><a href="../menu03/menu02.html">묻고답하기</a></li>
+                <li class="con not_login"><a class="login" href="./member/login.html">로그인</a></li>
+                <li class="con not_login"><a href="./member/join.html">회원가입</a></li>
+                <li class="con"><a href="./menu03/menu02.html">묻고답하기</a></li>
                 <li class="con"><a class="shopping" href="./menu04/menu02.html">장바구니</a></li>
                 <li class="con"><a class="search" href="#0">검색</a></li>
             </ul>
         </div>
-<!--
-        <form name="search_form" class="search_form" action="">
-            <fieldset>
-                <legend>강좌검색</legend>
-                <div class="category">
-                    <div class="cur_value">직무연수</div>
-                    <ul class="list">
-                        <li>직무연수</li>
-                        <li>자율연수</li>
-                    </ul>
+        <div class="search_areaW" style="display: none;">
+            <div class="search_area">
+                <div class="search_in">
+                    <form name="search_form" method="" action="">
+                    <p>
+                        <input type="text" name="txt_search" id="txt_search" placeholder="연수명을 검색해 보세요" class="input">
+                    </p>
+                    <a href="#0" class="bt">검색</a>
+                    </form>
                 </div>
-                <span class="div_line"></span>
-                <input type="text" name="search" value="" id="search_text" placeholder="직무연수명을 입력해 주세요" alt="직무연수명을 입력해 주세요" onclick="">
-                <button class="btn_search" type="submit">검색</button>
-            </fieldset>
-        </form>
--->
+            </div>
+        </div>
     </div>
 </div>
 
@@ -81,11 +76,11 @@
         </div>
         <div class="gnb">
             <ul class="gnb_main">
-                <li class="eq1"><a href="../menu01/menu01.html">직무연수<span class="blet"></span></a></li>
-                <li class="eq2"><a href="../menu02/menu01.html">자율연수<span class="blet"></span></a></li>
-                <li class="eq3"><a href="../menu03/menu01.html">연수지원<span class="blet"></span></a></li>
-                <li class="eq4"><a href="../menu04/menu01.html">나의강의실<span class="blet"></span></a></li>
-                <li class="eq5"><a href="../menu05/menu01.html">이벤트<span class="blet"></span></a></li>
+                <li class="eq1"><a href="../menu01/menu01.html">직무연수</a></li>
+                <li class="eq2"><a href="../menu02/menu01.html">자율연수</a></li>
+                <li class="eq3"><a href="../menu03/menu01.html">연수지원</a></li>
+                <li class="eq4"><a href="../menu04/menu01.html">나의강의실</a></li>
+                <li class="eq5"><a href="../menu05/menu01.html">이벤트</a></li>
             </ul>
         </div>
     </div>
