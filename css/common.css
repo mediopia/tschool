@@ -55,7 +55,7 @@ body.min_w{visibility:hidden; min-width:1116px;}
 /****************************************/
 /* common */
 /* 세부 페이지 공통 */
-.board_wrap{position:relative; width:880px; margin:0 auto 70px;}
+.board_wrap {position:relative; width:880px; margin: 0 0 70px 36px;}
 .board_wrap:after{content:""; display:block; clear:both;}
 .board_wrap>.title{/*margin-bottom:51px;*/ padding-bottom:10px; width:100%; /*border-bottom:2px solid #333;*/}
 .board_wrap .title h3{display:inline-block; font-weight:bold; font-size:30px; line-height:30px; color:#111; vertical-align:bottom;}
@@ -473,8 +473,9 @@ p.blet_circle span, ul.blet_circle span{color:#0077e5;}
 #section.aside_none{padding:0 176px 0 0;}
 
 /* 좌측 */
-#aside{position:absolute; top:0; left:0; display:inline-block; width:186px; vertical-align:top; box-sizing:border-box;}
+#aside {position:absolute; top:0; left:0; display:inline-block; width:205px; vertical-align:top; box-sizing:border-box;}
 /* 교육청 배너 */
+#aside.left_box {width: 186px;}
 #aside .edu_wrap{display:inline-block; width:100%;}
 #aside .edu_wrap .tab_btns{border: 1px solid #e4e4e5; border-bottom: none;}
 #aside .edu_wrap .tab_btns:after {content:""; display:block; clear:both;}
@@ -508,7 +509,7 @@ p.blet_circle span, ul.blet_circle span{color:#0077e5;}
 #aside .aside_menu_wrap h2{display:inline-block; width:100%; height:52px; background:#00b5e5; font-weight:bold; font-size:21px; line-height:51px; color:#fff; text-align:center; box-sizing:border-box;}
 #aside .aside_menu_wrap ul{display:inline-block; width:100%;}
 #aside .aside_menu_wrap ul li{width:100%; height:50px; border-bottom:1px solid #ccc; box-sizing:border-box;}
-#aside .aside_menu_wrap ul li a{display:block; padding-left:10px; line-height:50px; color:#555; font-size:17px; font-weight:bold; background:url(../image/common/aside_arrow.png) no-repeat; background-position:170px 21px;}
+#aside .aside_menu_wrap ul li a{display:block; padding-left:10px; line-height:50px; color:#555; font-size:17px; font-weight:500; background:url(../image/common/aside_arrow.png) no-repeat; background-position:180px 21px;}
 #aside .aside_menu_wrap ul li a.small{letter-spacing:-1px;}
 #aside .aside_menu_wrap ul li.on a,
 #aside .aside_menu_wrap ul li a:hover{color:#00b5e5;}
