@@ -33,6 +33,23 @@
         url(../font/NotoSansKR-Bold.otf) format('opentype');
  }
 
+@font-face {
+   font-family: 'Nanum Square';
+   font-style: normal;
+   font-weight: 400;
+   src: url(../font/NanumSquareR.woff2) format('woff2'),
+        url(../font/NanumSquareR.woff) format('woff'),
+        url(../font/NanumSquareR.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Nanum Square';
+   font-style: normal;
+   font-weight: 700;
+   src: url(../font/NanumSquareB.woff2) format('woff2'),
+        url(../font/NanumSquareB.woff) format('woff'),
+        url(../font/NanumSquareB.otf) format('opentype');
+ }
+
 body.min_w{visibility:hidden; min-width:1116px;}
 #content {}
 /****************************************/
@@ -405,7 +422,7 @@ p.blet_circle span, ul.blet_circle span{color:#0077e5;}
 .gnb_container .gnb{float: right;}
 .gnb_container .gnb .gnb_main{}
 .gnb_container .gnb .gnb_main li{position:relative; float: left; width: 150px; text-align:center;}
-.gnb_container .gnb .gnb_main li a{display:block; padding: 10px 0; color:#000; font-size:21px; font-weight:500; text-decoration:none; border-bottom:3px solid #fff;}
+.gnb_container .gnb .gnb_main li a{display:block; padding: 13px 0 10px 0; color:#000; font-family:'Nanum Square', sans-serif; font-size:21px; font-weight:700; text-decoration:none; border-bottom:3px solid #fff;}
 .gnb_container .gnb .gnb_main li a .blet{display:none; position:absolute; bottom:-6px; left:calc(50% - 5px); width:10px; height:7px; background:url(../image/common/header_blet.png) no-repeat; z-index: 99;}
 .gnb_container .gnb .gnb_main li a .pencil{display:inline-block; margin-top:37px; width:22px; height:29px; background:url(../image/common/header_pencil.png) no-repeat;}
 .gnb_container .gnb .gnb_main li.on a,
@@ -417,7 +434,7 @@ p.blet_circle span, ul.blet_circle span{color:#0077e5;}
 .gnb_container .gnb_sub_container .ad{float: left; width:366px; height:100%; border-right:1px solid #ccc; box-sizing:border-box;}
 .gnb_container .gnb_sub_container .ad .ad_img{display:inline-block; margin-top:65px; width:340px; height:175px; background:url(../image/banner/header_gnb_banner.png) no-repeat;}
 .gnb_container .gnb_sub_container .sub{float: left; padding-top:10px; width:150px; height:100%; border-right:1px solid #ccc; vertical-align:top; box-sizing:border-box;}
-.gnb_container .gnb_sub_container .sub li a{display:block; padding:5px 15px; font-size:16px; color:#555; text-decoration:none;}
+.gnb_container .gnb_sub_container .sub li a{display:block; padding:5px 15px; font-family:'Nanum Square', sans-serif; font-size:15px; color:#555; text-decoration:none;}
 .gnb_container .gnb_sub_container .sub li a:hover{color:#00b5e5;}
 /* -- 메인, 서브메뉴 영역 -- */
 
