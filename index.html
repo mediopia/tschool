@@ -31,8 +31,11 @@
 		var $subject_tab_btns;
 		var $subject_list;
 		var $lecture_banner;
+		var $lecture_banner2;
+        var $review_list;
 		var $bottom_banner;
 		var $notice_wrap;
+        var $gnb_banner;
 
 		function setDOMS_page() {
 			$top_banner = $('#top_banner .banner_wrap ul');
@@ -41,9 +44,12 @@
 			$subject_tab_btns = $('.subject_wrap .tab_btns');
 			$subject_list = $('.subject_list');
 			$lecture_banner = $('.lecture_banner .right ul');
-			$bottom_banner = $('.bottom_banner .banner_wrap ul');
+			$lecture_banner2 = $('.lecture_banner .left ul');
+			$review_list = $('.review_list');
+            $bottom_banner = $('.bottom_banner .banner_wrap ul');
 			$notice_wrap = $('.notice_wrap');
 			$notice_btns = $('.notice_wrap .tab_btns');
+            $gnb_banner = $('.gnb_banner');
 		}
 
 		$(window).load(function() {
@@ -54,7 +60,7 @@
 				auto: true,
 				pager: true,
 				useCSS: true,
-				mode: 'fade',
+				mode: 'horizontal',
 				easing: 'easeout',
 				speed: 500,
 				pause: 10000
@@ -75,14 +81,7 @@
 				speed: 500,
 				pause: 10000
 			});
-			//-- 테마연수 배너
-
-			// 베스트 후기
-			$('.review_list li p').ellipsis();
-			//-- 베스트 후기
-
-			//하단 배너
-			$bottom_banner.bxSlider({
+            $lecture_banner2.bxSlider({
 				auto: true,
 				pager: true,
 				useCSS: true,
@@ -91,8 +90,57 @@
 				speed: 500,
 				pause: 10000
 			});
+			//-- 테마연수 배너
+
+			// 베스트 후기
+			$('.review_list li p').ellipsis();
+			//-- 베스트 후기
+
+            //리뷰리스트
+			$review_list.bxSlider({
+				auto: true,
+				pager: true,
+                controls: false,
+				useCSS: true,
+				mode: 'horizontal',
+				easing: 'easeout',
+				speed: 500,
+				pause: 10000,
+                slideWidth: 300,
+                minSlides: 3,
+                maxSlides: 3,
+                slideMargin: 10
+			});
+
+			//하단 배너
+			$bottom_banner.bxSlider({
+				auto: true,
+				pager: true,
+				useCSS: true,
+				mode: 'vertical',
+				easing: 'easeout',
+				speed: 500,
+				pause: 10000
+			});
 			//-- 하단 배너
+
+            //GNB 배너
+			$gnb_banner.bxSlider({
+				auto: true,
+				pager: true,
+                controls: false,
+				useCSS: true,
+				mode: 'fade',
+				easing: 'easeout',
+				speed: 500,
+				pause: 5000
+			});
+            $(".gnb").on('mouseover', function(e) {
+                e.preventDefault();
+                $gnb_banner.reloadSlider();
+            });
 		});
+
 	</script>
 </head>
 
@@ -223,7 +271,10 @@
 				<div class="gnb_sub_container">
 					<ul class="gnb_sub">
 						<li class="ad">
-							<a class="ad_img" href="#"></a>
+                            <ul class="gnb_banner">
+                                <li><a href="#"><img src="image/banner/header_gnb_banner.png" title="안전한 학교 만들기"></a></li>
+                                <li><a href="#"><img src="image/banner/header_gnb_banner2.png" title="안전한 학교 만들기2"></a></li>
+                            </ul>
 						</li>
 						<li class="sub" data-eq="eq1">
 							<ul>
@@ -768,9 +819,16 @@
 					<div id="innner_w">
 						<!-- 과정 홍보 배너 -->
 						<div class="lecture_banner">
-							<div class="left"><a href="#"><img src="./image/banner/lecture01.png" /></a></div>
-							<div class="left"><a href="#"><img src="./image/banner/lecture02.png" /></a></div>
-
+                            <div class="left">
+                                <ul>
+                                    <li><a href="#"><img src="./image/banner/lecture01.png" /></a></li>
+                                    <li><a href="#"><img src="./image/banner/lecture0102.png" /></a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#"><img src="./image/banner/lecture02.png" /></a></li>
+                                    <li><a href="#"><img src="./image/banner/lecture0202.png" /></a></li>
+                                </ul>
+                            </div>
 							<div class="right_wrap">
 								<div class="right right_banner01 first">
 									<ul>
@@ -806,7 +864,34 @@
 							</div>
 
 							<ul class="content review_list">
-								<li class="first">
+								<li>
+									<a href="#">
+										<i><img src="./image/common/label_person.png" /></i>
+										<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
+										<p class="multiline">그 동안 잊고 있던 우리의 역사를 다시 생각해보고 알아가는 시간이 되었습니다. 우리 민족이 얼마나 열심히 또 얼마나 힘들게 지켜왔는지.. 현재 우리의 삶에 감사하고, '대한민국'이라는 이름의 소중함을 느낄 수 있었습니다. 우리의 역사에 대해 꾸준히 공부해야 할 것 같아요. 소중한 시간이었습니다.</p>
+										<em>yes****선생님</em>
+										<span class="label best">BEST 연수후기</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i><img src="./image/common/label_person.png" /></i>
+										<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
+										<p class="multiline">그 동안 잊고 있던 우리의 역사를 다시 생각해보고 알아가는 시간이 되었습니다. 우리 민족이 얼마나 열심히 또 얼마나 힘들게 지켜왔는지.. 현재 우리의 삶에 감사하고, '대한민국'이라는 이름의 소중함을 느낄 수 있었습니다. 우리의 역사에 대해 꾸준히 공부해야 할 것 같아요. 소중한 시간이었습니다.</p>
+										<em>yes****선생님</em>
+										<span class="label best">BEST 연수후기</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i><img src="./image/common/label_person.png" /></i>
+										<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
+										<p class="multiline">그 동안 잊고 있던 우리의 역사를 다시 생각해보고 알아가는 시간이 되었습니다. 우리 민족이 얼마나 열심히 또 얼마나 힘들게 지켜왔는지.. 현재 우리의 삶에 감사하고, '대한민국'이라는 이름의 소중함을 느낄 수 있었습니다. 우리의 역사에 대해 꾸준히 공부해야 할 것 같아요. 소중한 시간이었습니다.</p>
+										<em>yes****선생님</em>
+										<span class="label best">BEST 연수후기</span>
+									</a>
+								</li>
+                                <li>
 									<a href="#">
 										<i><img src="./image/common/label_person.png" /></i>
 										<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
@@ -825,6 +910,33 @@
 									</a>
 								</li>
 								<li class="last">
+									<a href="#">
+										<i><img src="./image/common/label_person.png" /></i>
+										<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
+										<p class="multiline">그 동안 잊고 있던 우리의 역사를 다시 생각해보고 알아가는 시간이 되었습니다. 우리 민족이 얼마나 열심히 또 얼마나 힘들게 지켜왔는지.. 현재 우리의 삶에 감사하고, '대한민국'이라는 이름의 소중함을 느낄 수 있었습니다. 우리의 역사에 대해 꾸준히 공부해야 할 것 같아요. 소중한 시간이었습니다.</p>
+										<em>yes****선생님</em>
+										<span class="label best">BEST 연수후기</span>
+									</a>
+								</li>
+                                <li>
+									<a href="#">
+										<i><img src="./image/common/label_person.png" /></i>
+										<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
+										<p class="multiline">그 동안 잊고 있던 우리의 역사를 다시 생각해보고 알아가는 시간이 되었습니다. 우리 민족이 얼마나 열심히 또 얼마나 힘들게 지켜왔는지.. 현재 우리의 삶에 감사하고, '대한민국'이라는 이름의 소중함을 느낄 수 있었습니다. 우리의 역사에 대해 꾸준히 공부해야 할 것 같아요. 소중한 시간이었습니다.</p>
+										<em>yes****선생님</em>
+										<span class="label best">BEST 연수후기</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i><img src="./image/common/label_person.png" /></i>
+										<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
+										<p class="multiline">그 동안 잊고 있던 우리의 역사를 다시 생각해보고 알아가는 시간이 되었습니다. 우리 민족이 얼마나 열심히 또 얼마나 힘들게 지켜왔는지.. 현재 우리의 삶에 감사하고, '대한민국'이라는 이름의 소중함을 느낄 수 있었습니다. 우리의 역사에 대해 꾸준히 공부해야 할 것 같아요. 소중한 시간이었습니다.</p>
+										<em>yes****선생님</em>
+										<span class="label best">BEST 연수후기</span>
+									</a>
+								</li>
+								<li>
 									<a href="#">
 										<i><img src="./image/common/label_person.png" /></i>
 										<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>

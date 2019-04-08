@@ -79,8 +79,23 @@ $(window).load(function(){
 							<a class="fl_r" href="./find_idpw.html">아이디/비밀번호 찾기</a>
 						</div>
 					</form>
-
-					<a class="ad_banner" href=""><img src="../image/banner/login_banner.png"/></a>
+                    <div class="ad_banner">
+                        <ul>
+                            <li><a href=""><img src="../image/banner/login_banner.png"/></a></li>
+                            <li><a href=""><img src="../image/banner/login_banner.png"/></a></li>
+                        </ul>
+                    </div>
+                    <script>
+                        $('.ad_banner ul').bxSlider({
+                            auto: true,
+                            pager: true,
+                            useCSS: true,
+                            mode: 'fade',
+                            easing: 'easeout',
+                            speed: 500,
+                            pause: 10000
+                        });
+                    </script>
 				</div>
 			</div>
 			<!-- //article -->
