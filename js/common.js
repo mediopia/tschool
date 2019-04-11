@@ -50,7 +50,7 @@ $(window).load(function(){
     //검색창 관련
     $('.search').click(function(){
         $(this).toggleClass('on');
-        $(this).parents().find('.search_areaW').slideToggle(200);
+        $(this).parents().find('.search_area').toggleClass('show');
     });
 
 	//회원 정보 - 수강 과정 목록 관련
