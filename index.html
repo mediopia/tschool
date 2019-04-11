@@ -31,7 +31,7 @@
 		var $subject_tab_btns;
 		var $subject_list;
 		var $lecture_banner;
-		var $lecture_banner2;
+        var $lecture_banner2;
         var $review_list;
 		var $bottom_banner;
 		var $notice_wrap;
@@ -44,7 +44,7 @@
 			$subject_tab_btns = $('.subject_wrap .tab_btns');
 			$subject_list = $('.subject_list');
 			$lecture_banner = $('.lecture_banner .right ul');
-			$lecture_banner2 = $('.lecture_banner .left ul');
+            $lecture_banner2 = $('.lecture_banner .left ul');
 			$review_list = $('.review_list');
             $bottom_banner = $('.bottom_banner .banner_wrap ul');
 			$notice_wrap = $('.notice_wrap');
@@ -76,7 +76,7 @@
 				auto: true,
 				pager: true,
 				useCSS: true,
-				mode: 'fade',
+                mode: 'fade',
 				easing: 'easeout',
 				speed: 500,
 				pause: 10000
@@ -111,6 +111,7 @@
                 maxSlides: 3,
                 slideMargin: 10
 			});
+            //-- 리뷰리스트
 
 			//하단 배너
 			$bottom_banner.bxSlider({
@@ -139,8 +140,8 @@
                 e.preventDefault();
                 $gnb_banner.reloadSlider();
             });
+            //-- GNB 배너
 		});
-
 	</script>
 </head>
 
@@ -149,10 +150,10 @@
 		<!-- header 공통 -->
 		<script>
 			$(function(){
-          $("#footer").load("./inc/footer.html");
-          $("#nav").load("./inc/nav.html");
-      });
-  </script>
+			$("#footer").load("./inc/footer.html");
+			$("#nav").load("./inc/nav.html");
+          });
+		</script>
 
 		<div id="header">
 			<div class="ad_container">
@@ -271,7 +272,7 @@
 				<div class="gnb_sub_container">
 					<ul class="gnb_sub">
 						<li class="ad">
-                            <ul class="gnb_banner">
+							<ul class="gnb_banner">
                                 <li><a href="#"><img src="image/banner/header_gnb_banner.png" title="안전한 학교 만들기"></a></li>
                                 <li><a href="#"><img src="image/banner/header_gnb_banner2.png" title="안전한 학교 만들기2"></a></li>
                             </ul>
@@ -331,8 +332,8 @@
 		<!-- container -->
 		<div id="container">
 
-			<!-- top_banner -->
-			 <div id="top_banner">
+            <!-- top_banner -->
+            <div id="top_banner">
                 <div class="banner_wrap">
                     <ul>
                         <li style="background:#a6dce4;"><a href="#"><img src="./image/banner/top_banner_01.png"/></a></li>
@@ -342,8 +343,10 @@
                 </div>
             </div>
             <!-- //top_banner -->
+
+
 			<!-- section -->
-			<div id="section">
+			<div id="section_m">
 				<!-- innner_w -->
 				<div id="innner_w">
 					<!-- aside -->
@@ -390,7 +393,17 @@
 								</ul>
 								<ul class="edu_banner my">
 									<li class="edu_thumb"><span>등록된 내용이 없습니다.</span></li>
+                                    <li class="edu_thumb"><span><img src="./image/banner/aside_blog.png"></span></li>
 								</ul>
+                                <!-- 좌측배너 -->
+                                <div class="m_left_ban">
+                                    <a href="#"><img src="./image/banner/aside_blog.png"></a>
+                                </div>
+
+                                <!-- 좌측배너 -->
+                                <div class="m_left_ban">
+                                    <a href="#"><img src="./image/banner/aside_viva.png"></a>
+                                </div>
 							</div>
 						</div>
 						<!-- //좌측 교육청 -->
@@ -819,7 +832,7 @@
 					<div id="innner_w">
 						<!-- 과정 홍보 배너 -->
 						<div class="lecture_banner">
-                            <div class="left">
+							<div class="left">
                                 <ul>
                                     <li><a href="#"><img src="./image/banner/lecture01.png" /></a></li>
                                     <li><a href="#"><img src="./image/banner/lecture0102.png" /></a></li>
@@ -829,6 +842,7 @@
                                     <li><a href="#"><img src="./image/banner/lecture0202.png" /></a></li>
                                 </ul>
                             </div>
+
 							<div class="right_wrap">
 								<div class="right right_banner01 first">
 									<ul>
@@ -909,7 +923,7 @@
 										<span class="label best">BEST 연수후기</span>
 									</a>
 								</li>
-								<li class="last">
+								<li>
 									<a href="#">
 										<i><img src="./image/common/label_person.png" /></i>
 										<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
@@ -918,7 +932,7 @@
 										<span class="label best">BEST 연수후기</span>
 									</a>
 								</li>
-                                <li>
+								<li>
 									<a href="#">
 										<i><img src="./image/common/label_person.png" /></i>
 										<strong>그 동안 잊고 있던 우리의 역사를 다시...</strong>
@@ -1028,5 +1042,8 @@
 		<div id="footer"></div>
 		<!-- //footer 공통 -->
 	</div>
+
+
 </body>
+
 </html>
