@@ -84,7 +84,7 @@ $(window).load(function(){
 
 			<div id="article">
 				<!-- board_wrap -->
-				<div class="board_wrap menu03_01">
+				<div class="board_wrap menu03_01 margin-bottom-30">
 					<div class="title">
 						<h3>공지사항</h3>
 						<p class="route">홈 &gt; 연수지원 &gt; <span>공지사항</span></p>
@@ -107,8 +107,8 @@ $(window).load(function(){
 						</thead>
 						<tbody>
 							<tr>
-								<td><strong>공지</strong></td>
-								<td class="ta_l"><a href="./sub01.html">[공지] 교육부 공시 안전연수 운영안</a></td>
+								<td><span class="txt_normal txt_blue2">공지</span></td>
+								<td class="ta_l"><a href="./sub01.html" class="txt_normal txt_blue2">[공지] 교육부 공시 안전연수 운영안</a></td><!-- 공지에는 클래스명 txt_blue2이 들어가야 함 -->
 								<td>2018-09-05</td>
 								<td>12337</td>
 							</tr>
@@ -196,22 +196,26 @@ $(window).load(function(){
 				</div>
 				<!-- //board_wrap -->
 
-				<div class="pager">
-					<a class="prev" href="#">이전 페이지</a>
-					<ul>
-						<li><a class="on" href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">6</a></li>
-						<li><a href="#">7</a></li>
-						<li><a href="#">8</a></li>
-						<li><a href="#">9</a></li>
-						<li><a href="#">10</a></li>
-					</ul>
-					<a class="next" href="#">다음 페이지</a>
-				</div>
+				<!-- 페이지 네비게이션 -->
+                <div class="pager">
+                    <a class="first" href="#">처음 페이지</a>
+                    <a class="prev" href="#">이전 페이지</a>
+                    <ul>
+                        <li><a class="on" href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                    </ul>
+                    <a class="next" href="#">다음 페이지</a>
+                    <a class="last" href="#">마지막 페이지</a>
+                </div>
+                <!-- /페이지 네비게이션 -->
 
 				<div class="bottom_search_wrap">
 					<select name="bottom_search" id="bottom_search">

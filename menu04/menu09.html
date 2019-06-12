@@ -92,14 +92,13 @@ $(window).load(function(){
 					</div>
 
 					<form class="guide_wrap">
-						<h4>탈퇴안내</h4>
-						<p class="plain_text">안녕하세요?<br>티스쿨 원격교육 연수원 입니다.<br>회원 탈퇴 시, 꼭 확인해주세요</p>
+						<p class="plain_text txt_red txt_bold txt_s18">회원 탈퇴 시, 꼭 확인해주세요</p>
 						<div class="text_contents">
 							<h5>회원 탈퇴 하시면</h5>
 							<ul class="blet_circle">
 								<li>티스쿨 사이트의 연수 서비스(수강신청/영수증/이수증 출력 등) 및 모든 로그인이 필요한 서비스를 이용하실 수 없습니다.</li>
 								<li>과거의 연수 내역, 구매 내역, 게시글 기록 내용을 조회하실 수 없습니다.</li>
-								<li>동일한 아이디로 재가입이 불가능 하며, 사이트 이용을 다시 원하실 경우 7일 후 신규회원으로 다시 가입하실 수 있습니다.</li>
+								<li>동일한 아이디로 재가입이 불가능 하며, 사이트 이용을 다시 원하실 경우 신규회원으로 다시 가입하실 수 있습니다.</li>
 							</ul>
 							<h5>탈퇴 후 삭제 내역</h5>
 							탈퇴 후 회원정보와 서비스가 아래와 같이 삭제되며 삭제된 데이터는 복구되지 않습니다.
@@ -112,17 +111,22 @@ $(window).load(function(){
 							운영지침에 따라 아래와 같이 유지됩니다.
 							<ul class="blet_circle">
 								<li>이수내역 요청 시 본인확인을 위한 기본정보 ( ID, 성명, 생년월일 )</li>
-								<li>수강내역 및 이수내역 교육청 보고 정보<br>(시험응시 결과, 과제 내용, 최종 성적, 소속학교, 나이스 개인번호 , 지명번호 등 )</li>
+								<li>수강내역 및 이수내역 교육청 보고 정보<br>(시험응시 결과, 과제 내용, 최종 성적, 소속학교, 나이스 개인번호 등 )</li>
 								<li>결제, 구매내역 (5년간 보유)</li>
-								<li>각종 게시판의 게시글<br>회원탈퇴를 하시면 삭제되신 아이디로 재가입이 불가능 하오니 신중히 고려하여 주시기 바랍니다.<br>탈퇴를 원하시면 아래 회원정보를 정확히 입력해 주시기 바랍니다.</li>
+								<li>각종 게시판의 게시글<br>
+                                    <span class="txt_orange dpb">회원탈퇴를 하시면 삭제되신 아이디로 재가입이 불가능 하오니 신중히 고려하여 주시기 바랍니다.</span>
+                                    <span class="txt_orange dpb">탈퇴를 원하시면 아래 회원정보를 정확히 입력해 주시기 바랍니다.</span>
+                                </li>
 							</ul>
 						</div>
-						<div class="confirm_password">
-							<p class="hide">개인정보보호를 위해 비밀번호를 다시 한번 입력해 주세요.</p>
-							<fieldset>
-								<label for="pass">비밀번호</label><input type="password" name="member_password" id="member_password"><a id="btn_submit" class="btn_grey" href="#">확인</a>
-							</fieldset>
-						</div>
+						<form class="guide_wrap">
+                            <div class="confirm_password">
+                                <p class="ta_c"><span class="dpb txt_s36">개인정보보호를 위해</span><span class="txt_s18">비밀번호를 다시 한번 입력해 주세요.</span></p>
+                                <fieldset>
+                                    <label for="pass">비밀번호</label><input type="password" name="member_password" id="member_password"><a class="btn btn-default form_side" href="#">확인</a>
+                                </fieldset>
+                            </div>
+                        </form>
 					</form>
 
 				</div>

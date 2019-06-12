@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq2').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(0).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+	//검색창 관련
+	$('.lecture_wrap .category').on('click', function(){
+		var $this = $(this);
+		if($this.hasClass('open')){
+			$this.removeClass('open');
+		}else{
+			$this.addClass('open');
+		}
+	});
+
+	$('.lecture_wrap .category li').on('click', function(){
+		$this = $(this);
+		$('.lecture_wrap .category .cur_value').html($this.html());
+	});
+	//--검색창 관련
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>자율연수</h2>
+					<ul>
+						<li><a href="./menu01.html">연수신청</a></li>
+						<li><a href="./menu02.html">무료특강</a></li>
+						<li><a href="./menu03.html">집합연수</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu01_ex">
+					<div class="title">
+						<h3>연수신청</h3>
+						<p class="route">홈 &gt; 직무연수 &gt; <span>연수신청</span></p>
+					</div>
+
+					<div class="info_wrap">
+						<div class="lecture_title">
+							<p><span>나를 찾는 인생 힐링, 미술관에서 보는 유럽의 문화와 역사</span><span class="can_mobile"></span></p>
+						</div>
+						<table class="table_template01">
+							<colgroup>
+								<col width="*">
+                                <col width="12%">
+                                <col width="24%">
+                                <col width="12%">
+                                <col width="24%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan="4">
+										<img src="../image/data/thumbnail_job/thumb_001.png" alt="AR, VR, 로봇을 활용한 수업">
+									</td>
+									<th>연수분야</th>
+									<td class="ta_l">직무</td>
+									<th>연수시간</th>
+									<td class="ta_l">15시간 / 1학점</td>
+								</tr>
+								<tr>
+									<th>연수기간</th>
+									<td class="ta_l"><span>2</span>주</td>
+									<th>모집정원</th>
+									<td class="ta_l"><span>500</span>명</td>
+								</tr>
+								<tr>
+									<th>연수비</th>
+                                    <td class="ta_l">70,000원&nbsp;&nbsp;<strong class="colorG">63,000원</strong> <strong class="colorL">(10%)</strong></td>
+									<th>교재비</th>
+									<td class="ta_l">-</td>
+								</tr>
+								<tr>
+									<th>강사</th>
+									<td class="ta_l" colspan="3"><strong>최만</strong></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btns">
+							<a class="btn_share btn_facebook" href="javascript:SNS.Share('중등 수업 평가 혁신', 0);">페이스북</a>
+							<a class="btn_share btn_blog" href="javascript:SNS.Share('중등 수업 평가 혁신', 4);">블로그</a>
+							<a class="btn_share btn_url" href="javascript:SNS.Copy();">url</a>
+							<a class="fl_r btn_grey" href="#">미리보기</a>
+						</div>
+					</div>
+
+					<div class="appli_content">
+						<h4>연수신청</h4>
+						<table class="table_template01">
+							<colgroup>
+								<col class="col1"/>
+								<col class="col2"/>
+								<col class="col3"/>
+								<col class="col4"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>구분</th>
+									<th>신청기간</th>
+									<th>연수기간</th>
+									<th>선택</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>01-01기</td>
+									<td>2018년 12월 18일 ~ 01월 03일</td>
+									<td>2019년 01월 04일 ~ 01월 16일</td>
+									<td><a href="../menu04/menu02.html" class="btn btn-primary">신청하기</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="explain_content">
+                        <!-- 탭 -->
+                        <div class="board_wrap menu04_03">
+                            <ul class="tab_btns">
+                                <li><a class="on" href="javascript:tab_btn('poster','lecture_explain','0')">연수정보</a></li>
+                                <li><a href="javascript:tab_btn('index','lecture_explain','1')">강의목차</a></li>
+                                <li><a href="javascript:tab_btn('teacher','lecture_explain','2')">강사소개</a></li>
+                            </ul>
+                        </div>
+                        <!-- /탭 -->
+						<ul class="content_box">
+							<li class="poster on">
+								<img src="../image/data/poster_job/poster_001.png"/>
+							</li>
+							<li class="index">
+								<h4>강의목차</h4>
+								<table class="table_template01">
+									<colgroup>
+										<col class="col1">
+										<col class="col2">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>강좌</th>
+											<th>목차</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>11</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>12</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>13</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>14</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+										<tr>
+											<td>15</td>
+											<td class="ta_l">가상현실과 로봇 활용 교육</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+							<li class="teacher">
+								<table class="table_template01">
+									<colgroup>
+										<col class="col1">
+										<col class="col2">
+										<col class="col3">
+									</colgroup>
+									<tbody>
+										<tr>
+											<td rowspan="2"><img src="../image/data/teacher/teacher_001.png" alt="강사 최만"/></td>
+											<td><strong>강사명</strong></td>
+											<td class="ta_l">최만</td>
+										</tr>
+										<tr>
+											<td><strong>주요경력<br>및<br>활동분야<strong></td>
+											<td class="ta_l">
+												<div class="text_contents">
+													<ul class="text_indent_hyphen">
+														<li>- 現 유안초등학교 교사</li>
+														<li>- 코스페이시스 EDU 한국 대사</li>
+														<li>- 소프트웨어정책연구소 VR자문</li>
+														<li>- SW교육, VR 관련 교사 연수 전문 강사</li>
+														<li>- 유아동코딩 교육자 모임, 글로벌 SW교육연구회 개설 및 운영</li>
+														<li>- SW교육 발전 공로상. 미래부장관</li>
+														<li>- 미래창조과학부 소프트웨어중심사회 기자 역임</li>
+														<li>- 문화체육관광부 정책 기자 역임</li>
+														<li>- 유아동 SW교육 워크북 리틀와이스마트키즈/오조봇 및 대시앤닷 교재 집필</li>
+														<li>- 에듀클라우드, 샘스토리, 샘동네, 샘블로그, 넥스트데일리 저술가</li>
+														<li>- AR·VR, 3D 프린터기, 코딩 등 30여개 커뮤니티를 운영  또는 활동을 하고 있으며 다양한 교사들과 교류하고 있음</li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+						</ul>
+					</div>
+
+					<!--<div class="caution_box">
+						<ul class="blet_alert">
+							<li>
+								재화의 정보에 관한 사항(이러닝)
+								<div class="text_contents">
+									<ul class="text_indent_num">
+										<li><strong>1. 제작자 또는 공급자</strong>: 티스쿨이앤씨㈜</li>
+										<li><strong>2. 이용기간</strong>: 콘텐츠 구매 시, 신청한 연수 기간 동안 이용 (이후 복습기간 1년 제공)</li>
+										<li><strong>3. 상품 제공 방식</strong>: 연중 무휴, 24시간 실시간 스트리밍 서비스 제공</li>
+										<li>
+											<strong>4. 최소 시스템 사양, 필수 소프트웨어</strong>:
+											<ul class="text_indent_hyphen">
+												<li>- CPU의 경우 펜티엄급 이상을 권장하며, 운영시스템은 Windows 98이상의 운영시스템을 필요로 합니다. 브라우저는 IE, 크롬, 파이어폭스 등에서 이용 가능합니다.</li>
+												<li>- 학습을 위하여 Adobe Flash Player(어도비 플래시 플레이어)와 스타플레이어 설치가 필요합니다.</li>
+											</ul>
+										</li>
+										<li><strong>5. 청약철회 또는 계약의 해제 해지에 따른 효과</strong>: 구매자의 단순변심에 의한 경우 콘텐츠 제공(연수 시작일) 7일 이내에 청약 철회를 할 수 있습니다.</li>
+										<li><strong>6. 소비자 상담 관련 전화번호</strong>: 티스쿨 고객센터 1544-9044</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>-->
+
+					<div class="intro_content">
+						<h4>과정소개</h4>
+						<table class="table_template01">
+							<colgroup>
+								<col class="col1"/>
+								<col class="col2"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>학습목표</th>
+									<td class="ta_l">
+										<ul class="text_indent_num">
+											<li>1. 교육환경의 변화를 인식하여 교육과정, 수업, 평가 방법의 필요성을 설명할 수 있다.</li>
+											<li>2. 교육과정 재구성, 수업 혁신, 융합 교육, 자유학기제에 따른 다양한 과정 평가 방법을 말할 수 있다.</li>
+											<li>3. 진학과 성적을 위한 평가가 아닌, 학생 개인의 역량을 표현하고 가능성을 끌어 올려주는 평가의 중요성을 말할 수 있다.</li>
+											<li>4. 주요 과목별 교육과정 및 수업 모형과 이에 따른 과정평가 방법을 사례를 통해 말할 수 있다.</li>
+											<li>5. 평가가 학생에게 미치는 영향을 고려하여 변화된 평가 방법에 따른 생활기록부 기재 방법을 설명할 수 있다.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>학습개요</th>
+								    <td class="ta_l">
+                                        비전에 기반하여 계획을 세우고 효과적인 프로젝트 관리 방법을 익히자!<br>프로젝트 업무를 수행하는 관리자들에게 필요한 자질은 무엇일까요? <br>본 과정을 통해 프로젝트 관리에 관한 전반적인 지식과 스킬을 제시하여 프로젝트의 생산성을 높이고 관리능력을<br>향상시켜 보시기 바랍니다.<br><br>■ 학습기대효과<br>프로젝트 업무를 수행하는 관리자들에게 프로젝트 관리에 관한 전반적인 지식과 스킬을 제시하여 프로젝트의 생산성을 높이고 관리능력을 향상시킨다.
+                                    </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="grade_content">
+						<h4>평가방법</h4>
+						<table class="table_template01">
+							<thead>
+								<tr>
+									<th>평가기준</th>
+									<th>진도율</th>
+									<th>시험 (필수)</th>
+									<th>과제 (필수)</th>
+									<th>출석시험</th>
+									<th>합계</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>평가비율(%)</td>
+									<td><span>30</span>%</td>
+									<td><span>40</span>%</td>
+									<td><span>30</span>%</td>
+									<td>없음</td>
+									<td><span>100</span>%</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="plain_text"><span>* 이수기준 진도율</span> - 80% 이상</p>
+						<p class="plain_text"><span>* 이수기준 점수</span> - (학습진도율 80% 이상,과제제출,시험응시), 총점 100점 만점에 60점 이상</p>
+					</div>
+
+					<div class="review_content">
+						<div class="title mb0">
+							<h4>연수후기</h4>
+                            <a href="../menu03/menu03.html" class="view_more mt30">더보기 +</a>
+						</div>
+
+						<table class="table_template01">
+							<colgroup>
+								<col class="col1"/>
+								<col class="col2"/>
+								<col class="col3"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>제목</th>
+									<th>작성자</th>
+									<th>평가</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="ta_l"><a href="javascript:open_window('../popup/popup_yeonsu_review.html', '', 'width=600, height=650')">연수 후기</a></td>
+									<td>abc****</td>
+									<td><img src="../image/common/star05.gif" alt="별점 5점"/></td>
+								</tr>
+								<tr>
+									<td class="ta_l"><a href="javascript:open_window('../popup/popup_yeonsu_review.html', '', 'width=600, height=650')">연수 후기</a></td>
+									<td>abc****</td>
+									<td><img src="../image/common/star04.gif" alt="별점 4점"/></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<!-- 페이지 네비게이션 -->
+						<div class="pager">
+                            <a class="first" href="#">처음 페이지</a>
+                            <a class="prev" href="#">이전 페이지</a>
+                            <ul>
+                                <li><a class="on" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                            </ul>
+                            <a class="next" href="#">다음 페이지</a>
+                            <a class="last" href="#">마지막 페이지</a>
+                        </div>
+                        <!-- /페이지 네비게이션 -->
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

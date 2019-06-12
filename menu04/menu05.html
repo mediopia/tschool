@@ -95,54 +95,73 @@ $(window).load(function(){
 						<p class="route">홈 &gt; 나의강의실 &gt; <span>수강연기</span></p>
 					</div>
 
-					<div class="caution_box">
-						<ul class="blet_alert">
-							<li>
-								꼭 확인해주세요!
-								<ul class="blet_circle">
-									<li>수강 기수 변경은 <span>동일 과정</span>으로만 가능하며, 교육청 단체연수는 게시판으로만 연기 신청이 가능합니다.</li>
+                    <div class="caution_box7">
+                        <h3>꼭 확인해주세요!</h3>
+                        <ul class="blet_alert pl180">
+                            <li>
+                                <ul class="blet_hyphen">
+                                    <li>수강 기수 변경은 <span>동일 과정</span>으로만 가능하며, 교육청 단체연수는 게시판으로만 연기 신청이 가능합니다.</li>
 									<li>수강 기수 변경은 <span>연수 종료일 전 총 3회</span> 까지만 가능합니다.</li>
 									<li>수강 기수를 변경하시면 이전 <span>진도/과제/시험</span> 응시 내역은 모두 초기화 됩니다.</li>
 									<li><span>교육청 단체연수 및 자율연수</span>는 연기가 불가능합니다.</li>
 									<li>수강 기수를 변경하신 경우 연수 <span>취소 및 환불</span>이 불가능합니다.</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
 					<div class="delay_wrap">
-						<h4>즉시 수강 연기하기</h4>
-						<p class="plain_text">교육청 단체연수는 아래 수강 내역에 노출되지 않습니다. 게시판으로 신청해주세요.</p>
-						<table class="table_template01">
-							<thead>
-								<tr>
-									<th class="col1">기수</th>
-									<th class="col2">과정명/교재명</th>
-									<th class="col3">결제금액</th>
-									<th class="col4">신청일자</th>
-									<th class="col5">수강연기</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!--<tr>
-									<td class="col1"></td>
-									<td class="col2 ta_l"></td>
-									<td class="col3"></td>
-									<td class="col4"></td>
-									<td class="col5"></td>
-								</tr>-->
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="5">즉시 수강 연기 가능한 연수가 없습니다.</td>
-								</tr>
-							</tfoot>
-						</table>
+						<h4 class="mb0">즉시 수강 연기하기</h4>
+						<p class="plain_text mt0">교육청 단체연수는 아래 수강 내역에 노출되지 않습니다. 게시판으로 신청해주세요.</p>
+                        <form class="form_write">
+                            <table class="table_template01" summary="나의 연수과정 리스트입니다.">
+                                <caption> 연수과정 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 12%;">
+                                    <col style="width: 14%;">
+                                    <col style="width: 12%;">
+                                    <col style="width: auto;">
+                                    <col style="width: 10%;">
+                                    <col style="width: 10%;">
+                                </colgroup>
+                                <thead>
+                                    <tr class="h0">
+                                        <td colspan="6" class="pt0 pb0"></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border_none">
+                                        <th scope="col"><strong>연수명</strong></th>
+                                        <td class="ta_l" colspan="5">김봉환 교수의 진로지도 Total Solution</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col"><strong>현재 기수</strong></th>
+                                        <td class="ta_l">2019-23-04</td>
+                                        <th scope="col"><strong>변경할 기수</strong></th>
+                                        <td class="ta_l">
+                                            <select name="write_subject">
+                                                <option>연수연기할과목 선택</option>
+                                            </select>
+                                            <a class="btn btn-default form_side" href="#">변경</a>
+                                        </td>
+                                        <th scope="col"><strong>변경횟수</strong></th>
+                                        <td>0회/3회</td>
+                                     </tr>
+                                </tbody>
+                            </table>
+                        </form>
 					</div>
 
-					<div class="question_board_wrap">
-						<h4>수강 연기 관련 문의 하기<a class="btn_delay" href="./menu05_delay.html">수강 연기 문의하기</a></h4>
-						<p class="plain_text">교육청 단체연수는 아래 수강 내역에 노출되지 않습니다. 게시판으로 신청해주세요.</p>
+					<div class="question_board_wrap mb30">
+                        <div class="clearfix">
+                            <div class="fl_l">
+                                <h4 class="mt0 mb0">수강 연기 관련 문의 하기</h4>
+                                <p class="plain_text mt0">교육청 단체연수는 아래 수강 내역에 노출되지 않습니다. 게시판으로 신청해주세요.</p>
+                            </div>
+                            <div class="fl_r">
+                            <a class="mt10 btn btn-primary" href="./menu05_delay.html">수강 연기 문의하기</a>
+                            </div>
+                        </div>
 						<table class="table_template01">
 							<thead>
 								<tr>
@@ -195,21 +214,23 @@ $(window).load(function(){
 				<!-- //board_wrap -->
 
 				<div class="pager">
-					<a class="prev" href="#">이전 페이지</a>
-					<ul>
-						<li><a class="on" href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">6</a></li>
-						<li><a href="#">7</a></li>
-						<li><a href="#">8</a></li>
-						<li><a href="#">9</a></li>
-						<li><a href="#">10</a></li>
-					</ul>
-					<a class="next" href="#">다음 페이지</a>
-				</div>
+                    <a class="first" href="#">처음 페이지</a>
+                    <a class="prev" href="#">이전 페이지</a>
+                    <ul>
+                        <li><a class="on" href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                    </ul>
+                    <a class="next" href="#">다음 페이지</a>
+                    <a class="last" href="#">마지막 페이지</a>
+                </div>
 
 				<div class="bottom_search_wrap">
 					<select name="bottom_search" id="bottom_search">

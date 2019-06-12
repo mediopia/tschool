@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>티스쿨원격교육연수원</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<link rel="stylesheet" type="text/css" href="/css/default.css" />
+<meta http-equiv="page-enter" content="blendtrans(duration=0.3)"/>
+<meta http-equiv="page-exit" content="blendtrans(duration=0.3)"/>
+<META http-equiv="imagetoolbar" content="no">
+</head>
+<script language="javascript">
+// 자바스크립트에서 사용하는 전역변수 선언
+var g4_path      = "..";
+var g4_bbs       = "bbs";
+var g4_bbs_img   = "img";
+var g4_url       = "http://w2.tschool.net";
+var g4_is_member = "1";
+var g4_is_admin  = "";
+var g4_bo_table  = "";
+var g4_sca       = "";
+var g4_charset   = "euc-kr";
+var g4_cookie_domain = "";
+var g4_is_gecko  = navigator.userAgent.toLowerCase().indexOf("gecko") != -1;
+var g4_is_ie     = navigator.userAgent.toLowerCase().indexOf("msie") != -1;
+</script>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/popupLayer.js"></script>
+<script type="text/javascript" src="../js/swf.js"></script>
+<script type="text/javascript" src="../js/init.js"></script>
+<script>
+function comView(flag1,flag)
+{
+	for(i=1;i<5;i++)
+	{
+		if(document.all(flag1+i))
+		{
+			document.all(flag1+i).style.display='none';
+			document.all(flag1+i+'_img').src='../img//'+flag1+'_menu0'+i+'_off.gif'
+		}
+	}
+	document.all(flag1+flag).style.display='';
+	document.all(flag1+flag+'_img').src='../img//'+flag1+'_menu0'+flag+'_on.gif'
+}
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+	window.open(theURL,winName,features);
+}
+</script>
+<body ><SCRIPT LANGUAGE="JavaScript">
+function printNow(result,id) {
+  document.getElementById('command_bar').style.display = 'none';
+ // document.getElementById('command_bar1').style.display = 'none';
+  window.print();
+}
+function printError() {
+	window.open("../cab/IEPageSetupX.exe");
+}
+function ActiveX_print()
+{
+    if(document.all.IEPageSetupX == null || document.all.IEPageSetupX.undefined == true)
+    {
+        //alert("프린트를 하려면 제공되는 ActiveX 콘트롤을 설치해야 합니다.\n\n브라우저 화면 상단에 ActiveX 콘트롤 설치 메세지가 나타나지 않으면\n\nF5키를 눌러 새로고침을 시도하십시오.\n\nActiveX 콘트롤 설치 후 적용을 위해 시스템을 재시작 하셔야 합니다.");
+    }
+    else
+    {
+		 document.getElementById('command_bar').style.display = 'none';
+        alert("확인 버튼을 누르시고 인쇄 미리보기 창이 나올때까지 잠시만 기다려 주십시오.");
+		IEPageSetupX.leftMargin = 0.5; // 왼쪽여백설정
+		IEPageSetupX.rightMargin = 0.5; // 오른쪽여백 설정
+		IEPageSetupX.topMargin = 21; // 윗쪽여백 설정
+		IEPageSetupX.paper = "A4"; // 용지설정입니다.
+        IEPageSetupX.Preview(); // 미리보기
+    }
+}
+</SCRIPT>
+<OBJECT id=IEPageSetupX classid="clsid:41C5BC45-1BE8-42C5-AD9F-495D6C8D7586" codebase="../cab/IEPageSetupX.cab#version=1,3,0,2" width=0 height=0>
+<param name="copyright" value="http://isulnara.com">
+</OBJECT>
+<style>
+.receiptAWrap {width:700px;min-height:1000px;/*background:url(/image/content/bg_diploma.jpg) 0 20px no-repeat;*/font-family:"궁서", "궁서체";position:relative;}
+.receiptAWrap h1 {position:relative; font-size:32px; color:#333; padding-left:10px; padding:120px 0 10px; margin:0 auto; text-align:center; font-family:"궁서", "궁서체";}
+.receiptAWrap table {border-top:none;font-size:18px;margin:150px 0 0 100px; width:500px;}
+.receiptAWrap table thead th {text-align:left;}
+.receiptAWrap table thead th:first-child {background:none;text-align:left;}
+.receiptAWrap table tbody th, .receiptAWrap table tbody td { font-size:18px; color:#333; font-family:"바탕체", "궁서", "궁서체";}
+.receiptAWrap table tbody th:first-child, .receiptAWrap table td:first-child { border-left:none;text-align:left;font-weight:600;}
+.receiptAWrap table tbody th, .receiptAWrap table tbody td strong { color:#333333; }
+.receiptAWrap table a + a {margin-top:2px;}
+.receiptAWrap table thead td {text-align:left;}
+.receiptAWrap div {font-family:"바탕체", "궁서", "궁서체";}
+
+
+.receiptWrap {padding:10px; }
+.receiptWrap h1 {height:40px; text-align:center; padding-top:20px; background:url(/image/common/bg_pop_h1.gif); margin-top:5px;}
+.receiptWrap h1 + p {padding:20px 0 7px 0;}
+.receiptWrap h2 {font-size:14px; color:#186aa2; margin:15px 0 9px 0;}
+.receiptWrap table {font-size:12px;}
+.receiptWrap table tbody th {border-right:1px solid #E5E5E5; background:#f5f6f7;}
+.receiptWrap table tbody td {text-align:left; padding-left:20px;}
+.receiptWrap table strong {font-size:14px; color:#333333;}
+.receiptWrap table img {vertical-align:middle;}
+.receiptBox {text-align:center; background:#f5f6f7; font-size:14px; padding:20px 0 28px 0; color:#333;margin:0px 10px 10px;font-family:"궁서", "궁서체";}
+.receiptBox strong {display:block; padding:17px 0 25px 0;}
+
+.receiptPBox {text-align:center; font-size:14px; line-height:1.7em; padding:40px 0 50px 0; color:#333;margin:0px 10px 10px;font-family:"궁서", "궁서체";}
+
+.tblViewB caption{visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0}
+
+.licenseBox { text-align:center; padding:10px 0 15px 0;font-size:16px; color:#666666; margin:100px 0px 10px 0px; font-weight:500;}
+.licenseBox ul {font-size:14px;margin-left:20px; padding:3px 0;display:block;font-family:"돋움",Dotum,"굴림",Gulim,Arial,"Trebuchet MS",Verdana,"Sans-serif"; font-size:1em; line-height:normal}
+.licenseBox ul li {width:500px;border:1px solid #000;text-align:left;padding:5px;display:inline;}
+.licenseBox strong {display:block; padding:40px 0 100px 0; color:#333;}
+
+.tblViewB {table-layout:fixed;}
+.tblViewB tbody th { padding:8px 5px 10px 5px; /*font-size:11px;*/ font-weight:normal; text-align:left;}
+.tblViewB tbody td { padding:8px 10px 10px 10px;}
+.tblViewB .title {background:#f5f6f7; font-size:14px; color:#1782c6; font-weight:bold; padding:5px 20px;}
+.tblViewB .contentsView {line-height:20px; padding:25px 20px;}
+.tblViewB tr.info td {font-size:11px;}
+.tblViewB tr.info td span {display:inline-block; margin:0 26px 0 10px; color:#555555;}
+.tblViewB .titleBtn {background:#f5f6f7; font-size:12px; color:#1782c6; text-align:right;}
+.tblViewB tr.bgC th, .tblView tr.bgC td {background:#f5f6f7; color:#555;}
+
+@page {
+	size: A4;
+	padding: 1cm;
+	margin: 1cm;
+}
+@media print {
+	body {width:100%;height:100%;}
+	.receiptAWrap  {width: 21cm;min-height: 27.7cm;padding:1cm 0;}
+	.receiptAWrap .bg {width:100%;height:100%;}
+}
+</style>
+
+<div class="popWrap">
+  <div class="receiptAWrap">
+  <img src="../image/common/bg_diploma2.jpg" alt="" style="position:absolute;top:0;left:0;z-index:-1" class="bg">
+    <div class="textR" id="command_bar" style="position:absolute;top:0;right:30px;z-index:10"><a href="#" onclick="printNow('')"><img src="../image/common/btn_print.gif" alt="프린트" /></a></div>
+	  <!-- 이수증 S -->
+	  <h1>교육연수 이수증</h1>
+		<table class="tblViewB" summary="교육연수이수증" border="0" style="margin-top:50px;">
+		<caption>교육연수이수증</caption>
+		<colgroup>
+		<col style="width:20%;" />
+		<col style="auto" />
+		</colgroup>
+		<tbody>
+		<tr>
+		  <th scope="row">이수번호</th>
+		  <td><strong>티스쿨-초등-직무-test-01-0009</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">성&nbsp;&nbsp;&nbsp;&nbsp;명</th>
+		  <td><strong>티스쿨</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">생년월일</th>
+		  <td><strong>1989년 12월 22일</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">연수종별</th>
+		  <td><strong>직무연수 1학점</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">이수시간</th>
+		  <td><strong>15시간(1학점)</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">연수과정</th>
+		  <td><strong>2015 개정 국어과 교육과정의 이해와 수업</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">연수기간</th>
+		  <td><strong>2013년 12월 12일 ~ 12월 31일</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">이수점수</th>
+		  <td><strong>이수</strong></td>
+		</tr>
+	   </tbody>
+	 </table>
+	<div class="licenseBox" style="margin-top:55px;">
+		위와 같이 교육연수를 이수하였음을 증명합니다.
+		<strong>2064년 12월 31일</strong>
+		<p><img src="../image/common/txt_tschoolmark.gif" alt="교육부인가 02-9호 티스쿨 원격교육연수원" /></p>
+	</div>
+	<!-- 이수증 E -->
+
+	<!-- 수료증 S ->
+	   <h1>교육연수수료증</h1>
+		<table summary="교육연수수료증">
+		<caption>교육연수수료증</caption>
+		<colgroup>
+		<col style="width:20%;" />
+		<col style="auto" />
+		</colgroup>
+		<tbody>
+		<tr>
+		  <th scope="row">성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</th>
+		  <td><strong>홍재균</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">생년월일</th>
+		  <td><strong>810110</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">연수종별</th>
+		  <td><strong>직무</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">연수과정</th>
+		  <td><strong>장애인차별금지의 이해</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">연수차시</th>
+		  <td><strong>15차시</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">연수기간</th>
+		  <td><strong>2013.11.01 ~ 2013.12.01</strong></td>
+		</tr>
+		<tr>
+		  <th scope="row">수료여부</th>
+		  <td><strong>수료</strong></td>
+		</tr>
+	   </tbody>
+	 </table>
+	<div class="licenseBox">
+		위와 같이 수료하였음을 증명합니다.
+		<strong>2013년 12월 02일</strong>
+		<p><img src="/image/content/txt_tschoolmark.gif" alt="교육부인가 02-9호 티스쿨 원격교육연수원" /></p>
+	</div>
+	<!-- 수료증 E -->
+
+
+<!-- <div id="wrap"><div id="contentArea">
+<div id="area_absol_info">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_licenseInfo">
+  <col width="300" /><col />
+  <tr>
+    <td colspan="2">지명번호 : </td>
+  </tr>
+  <tr>
+    <td colspan="2">이수번호 : 티스쿨-초등-직무-test-01-0009</td>
+  </tr>
+  <tr>
+    <td>성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명 : 티스쿨</td>
+    <td>주민등록번호 : 1989년 12월 22일</td>
+  </tr>
+  <tr>
+    <td>연수종별 : 직무연수</td>
+    <td>이&nbsp;&nbsp;수&nbsp;&nbsp;시&nbsp;&nbsp;간 : 15시간(1학점)</td>
+  </tr>
+  <tr>
+    <td colspan="2">연수과정 : 2015 개정 국어과 교육과정의 이해와 수업</td>
+  </tr>
+  <tr>
+    <td colspan="2">연수기간 : 2013년 12월 12일 ~ 12월 31일(18648일간)</td>
+  </tr>
+  <tr>
+    <td colspan="2">연수성적 : 이수</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="bottom" height="180" >
+      <table width="200" height="100" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="155" align="center" valign="middle"><span style="font-size:12pt;"><b>2064년 12월 31일</b></span></td>
+      </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+</div></div> -->
+
+<!-- <div id="command_bar">
+  &nbsp;A4용지를 준비하고 인쇄버튼을 클릭하세요.&nbsp;<input type="button" value="&nbsp;인쇄하기&nbsp;" onclick="ActiveX_print()" /><!-- <input type="button" value="인쇄하기" onclick="printNow('')" />&nbsp;&nbsp;&nbsp;이수증 출력이 안될 시 클릭하세요.&nbsp;<!-- <input type="button" value="&nbsp;오류 해결&nbsp;" onclick="printError()" />
+ -->
+</div>
+</div>
+</td>
+</tr>
+</table>
+<script language="javascript" src="../js/wrest.js"></script><!-- 폼 입력 필드 체크 자바스크립트 -->
+<script language="javaScript">
+<!--
+function openCenter(strUrl, strName, nWidth, nHeight, strFeatures) {
+		var nTop  = (screen.height - nHeight) / 2;
+		var nLeft = (screen.width - nWidth) / 2;
+
+		strFeatures += ",height="+nHeight+",width="+nWidth+",top="+nTop+",status=yes,left="+nLeft;
+		window.open(strUrl, strName, strFeatures);
+	}
+
+function testPOP(num,w,h,bar) {
+		openCenter(num, "MR", w, h, "toolbar=no,scrollbars="+bar+",titlebar=no,resizable=1");
+}
+//-->
+</script>
+<!-- 새창 대신 사용하는 iframe -->
+<iframe width=0 height=0 name='hiddenframe' style='display:none;'></iframe>
+<!--  -->
+</div>
+</body>
+</html>

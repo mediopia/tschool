@@ -94,9 +94,6 @@ $(window).load(function(){
 								<col class="col1">
 								<col class="col2">
 							</colgroup>
-							<thead>
-								<tr><th colspan="2">글쓰기</th></tr>
-							</thead>
 							<tbody>
 								<tr>
 									<th>제목</th>
@@ -105,10 +102,16 @@ $(window).load(function(){
 								<tr>
 									<th>파일첨부<a class="btn_add" href="javascript:add_file();">파일 추가</a><a class="btn_del" href="javascript:del_file();">파일 삭제</a></th>
 									<td class="ta_l">
-										<table id="variable_files">
-
-										</table>
-										<a class="btn_down btn_grey" href="#">단체신청서 다운</a>
+                                        <input type="text" class="upload_text" readonly="readonly" style="width:300px; height:28px; margin-bottom:5px;">
+                                        <!--button-->
+                                        <div class="upload-btn_wrap">
+                                          <button type="button" title="파일찾기">
+                                           <span>파일찾기</span>
+                                          </button>
+                                          <input type="file" class="input_file" title="파일찾기">
+                                        </div>
+                                        <!--<input name="bf_file[]" title="파일 용량 14,194,304 바이트 이하만 업로드 가능" class="ed" type="file">-->
+										<div class="margin-bottom-10"><a class="btn_white2" href="#">단체신청서 다운</a></div>
 									</td>
 								</tr>
 								<tr>
@@ -119,7 +122,7 @@ $(window).load(function(){
 											<a class="original" href="javascript:textarea_original('write_content', 20);">높이 원래대로</a>
 											<a class="increase" href="javascript:textarea_increase('write_content', 10);">높이 늘이기</a>
 										</div>
-										<textarea name="write_content" id="write_content" class="write_content" rows="20"></textarea>
+										<textarea name="write_content" id="write_content" class="write_content" rows="12"></textarea>
 									</td>
 								</tr>
 							</tbody>

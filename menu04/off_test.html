@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=1300" />
+		<meta name="description" content="내용">
+		<meta property="og:title" content="티스쿨원격교육연수원">
+		<meta property="og:url" content="http://www.tschool.net/">
+		<title>티스쿨원격교육연수원</title>
+		<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+		<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+		<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="../js/util.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="../js/html5shiv.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			<!--
+			.style1 {
+			font-size: 26px;
+			color: #000000;
+			font-weight: bold;
+			}
+			.style2 {
+			color: #CC6666;
+			font-weight: bold;
+			}
+			.style3 {color: #DE3F8E}
+			-->
+		</style>
+		<SCRIPT LANGUAGE="JavaScript">
+			<!--
+			//scriptX 사용
+			function _Print() {
+			if(document.all.factory.printing == null || document.all.factory.printing.undefined == true)
+			{
+			//alert("프린트를 하려면 제공되는 ActiveX 콘트롤을 설치해야 합니다.\n\n브라우저 화면 상단에 ActiveX 콘트롤 설치 메세지가 나타나지 않으면\n\nF5키를 눌러 새로고침을 시도하십시오.\n\nActiveX 콘트롤 설치 후 적용을 위해 시스템을 재시작 하셔야 합니다.");
+			}
+			else
+			{
+			//alert("확인 버튼을 누르시고 인쇄 미리보기 창이 나올때까지 잠시만 기다려 주십시오.");
+			factory.printing.header = "";
+			factory.printing.footer = "";
+			factory.printing.portrait = true;
+			factory.printing.leftMargin = 0.5;
+			factory.printing.topMargin = 21;
+			factory.printing.rightMargin = 0.5;
+			factory.printing.bottomMargin = 0;
+			//factory.printing.Print(true, window);
+			factory.printing.Preview();
+			}
+			}
+			//-->
+		</SCRIPT>
+		<script>
+			function printWindow() {
+			bV = parseInt(navigator.appVersion);
+			if (bV >= 4) window.print();
+			}
+			var tempBody;
+			window.onbeforeprint = function() {
+			tempBody = document.body.innerHTML;
+			//document.body.innerHTML = pri.innerHTML;
+			}
+
+			window.onafterprint = function() {
+			document.body.innerHTML = tempBody;
+			}
+
+		</script>
+		<SCRIPT LANGUAGE="JavaScript">
+			function printNow(result,id) {
+			document.getElementById('command_bar').style.display = 'none';
+			// document.getElementById('command_bar1').style.display = 'none';
+			window.print();
+			}
+			function printError() {
+			window.open("../cab/IEPageSetupX.exe");
+		}
+		</SCRIPT>
+		<script type="text/javascript">
+		function setDOMS_page(){
+		}
+		$(window).load(function(){
+		setDOMS_page();
+		//상단메뉴와 좌측메뉴 현재 위치 표시
+		$('.gnb_main .eq4').addClass('on');
+		$('.aside_menu_wrap > ul > li').eq(0).addClass('on');
+		//--상단메뉴와 좌측메뉴 현재 위치 표시
+		//퀵메뉴 고정/고정해제
+		$window.scroll(function(){
+		nav_fix(0);
+		});
+		for(var i = 0; i < $('.progress_mask').length; i++){
+		var rate = $('.progress_mask').eq(i).parent().attr('data-fill') + '%';
+		$('.progress_mask').eq(i).css('width', rate);
+		$('.rate').eq(i).html(rate)
+		}
+		});
+		</script>
+	</head>
+	<body>
+		<!-- <script type="text/javascript">
+		document.write("<object id=factory style=\"display:none\" classid=\"clsid:1663ed61-23eb-11d2-b92f-008048fdd814\" codebase=\"./ScriptX.cab#Version=6,2,433,14\"></OBJECT>");
+		</script> -->
+		<div style="width:698px; margin:0 auto;">
+			<table align="center" width="698" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+				<td ><div class="textR" id="command_bar"><a href="#" onClick="printNow('')"><img src="../image/data/btn_print.gif" alt="프린트" /></a></div></td>
+				</tr><!-- -->
+				<tr>
+				<td height="10" colspan="4"></td>
+				</tr>
+				<tr>
+				<td colspan="4"><img src="../image/data/memberPre_top.jpg" /></td>
+				</tr>
+				<tr>
+				<td height="10" colspan="4"></td>
+				</tr>
+			</table>
+			<table align="center" border=0>
+				<tr>
+				<td>
+				<!--########  수험표  ######## -->
+				<!-- <table width="698" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="484848"> -->
+				<table width="698" align="center" cellpadding="4" cellspacing="1" bordercolorlight="black" border="border" style="border-collapse: collapse; background-color: white">
+				<tr bgcolor="#FFFFFF">
+				<td width="70" height="40" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>성&nbsp;&nbsp;&nbsp; 명</strong></td>
+				<td width="237" height="30">&nbsp;</td>
+				<td width="70" height="30" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>소속기관</strong></td>
+				<td width="237" height="30">&nbsp;부산초등학교</td>
+				</tr>
+				<tr bgcolor="#FFFFFF">
+				<td height="40" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>과 정 명</strong> </td>
+				<td height="30" colspan="3">&nbsp;</td>
+				</tr>
+				<tr bgcolor="#FFFFFF">
+				<td height="40" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>과목코드</strong> </td>
+				<td height="30">&nbsp;</td>
+				<td height="30" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>수험번호</strong></td>
+				<td height="30">&nbsp;</td>
+				</tr>
+				<tr bgcolor="#FFFFFF">
+				<td height="40" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>생년월일</strong></td>
+				<td height="30">&nbsp;</td>
+				<td height="30" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>시험일시</strong></td>
+				<td height="30">&nbsp;2015년 7월 10일</td>
+				</tr>
+				<tr bgcolor="#FFFFFF">
+				<td height="40" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>응시지역</strong> </td>
+				<td height="30">&nbsp;</td>
+				<td height="30" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>시험시간</strong></td>
+				<td height="30">&nbsp;<!--  1교시 (15:00~15:50) -->교시 ()</td>
+				</tr>
+				<tr bgcolor="#FFFFFF">
+				<td height="40" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>시험장소</strong></td>
+				<td height="30" colspan="3">&nbsp;강릉율곡중학교</td>
+				</tr>
+				<tr bgcolor="#FFFFFF">
+				<td height="40" align="center" bgcolor="#1369a4" style="font-size:15px; color:#fff;"><strong>주&nbsp;&nbsp;&nbsp;&nbsp;소</strong></td>
+				<td height="30" colspan="3">&nbsp;주소강원도 강릉시 가작로 125 율곡중학교 </td>
+				</tr>
+				<tr bgcolor="#FFFFFF">
+				<td height="30" colspan="4" align="right" style="font-size:12px;"><strong>티스쿨원격연수원</strong> <a href="http://www.tschool.net" target="_blank">www.tschool.net</a> [교과부인가 제02-9호] </td>
+				</tr>
+			</table>
+			<!--########  수험표  ######## -->
+			<br />
+			<!--########  출석고사 준비물 / 시험장 안내 끝 ######## -->
+			<TABLE cellSpacing=0 cellPadding=3 width=698 align=center border=0>
+				<TBODY>
+					<TR>
+					<TD>
+					<DIV class=style1 align=center><STRONG><FONT style="FONT-SIZE: 18px">2015년 2015-31기 출석고사 안내입니다</FONT></STRONG></DIV>
+					</TD>
+					</TR>
+					<TR>
+					<TD height=10></TD>
+					</TR>
+					<TR>
+					<TD style="FONT-SIZE: 12px"><STRONG>1. 준비물 : 수험표, 신분증(공무원증 가능), 컴퓨터용 사인펜(검정볼펜) * 꼭 챙겨주세요. </STRONG></TD>
+					</TR>
+					<TR>
+					<TD style="FONT-SIZE: 12px"><STRONG>2. 출석고사에 꼭 응시하세요. 출석고사에 응시하지 않으시면 자동 과락됩니다.(연수이수증 미교부)</STRONG></TD>
+					</TR>
+					<TR>
+					<TD style="FONT-SIZE: 12px"><STRONG>3. 시험 시작 10분 전까지 지정 고사장에 입실하여 주시기 바랍니다. </STRONG></TD>
+					</TR>
+				</TBODY>
+			</table><br />
+			<TABLE cellSpacing=0 cellPadding=3 width=698 align=center border=0>
+				<TBODY>
+				<TR>
+					<TD>
+						<TABLE style="BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: white" cellSpacing=1 cellPadding=8 width=660 align=center borderColorLight=black border=border>
+							<TBODY>
+								<TR bgColor=#eeeeee>
+								<TD style="FONT-SIZE: 17px" width=101>
+								<DIV align=center><STRONG>교시</STRONG></DIV>
+								</TD>
+								<TD style="FONT-SIZE: 17px" width=392>
+								<DIV align=center><STRONG>과정명</STRONG></DIV>
+								</TD>
+								<TD style="FONT-SIZE: 17px" width=115>
+								<DIV align=center><STRONG>시간</STRONG></DIV>
+								</TD>
+								</TR>
+								<TR bgColor=#ffffff>
+								<TD style="FONT-SIZE:18px">
+								<DIV align=center><STRONG>1교시</STRONG></DIV>
+								</TD>
+								<TD style="FONT-SIZE: 13px">
+								<TABLE cellSpacing=0 cellPadding=2 width=390 border=0>
+								<TBODY>
+								<TR>
+								<TD>김봉환 교수의 진로지도 Total Solution</TD>
+								</TR>
+								<TR>
+								<TD>한 번에 끝내는 한국사</TD>
+								</TR>
+							</TBODY>
+						</TABLE>
+					</TD>
+					<TD style="FONT-SIZE: 16px">
+						<DIV align=center><STRONG>10:00~11:00<BR>(60분간)</STRONG></DIV>
+					</TD>
+				</TR>
+				</TBODY>
+			</TABLE>
+			<br />
+			<br />
+			<TABLE cellSpacing=0 cellPadding=5 width=698 align=center border=0>
+				<TBODY>
+					<TR>
+					<TD>
+						<div style="TEXT-ALIGN: left">
+							<div>안녕하세요 티스쿨연수원입니다.</div>
+							<div>&nbsp;</div>
+							<div>시험당일 수험표와 신분증(공무원증 포함)을 꼭 지참하시기 바랍니다.</div>
+							<div>아래 출석고사 이후 일정도 잘 확인해주세요.</div>
+							<div>&nbsp;</div>
+							<div>출석고사 최종&nbsp;정답 공개일 : 2015년 07월 17일&nbsp;금요일</div>
+							<div>상대평가 최종 점수 공개일 : 2015년 07월 17일&nbsp;금요일</div>
+							<div>31기 4학점 이수증 발급일&nbsp;: 2015년 07월 17일&nbsp;금요일&nbsp;</div>
+							<div>&nbsp;</div>
+							<div>감사합니다.</div>
+						</div>
+					</TD>
+					</TR>
+				</TBODY>
+			</table>
+			</td>
+			</tr>
+			</table>
+			<br />
+			<br />
+
+			<table align="center" border=0>
+				<tr>
+					<td>
+						<table width="698" border="0" align="center" cellpadding="0" cellspacing="0">
+							<tr>
+							<td height="36"><b>※ 시험장소 찾아오시는길</b></td>
+							</tr>
+							<tr>
+							<td>
+							<table width="678" border="0" align="center" cellpadding="0" cellspacing="0"0>
+							<tr>
+							<td align="center" width="678" ><img src="../image/data/area/all_10271243010.jpg"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+				<td height="30"></td>
+				</tr>
+				<tr>
+				<td align="center"><img src="../image/data/attendance.jpg"></td>
+				</tr>
+				<tr>
+				<td height="5"></td>
+				</tr>
+				</table></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

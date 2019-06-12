@@ -84,11 +84,15 @@ $(window).load(function(){
 						<p class="route">홈 &gt; 멤버십 &gt; <span>ID/PW 찾기</span></p>
 					</div>
 
+                    <ul class="tab_btns">
+                        <li class="on" data-link="history_wrap">아이디 찾기</li>
+                        <li data-link="group_history_wrap">비밀번호 찾기</li>
+                    </ul>
+
 					<div class="find_wrap">
-						<h4>아이디 찾기</h4>
 						<div class="box">
-							<h5>휴대폰인증(본인명의)으로 찾기</h5>
-							<div class="caution_box">
+							<h5 class="mb10">휴대폰인증(본인명의)으로 아이디 찾기</h5>
+							<div class="caution_box2 phone pt90">
 								본인명의의 휴대폰으로<br>
 								아이디를 찾으실 수 있습니다.<br><br>
 								<span>"휴대폰인증" 버튼을 클릭하세요.</span><br><br>
@@ -97,8 +101,8 @@ $(window).load(function(){
 						</div>
 
 						<div class="box">
-							<h5>I-PIN 인증으로 찾기</h5>
-							<div class="caution_box">
+							<h5 class="mb10">I-PIN 인증으로 아이디 찾기</h5>
+							<div class="caution_box2 ipin pt90">
 								I-PIN 인증으로<br>
 								아이디를 찾으실 수 있습니다.<br><br>
 								<span>"I-PIN인증" 버튼을 클릭하세요.</span><br><br>
@@ -108,11 +112,10 @@ $(window).load(function(){
 					</div>
 
 					<div class="find_wrap">
-						<h4>비밀번호 찾기 (비밀번호를 다시 설정할 수 있습니다.)</h4>
 						<div class="box">
 							<form name="phone">
-								<h5>휴대폰인증(본인명의)으로 찾기</h5>
-								<div class="caution_box">
+								<h5 class="mb10">휴대폰인증(본인명의)으로 비밀번호 찾기</h5>
+								<div class="caution_box2 phone pt90">
 									<p class="id_input"><label for="id">아이디</label><input type="text" id="member_id" name="member_id_2"></p><br>
 									가입하신 <em>티스쿨 아이디</em>를 입력하신 후<br>
 									<span>"휴대폰인증" 버튼을 클릭하세요.</span><br><br>
@@ -123,8 +126,8 @@ $(window).load(function(){
 
 						<div class="box">
 							<form name="ipin">
-								<h5>I-PIN 인증으로 찾기</h5>
-								<div class="caution_box">
+								<h5 class="mb10">I-PIN 인증으로 비밀번호 찾기</h5>
+								<div class="caution_box2 ipin pt90">
 									<p class="id_input"><label for="id">아이디</label><input type="text" id="member_id" name="member_id_2"></p><br>
 									가입하신 <em>티스쿨 아이디</em>를 입력하신 후<br>
 									<span>"I-PIN인증" 버튼을 클릭하세요.</span><br><br>

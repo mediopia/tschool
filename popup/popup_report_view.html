@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1300" />
+    <meta name="description" content="내용">
+    <meta property="og:title" content="티스쿨원격교육연수원">
+    <meta property="og:url" content="http://www.tschool.net/">
+    <title>티스쿨원격교육연수원</title>
+    <!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">-->
+    <!-- pc -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+    <script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="../js/util.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>-->
+    <!-- pc -->
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <div id="pop_wrap">
+        <!-- pop_header -->
+        <div id="pop_header">
+            <h1>성적표 보기</h1>
+            <div class="pop_close"><img src="../image/common/popup_close.png"></div>
+        </div>
+        <!--// pop_header -->
+
+        <!-- pop_content -->
+        <div id="pop_content">
+            <div class="content">
+                <div class="mb20">
+                    <h4 class="mb10">나의 온라인 시험 평가내역 </h4>
+                    <ul>
+                        <li><span class="">시험구분 : A SET</span></li>
+                        <li><span class="">시험일자 : 시작시간 : (2019-04-19 10:08:32) ~ 종료시간 : (2019-04-19 10:09:03) </span></li>
+                    </ul>
+                </div>
+
+                <div class="mb30">
+                    <h4 class="mb10">온라인 시험 성적표</h4>
+                    <div class="mb20">
+                        <table class="table_template01">
+                            <tbody>
+                                <tr bgcolor="#fafafa">
+                                    <td align="left" width="90" style="background:#fff;">
+                                        <font color="#00000">&nbsp;나의점수</font>
+                                    </td>
+                                    <td align="left" bgcolor="#ffffff">
+                                        <table width="100" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="5" bgcolor="#00a7d3"><font color="#000000"><strong>50점</strong>/만점(40점)</font> </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr bgcolor="#ffffff">
+                                    <td align="left" style="background:#fff;">
+                                        <font color="#000000">&nbsp;전체 평균점수</font>
+                                    </td>
+                                    <td align="left">
+                                        <table width="50" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="5" bgcolor="#c7c7c7"><font color="#333333">50점/만점(40점)</font> </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="">
+                        <div class="clearfix mb10">
+                            <h4 class="fl_l txt_bold">답안지</h4>
+                            <span class="fl_r txt_red">※아래의 문항을 클릭하시면 자세한 해설을 보실 수 있습니다. </span>
+                        </div>
+                        <div class="">
+                            <table class="table_template01">
+                                <tbody>
+                                    <tr align="center" bgcolor="#f5f5f5">
+                                        <td width="100">
+                                            <strong>
+                                                <font color="#000000">문항</font>
+                                            </strong>
+                                        </td>
+                                        <td><strong><a href="#ans1">1</a></strong></td>
+                                        <td><strong><a href="#ans2">2</a></strong></td>
+                                        <td><strong><a href="#ans3">3</a></strong></td>
+                                        <td><strong><a href="#ans4">4</a></strong></td>
+                                        <td><strong><a href="#ans5">5</a></strong></td>
+                                        <td><strong><a href="#ans6">6</a></strong></td>
+                                        <td><strong><a href="#ans7">7</a></strong></td>
+                                        <td><strong><a href="#ans8">8</a></strong></td>
+                                        <td><strong><a href="#ans9">9</a></strong></td>
+                                        <td><strong><a href="#ans10">10</a></strong></td>
+                                        <td><strong><a href="#ans11">11</a></strong></td>
+                                        <td><strong><a href="#ans12">12</a></strong></td>
+                                        <td><strong><a href="#ans13">13</a></strong></td>
+                                        <td><strong><a href="#ans14">14</a></strong></td>
+                                        <td><strong><a href="#ans15">15</a></strong></td>
+                                        <td><strong><a href="#ans16">16</a></strong></td>
+                                        <td><strong><a href="#ans17">17</a></strong></td>
+                                        <td><strong><a href="#ans18">18</a></strong></td>
+                                        <td><strong><a href="#ans19">19</a></strong></td>
+                                        <td><strong><a href="#ans20">20</a></strong></td>
+                                    </tr>
+                                    <tr align="center" bgcolor="#ffffff">
+                                        <td width="100" bgcolor="#fafafa">채점표</td>
+                                        <td><b><a href="#ans1"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans2"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans3"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans4"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans5"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans6"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans7"><font color="red">O</font></a></b></td>
+                                        <td><b><a href="#ans8"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans9"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans10"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans11"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans12"><font color="red">O</font></a></b></td>
+                                        <td><b><a href="#ans13"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans14"><font color="red">O</font></a></b></td>
+                                        <td><b><a href="#ans15"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans16"> <font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans17"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans18"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans19"><font color="red">X</font></a></b></td>
+                                        <td><b><a href="#ans20"><font color="red">X</font></a></b></td>
+                                    </tr>
+                                    <tr align="center" bgcolor="#ffffff">
+                                        <td width="100" bgcolor="#fafafa">정답</td>
+                                        <td><a href="#ans1">3</a></td>
+                                        <td><a href="#ans2">4</a></td>
+                                        <td><a href="#ans3">2</a></td>
+                                        <td><a href="#ans4">5</a></td>
+                                        <td><a href="#ans5">5</a></td>
+                                        <td><a href="#ans6">2</a></td>
+                                        <td><a href="#ans7">1</a></td>
+                                        <td><a href="#ans8">4</a></td>
+                                        <td><a href="#ans9">3</a></td>
+                                        <td><a href="#ans10">4</a></td>
+                                        <td><a href="#ans11">5</a></td>
+                                        <td><a href="#ans12">1</a></td>
+                                        <td><a href="#ans13">2</a></td>
+                                        <td><a href="#ans14">1</a></td>
+                                        <td><a href="#ans15">1</a></td>
+                                        <td><a href="#ans16">4</a></td>
+                                        <td><a href="#ans17">5</a></td>
+                                        <td><a href="#ans18">5</a></td>
+                                        <td><a href="#ans19">2</a></td>
+                                        <td><a href="#ans20">1</a></td>
+                                    </tr>
+                                    <tr align="center" bgcolor="#ffffff">
+                                        <td width="100" bgcolor="#fafafa">입력답</td>
+                                        <td><a href="#ans1">1</a></td>
+                                        <td><a href="#ans2">1</a></td>
+                                        <td><a href="#ans3">1</a></td>
+                                        <td><a href="#ans4">1</a></td>
+                                        <td><a href="#ans5">1</a></td>
+                                        <td><a href="#ans6">1</a></td>
+                                        <td><a href="#ans7">1</a></td>
+                                        <td><a href="#ans8">1</a></td>
+                                        <td><a href="#ans9">1</a></td>
+                                        <td><a href="#ans10">1</a></td>
+                                        <td><a href="#ans11">1</a></td>
+                                        <td><a href="#ans12">1</a></td>
+                                        <td><a href="#ans13">1</a></td>
+                                        <td><a href="#ans14">1</a></td>
+                                        <td><a href="#ans15">3</a></td>
+                                        <td><a href="#ans16">3</a></td>
+                                        <td><a href="#ans17">1</a></td>
+                                        <td><a href="#ans18">3</a></td>
+                                        <td><a href="#ans19">1</a></td>
+                                        <td><a href="#ans20">2</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 문제해설 -->
+                <div class="mp20_line">
+                    <h4>문제해설</h4>
+
+                    <div class="question_item  pt0" q_type="objective" q_no="1">
+                        <div class="question">
+                            1. 강연자는 연수 주제에 대한 전문성을 확보하고 있습니까?
+                            <input name="q_type[1]" type="hidden" value="objective">
+                        </div>
+                        <div class="q_list">
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="1"> 매우 불만족</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="2"> 불만족</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="3"> 보통</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="4"> 만족</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="5"> 매우 만족</label>
+                            </div>
+                        </div>
+
+                        <div class="box_grey">
+                            <div class="">
+                                <span class="txt_bold">판정: </span><span class="txt_bold txt_blue">X</span> /
+                                <span class="txt_bold">정답: &#40;1&#41;</span>
+                            </div>
+                            <span class="txt_bold txt_blue">해설: </span>
+                            <span class="">
+                                UCC는 사용자 제작 컨텐츠를 뜻하는 신조어로써 개인적으로 직접 만든 저작물(영상, 사진, 텍스트 등 모든 컨텐츠)들을 일컫는 말입니다.
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="question_item" q_type="objective" q_no="1">
+                        <div class="question">
+                            2. 연수의 전반적인 난이도는 적정했나요?
+                            <input name="q_type[1]" type="hidden" value="objective">
+                        </div>
+                        <div class="q_list">
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="1"> 매우 불만족</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="2"> 불만족</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="3"> 보통</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="4"> 만족</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="5"> 매우 만족</label>
+                            </div>
+                        </div>
+
+                        <div class="box_grey">
+                            <div class="">
+                                <span class="txt_bold">판정: </span><span class="txt_bold txt_blue">X</span> /
+                                <span class="txt_bold">정답: &#40;1&#41;</span>
+                            </div>
+                            <span class="txt_bold txt_blue">해설: </span>
+                            <span class="">
+                                UCC는 사용자 제작 컨텐츠를 뜻하는 신조어로써 개인적으로 직접 만든 저작물(영상, 사진, 텍스트 등 모든 컨텐츠)들을 일컫는 말입니다.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="question_item" q_type="objective" q_no="1">
+                        <div class="question">
+                            3. 학습하기 편안한 원격연수 환경을 제공했습니까?
+                            <input name="q_type[1]" type="hidden" value="objective">
+                        </div>
+                        <div class="q_list">
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="1"> 매우 불만족</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="2"> 불만족</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="3"> 보통</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="4"> 만족</label>
+                            </div>
+                            <div class="q_item">
+                                <label><input name="objective_list[1]" type="radio" value="5"> 매우 만족</label>
+                            </div>
+                        </div>
+                        <div class="box_grey">
+                            <div class="">
+                                <span class="txt_bold">판정: </span><span class="txt_bold txt_blue">X</span> /
+                                <span class="txt_bold">정답: &#40;1&#41;</span>
+                            </div>
+                            <span class="txt_bold txt_blue">해설: </span>
+                            <span class="">
+                                UCC는 사용자 제작 컨텐츠를 뜻하는 신조어로써 개인적으로 직접 만든 저작물(영상, 사진, 텍스트 등 모든 컨텐츠)들을 일컫는 말입니다.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /문제해설 -->
+
+
+            </div>
+            <div class="ta_c mb30"><a class="btn btn-default" href="#">창닫기</a></div>
+        </div>
+        <!--// pop_content -->
+
+    </div>
+</body>
+
+</html>

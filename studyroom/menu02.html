@@ -51,17 +51,11 @@ $(window).load(function(){
 <div id="wrap">
 	<!-- header 공통 -->
 	<div id="header">
-		<div class="studyroom_header_container">
-			<div class="content">
-				<a class="go_tschool" href="#">티스쿨 원격 교육 연수원</a>
-				<a class="go_visang" href="#">비상 원격 평생교육원</a>
-				<a class="exit" href="#">강의실 나가기</a>
-			</div>
-		</div>
 		<div class="studyroom_container">
 			<div class="content">
 				<h1><a class="logo_tschool" href="../">티스쿨 원격교육연수원</a></h1>
 				<h2>사이버강의실</h2>
+                <a class="exit" href="#">강의실 나가기</a>
 			</div>
 		</div>
 	</div>
@@ -79,35 +73,45 @@ $(window).load(function(){
 					<ul>
 						<li><a href="./menu01.html">학습하기(목차)</a></li>
 						<li><a href="./menu02.html">온라인 시험</a></li>
-						<li><a href="#">온라인 과제</a></li>
-						<li><a href="#">강의평가</a></li>
-					</ul>
-					<ul class="etc_menu">
-						<li><a href="../menu03/menu01.html">공지사항</a></li>
-						<li><a href="../menu03/menu05.html">학습자료실</a></li>
-						<li><a href="../menu03/menu02.html">Q&amp;A</a></li>
-						<li><a href="../menu03/menu03.html">연수후기</a></li>
+						<li><a href="./menu03.html">온라인 과제</a></li>
+						<li><a href="./menu04.html">강의평가</a></li>
 					</ul>
 				</div>
+                <ul class="etc_menu">
+                    <li><a href="./menu05.html">공지사항</a></li>
+                    <li><a href="./menu06.html">학습자료실</a></li>
+                    <li><a href="./menu07.html">Q&amp;A</a></li>
+                    <li><a href="./menu08.html">연수후기</a></li>
+                </ul>
+                <div class="studyroom01">
+                    <div class="s_left_ban bg_review">
+                        <p class="mb20 txt_bold txt_black">연수 후기를 작성하시면<br>즉시 사용 가능한<br>포인트 1,000점 증정</p>
+                        <a class="btn btn-info form_side" href="../menu03/menu03_write.html" style="background:#4760ab; color:#fff;">후기쓰기</a>
+                    </div>
+
+                    <div class="s_left_ban bg_check">
+                        <a href="javascript:open_window('../popup/popup_jindo_check.html', '', 'width=600, height=350')">
+                            <p class="txt_bold txt_black">진도 체크 문제<br>해결 방법 보기</p>
+                        </a>
+                    </div>
+
+                    <div class="s_left_ban bg_cs">
+                        <p class="txt_bold txt_black">고객센터</p>
+                        <span class="mb20 txt_bold txt_s24 txt_dblue">1544-9044</span>
+                        <dl>
+                            <dt>FAX</dt>
+                            <dd>02-6970-6179</dd>
+                            <dt>상담시간</dt>
+                            <dd>09:00 ~ 18:00</dd>
+                            <dt>점심시간</dt>
+                            <dd>12:15 ~ 13:15</dd>
+                            <dt>이메일</dt>
+                            <dd>tschool@tschool.net</dd>
+                        </dl>
+                    </div>
+                </div>
 			</div>
 			<!-- //좌측 메뉴 -->
-
-			<!-- 우측 퀵메뉴 공통 -->
-			<div id="nav">
-				<a class="quick_toggle" href="javascript:quick_toggle();"></a>
-				<dl>
-                    <dt><span>QUICK<br />MENU</span></dt>
-                    <dd class="quick_1"><a href="./menu03/menu03.html">연수후기</a></dd>
-                    <dd class="quick_2"><a href="javascript:popimage('./image/common/inga.gif',480,670);">교육부<br />인가서</a></dd>
-                    <dd class="quick_3"><a href="./menu01/menu05.html">연수일정</a></dd>
-                    <dd class="quick_4"><a href="./menu04/menu04.html">이수증</a></dd>
-                    <dd class="quick_5"><a href="./menu04/menu05.html">수강연기</a></dd>
-                    <dd class="quick_6"><a href="./menu04/menu03.html">영수증<br />수강취소</a></dd>
-                    <dd class="quick_7"><a href="http://113366.com/visang">원격지원</a></dd>
-                    <dd class="quick_8"><a href="./menu03/menu02.html">묻고답하기</a></dd>
-                </dl>
-			</div>
-			<!-- //우측 퀵메뉴 공통 -->
 
 			<div id="article">
 				<!-- board_wrap -->
@@ -136,16 +140,22 @@ $(window).load(function(){
 							</thead>
 							<tbody>
 								<tr>
-									<td rowspan="2">온라인평가</td>
+									<td rowspan="3">온라인평가</td>
 									<td><strong>진도율</strong></td>
-									<td><span>50</span></td>
+									<td><span>40</span></td>
 									<td><span>7점</span><strong>(14.00%)</strong></td>
 									<td>80% 이상시 수료</td>
 								</tr>
 								<tr>
+									<td><strong>과제</strong></td>
+									<td><span>30</span></td>
+									<td>제출완료&#40;과제 채점중&#41;</td>
+									<td>온라인 과제 시험</td>
+								</tr>
+                                <tr>
 									<td><strong>시험</strong></td>
-									<td><span>50</span></td>
-									<td>미응시</td>
+									<td><span>30</span></td>
+									<td>30점 <a class="link" href="javascript:open_window('../popup/popup_report_view.html', '', 'width=700, height=700')" target="_blank">성적표 보기</a></td>
 									<td>온라인 퀴즈 시험</td>
 								</tr>
 								<tr>
@@ -163,9 +173,9 @@ $(window).load(function(){
 							</tbody>
 							<tfoot>
 								<tr>
-									<td colspan="2"><strong>절대평가 점수 합계<strong></td>
+                                    <td colspan="2"><strong>절대평가 점수 합계</strong></td>
 									<td><span>100</span></td>
-									<td><strong>7<strong></td>
+                                    <td><strong>7</strong></td>
 									<td><strong>60점 이상시 이수가능</strong></td>
 								</tr>
 							</tfoot>
@@ -196,10 +206,13 @@ $(window).load(function(){
 							<tbody>
 								<tr>
 									<td class="col1">1</td>
-									<td class="col2 ta_l"><strong>교실속! 메이커 교육<strong></td>
+                                    <td class="col2 ta_l">
+                                        <strong>교실속! 메이커 교육</strong><br>
+                                        <a class="btn_white2" href="javascript:open_window('../popup/popup_online_test.html', '', 'width=600, height=630')">온라인 시험</a>
+                                    </td>
 									<td class="col3">2018-11-19 ~ 2018-12-31</td>
-									<td class="col4">-</td>
-									<td class="col5">-</td>
+									<td class="col4">미제출</td>
+									<td class="col5">2018-12-24</td>
 									<td class="col6"><span>50점</span></td>
 								</tr>
 							</tbody>
@@ -237,12 +250,12 @@ $(window).load(function(){
 					</ul>
 				</li>
 				<li class="copyright">
-        ㈜티스쿨이앤씨 | 서울시 구로구 디지털로 33길 48 대륭포스트타워 7차 | 대표이사:박병근<br>
-        티스쿨 고객센터 : 1544-9044 | FAX : 02-6970-6179 | 메일 : tschool@tschool.net<br>
-        사업자 등록번호 : 214-87-33789 | 연수원 인가: 제02-9호 | 통신판매업신고 제 2013-서울구로-0983호
-        <a class="link" href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2013316015930200983&area1=&area2=&currpage=1&searchKey=04&searchVal=2148733789&stdate=&enddate=">사업자 정보 확인</a><br>
-        COPYRIGHT 2013 TSCHOOL ALLRIGHTS RESERVED.
-        </li>
+                ㈜티스쿨이앤씨 | 서울시 구로구 디지털로 33길 48 대륭포스트타워 7차 | 대표이사:박병근<br>
+                티스쿨 고객센터 : 1544-9044 | FAX : 02-6970-6179 | 메일 : tschool@tschool.net<br>
+                사업자 등록번호 : 214-87-33789 | 연수원 인가: 제02-9호 | 통신판매업신고 제 2013-서울구로-0983호
+                <a class="link" href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2013316015930200983&area1=&area2=&currpage=1&searchKey=04&searchVal=2148733789&stdate=&enddate=">사업자 정보 확인</a><br>
+                COPYRIGHT 2013 TSCHOOL ALLRIGHTS RESERVED.
+                </li>
 			</ul>
 			<span class="logo_edu"></span>
 		</div>

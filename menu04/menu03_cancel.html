@@ -38,6 +38,21 @@ $(window).load(function(){
 	$window.scroll(function(){
 		nav_fix(0);
 	});
+
+	if($('.table_cancel_history tbody tr').length == 0){
+		$('.table_cancel_history tfoot').show();
+	}
+
+	if($('.table_group_history tbody tr').length == 0){
+		$('.table_group_history tfoot').show();
+	}
+
+	$('.tab_btns li').on('click', function(){
+		$('.tab_btns li').removeClass('on');
+		$(this).addClass('on');
+		$('.history_content').removeClass('on');
+		$('.' + $(this).attr('data-link')).addClass('on');
+	});
 });
 </script>
 </head>
@@ -90,7 +105,13 @@ $(window).load(function(){
 						<p class="route">홈 &gt; 나의강의실 &gt; <span>결제내역</span></p>
 					</div>
 
-					<div class="history_wrap">
+					<ul class="tab_btns">
+						<li class="on" data-link="history_wrap">결제내역</li>
+						<li data-link="group_history_wrap">단체 결제내역</li>
+                        <li data-link="training_history_wrap">연수 결제내역</li>
+					</ul>
+
+					<div class="history_content history_wrap on">
 						<table class="table_history table_template01">
 							<thead>
 								<tr>
@@ -111,105 +132,145 @@ $(window).load(function(){
 									<td class="col3">50,000</td>
 									<td class="col4">계좌이체</td>
 									<td class="col5">2018-11-11</td>
-									<td class="col6"><a class="btn_blue" href="#">결제확인</a></td>
-									<td class="col7"><a class="btn_blue" href="#">영수증</a></td>
-									<td class="col8"><a class="btn_grey" href="#">결제취소</a></td>
+									<td class="col6"><a class="btn btn-default tb_grey" href="#">결제확인</a></td>
+									<td class="col7"><a class="btn btn-default tb_grey" href="#">영수증</a></td>
+									<td class="col8"><a class="btn btn-default tb_grey" href="#">결제취소</a></td>
 								</tr>
 							</tbody>
 						</table>
 
 						<div class="pager">
-							<a class="prev" href="#">이전 페이지</a>
-							<ul>
-								<li><a class="on" href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li><a href="#">6</a></li>
-								<li><a href="#">7</a></li>
-								<li><a href="#">8</a></li>
-								<li><a href="#">9</a></li>
-								<li><a href="#">10</a></li>
-							</ul>
-							<a class="next" href="#">다음 페이지</a>
-						</div>
+                            <a class="first" href="#">처음 페이지</a>
+                            <a class="prev" href="#">이전 페이지</a>
+                            <ul>
+                                <li><a class="on" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                            </ul>
+                            <a class="next" href="#">다음 페이지</a>
+                            <a class="last" href="#">마지막 페이지</a>
+                        </div>
 
-						<div class="caution_box">
-							<ul class="blet_alert">
+						<div class="caution_box7">
+                            <h3>수강 및 결제취소</h3>
+							<ul class="blet_alert pl180">
 								<li>
-									수강 및 결제취소
 									<ul class="blet_circle">
 										<li>수강/결제내역에서 [결제취소]를 진행 하실 수 있습니다.</li>
-										<li>결제취소가 불가능한 경우, 아래 취소게시판에 신청해주세요.</li>
+										<li>결제취소가 불가능한 경우, 아래 <span class="txt_red">취소게시판</span>에 신청해주세요.</li>
 										<li>결제취소에 대한 환불은 결제취소 신청 후 약 5~7일 이내 카드결제가 취소되거나 이체하신 통장으로 입금 됩니다.</li>
-										<li>취소 및 환불규정을 확인 해 주세요.<a class="btn_grey btn_caution" target="_blank" href="./popup_refund.html">취소/환불안내</a></li>
+										<li>취소 및 환불규정을 확인 해 주세요. <a class="btn_white2" href="javascript:open_window('../popup/popup_refund.html', '', 'width=600, height=600')">결제 취소 및 환불규정 <img class="icon_arrow" src="../image/common/bul_st02.gif"></a></li>
 									</ul>
 								</li>
 							</ul>
 						</div>
+
+						<form class="form_write">
+                            <table class="table_template01">
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>제목</th>
+                                        <td class="ta_l"><input name="write_title" class="write_title" value="수강 취소 신청합니다"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>연수선택</th>
+                                        <td class="ta_l">
+                                            <select name="write_subject">
+                                                <option>연수연기할과목 선택</option>
+                                            </select>
+                                            <p>* 개강 10일 이후 과정은 연기/취소처리불가</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>내용</th>
+                                        <td class="ta_l">
+                                            <div class="text_area_btns">
+                                                <a class="decrease" href="javascript:textarea_decrease('write_content', 10);">높이 줄이기</a>
+                                                <a class="original" href="javascript:textarea_original('write_content', 10);">높이 원래대로</a>
+                                                <a class="increase" href="javascript:textarea_increase('write_content', 10);">높이 늘이기</a>
+                                            </div>
+                                            <textarea name="write_content" id="write_content" class="write_content" rows="10"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>은행명</th>
+                                        <td class="ta_l"><input name="write_bank" size="20"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>계좌 번호</th>
+                                        <td class="ta_l"><input name="write_account_num" size="50"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>예금주</th>
+                                        <td class="ta_l"><input name="write_account_owner" size="20"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="txt_msg">
+                                <div class="caution_box3">
+                                    <span class="txt_bold txt_black">&lt;환불 받으실 계좌 정보&gt;</span>
+                                    <span>※ 수강신청 시, 가상계좌입금 또는 무통장입금 으로 결제 하신 경우에만 환불 받으실 계좌정보를 입력해주세요.</span>
+                                </div>
+                            </div>
+                            <div class="btns mb30">
+                                <a class="btn_grey" href="./menu03.html">목록</a>
+                                <a class="btn_blue" href="#">글쓰기</a>
+                            </div>
+                        </form>
 					</div>
 
-					<form class="form_write">
-						<table class="table_template01">
+					<div class="history_content group_history_wrap">
+						<table class="table_group_history table_template01">
 							<colgroup>
-								<col class="col1">
-								<col class="col2">
+								<col class="col1"/>
+								<col class="col2"/>
+								<col class="col3"/>
+								<col class="col4"/>
+								<col class="col5"/>
+								<col class="col6"/>
 							</colgroup>
 							<thead>
-								<tr><th colspan="2">글쓰기</th></tr>
+								<tr>
+									<th class="col1">신청내역</th>
+									<th class="col2">결제금액</th>
+									<th class="col3">결제방법</th>
+									<th class="col4">신청일자</th>
+									<th class="col5">결제확인</th>
+									<th class="col6">영수증</th>
+								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<th>제목</th>
-									<td class="ta_l"><input name="write_title" class="write_title" value="수강 취소 신청합니다"></td>
-								</tr>
-								<tr>
-									<th>연수선택</th>
-									<td class="ta_l">
-										<select name="write_subject">
-											<option>연수연기할과목 선택</option>
-										</select>
-										<p>* 개강 10일 이후 과정은 연기/취소처리불가</p>
-									</td>
-								</tr>
-								<tr>
-									<th>내용</th>
-									<td class="ta_l">
-										<div class="text_area_btns">
-											<a class="decrease" href="javascript:textarea_decrease('write_content', 10);">높이 줄이기</a>
-											<a class="original" href="javascript:textarea_original('write_content', 10);">높이 원래대로</a>
-											<a class="increase" href="javascript:textarea_increase('write_content', 10);">높이 늘이기</a>
-										</div>
-										<textarea name="write_content" id="write_content" class="write_content" rows="10"></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th>은행명</th>
-									<td class="ta_l"><input name="write_bank" size="20"></td>
-								</tr>
-								<tr>
-									<th>계좌 번호</th>
-									<td class="ta_l"><input name="write_account_num" size="50"></td>
-								</tr>
-								<tr>
-									<th>예금주</th>
-									<td class="ta_l"><input name="write_account_owner" size="20"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="txt_msg">
-							<strong>&lt;환불 받으실 계좌 정보&gt;</strong>
-							<span>※ 수강신청 시, 가상계좌입금 또는 무통장입금 으로 결제 하신 경우에만 환불 받으실 계좌정보를 입력해주세요.</span>
-						</div>
-						<div class="btns">
-							<a class="btn_grey" href="./menu03.html">목록</a>
-							<a class="btn_blue" href="#">글쓰기</a>
-						</div>
-					</form>
 
+							</tbody>
+							<tfoot>
+								<tr>
+									<th colspan="6">단체 대표 참여 데이터가 없습니다.</th>
+								</tr>
+							</tfoot>
+						</table>
+
+                        <div class="ta_r pt20 mb30"><a class="btn_blue" href="./menu06.html"><span class="icon_area ico_cancle"></span> 결제 취소 및 연기 신청</a></div>
+
+					</div>
+
+                    <div class="history_content training_history_wrap">
+                        연수결제내역
+                    </div>
 				</div>
 				<!-- //board_wrap -->
+
+
 			</div>
 			<!-- //article -->
 		</div>

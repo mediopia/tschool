@@ -50,8 +50,18 @@ $(window).load(function(){
     //검색창 관련
     $('.search').click(function(){
         $(this).toggleClass('on');
+        //$(this).parents().find('.search_areaW').slideToggle(200);
         $(this).parents().find('.search_area').toggleClass('show');
     });
+
+    //파일인풋
+    $(function(){
+		$('.upload_text').val('파일첨부');
+		$('.input_file').change(function(){
+			var i = $(this).val();
+			$('.upload_text').val(i);
+		});
+	});
 
 	//회원 정보 - 수강 과정 목록 관련
 	$('.member_content .subject').on('click', function(){

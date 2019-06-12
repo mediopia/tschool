@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq2').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(2).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>자율연수</h2>
+					<ul>
+						<li><a href="./menu01.html">연수신청</a></li>
+						<li><a href="./menu02.html">무료특강</a></li>
+						<li><a href="./menu03.html">집합연수</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu04_02">
+					<div class="title">
+						<h3>집합연수</h3>
+						<p class="route">홈 &gt; 자율연수 &gt; <span>집합연수</span></p>
+					</div>
+
+					<div class="board_content_wrap">
+                        <table class="total_table table_template01">
+                            <colgroup>
+                                <col width="*">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="15%">
+                            </colgroup>
+							<thead>
+								<tr>
+									<th>연수명</th>
+									<th>연수비</th>
+									<th>합계액</th>
+									<th>취소</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="ta_l">질문이 살아 있는 수업(질문&#38;국거&#38;과학편)</td>
+									<td>70,000원</td>
+									<td>70,000원</td>
+									<td><a class="btn_white2" href="#">삭제</a></td>
+								</tr>
+                                <!--<tr>
+                                    <td class="col4 ta_r total" colspan="4"><span class="fl_l txt_white">총 합계 금액</span> <strong>67,500</strong>원</td>
+                                </tr>-->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>총 합계 금액</th>
+                                    <td class="col4 ta_r total" colspan="3"><strong>67,500</strong>원</td>
+                                </tr>
+							</tfoot>
+                        </table>
+
+                        <h4>주문자 정보 </h4> <a class="mt30 btn_white2" href="../menu04/menu07.html">수정하기</a>
+                        <div class="pay">
+                            <table class="how_pay_table table_template01">
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="">
+                                    <col width="10%">
+                                    <col width="">
+                                    <col width="10%">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>성명</th>
+                                        <td>정영희</td>
+                                        <th>핸드폰</th>
+                                        <td>010-1234-5678</td>
+                                        <th>이메일</th>
+                                        <td>dkjofe@tschool.net</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="clearfix">
+                            <h4>수취인 정보</h4>
+                            <span class="fl_r mt30"><input type="checkbox" name="check"> 주문자 정보와 수취인 정보가 같음</span>
+                        </div>
+                        <div class="pay">
+                            <table class="how_pay_table table_template01">
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="">
+                                    <col width="10%">
+                                    <col width="">
+                                    <col width="10%">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>성명</th>
+                                        <td><input id="mb_id" name="mb_id" type="text" size="10" onblur="check_id();"></td>
+                                        <th>핸드폰</th>
+                                        <td><input id="mb_id" name="mb_id" type="text" size="10" onblur="check_id();"></td>
+                                        <th>이메일</th>
+                                        <td><input id="mb_id" name="mb_id" type="text" size="10" onblur="check_id();"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>결제 수단 선택</h4>
+                        <div class="pay">
+                            <table class="how_pay_table table_template01">
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="*">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="col1">결제수단</th>
+                                        <td class="col2 ta_l">
+                                            <input type="radio" id="sel01" name="pay" value="t" checked=""><label for="sel01">신용카드</label>
+                                            <input type="radio" id="sel02" name="pay" value="v"><label for="sel02">계좌이체</label>
+                                            <input type="radio" id="sel03" name="pay" value="o"><label for="sel03">무통장입금(가상계좌)</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="ta_c">
+                                <a class="btn btn-primary btn-lg" href="#">결제하기</a>
+                            </div>
+                        </div>
+
+
+
+					</div>
+
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

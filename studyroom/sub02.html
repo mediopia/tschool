@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.aside_menu_wrap > ul > li').eq(1).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+	for(var i = 0; i < $('.graph_mask').length; i++){
+		var rate = $('.graph_mask').eq(i).parent().attr('data-fill') + '%';
+		$('.graph_mask').eq(i).css('width', rate);
+		$('.display_progress').eq(i).html(rate)
+	}
+});
+
+var fileTarget = $('.filebox .upload-hidden');
+
+fileTarget.on('change', function(){ // 값이 변경되면
+  if(window.FileReader){ // modern browser
+    var filename = $(this)[0].files[0].name;
+  }
+  else { // old IE
+    var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+  }
+
+  // 추출한 파일명 삽입
+  $(this).siblings('.upload-name').val(filename);
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<div id="header">
+		<div class="studyroom_container">
+			<div class="content">
+				<h1><a class="logo_tschool" href="../">티스쿨 원격교육연수원</a></h1>
+				<h2>사이버강의실</h2>
+                <a class="exit" href="#">강의실 나가기</a>
+			</div>
+		</div>
+	</div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>사이버강의실</h2>
+					<ul>
+						<li><a href="./menu01.html">학습하기(목차)</a></li>
+						<li><a href="./menu02.html">온라인 시험</a></li>
+						<li><a href="./menu03.html">온라인 과제</a></li>
+						<li><a href="./menu04.html">강의평가</a></li>
+					</ul>
+				</div>
+                <ul class="etc_menu">
+                    <li><a href="./menu05.html">공지사항</a></li>
+                    <li><a href="./menu06.html">학습자료실</a></li>
+                    <li><a href="./menu07.html">Q&amp;A</a></li>
+                    <li><a href="./menu08.html">연수후기</a></li>
+                </ul>
+                <div class="s_left_ban">
+                    <a href="#"><img src="../image/banner/aside_blog.png"></a>
+                </div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap studyroom02">
+					<div class="title">
+						<h3>연수후기</h3>
+						<p class="route">홈 &gt; 사이버강의실 &gt; <span>연수후기</span></p>
+					</div>
+                    <div class="mb30">
+                        <form class="form_write">
+                            <table class="table_template01">
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>분류</th>
+                                        <td class="ta_l">
+                                            <p>과목분류 : </p>
+                                            <select name="subject">
+                                                <option value="">선택하세요</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>만족도</th>
+                                        <td class="ta_l">
+                                            <input type="radio" name="wr_10" value="1"><img src="../image/common/star01.gif">
+                                            <input type="radio" name="wr_10" value="2"><img src="../image/common/star02.gif">
+                                            <input type="radio" name="wr_10" value="3"><img src="../image/common/star03.gif">
+                                            <input type="radio" name="wr_10" value="4"><img src="../image/common/star04.gif">
+                                            <input type="radio" name="wr_10" value="5" checked=""><img src="../image/common/star05.gif">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>제목</th>
+                                        <td class="ta_l"><input name="write_title" class="write_title" value=""></td>
+                                    </tr>
+                                    <tr>
+                                        <th>내용</th>
+                                        <td class="ta_l">
+                                            <div class="text_area_btns">
+                                                <a class="decrease" href="javascript:textarea_decrease('write_content', 10);">높이 줄이기</a>
+                                                <a class="original" href="javascript:textarea_original('write_content', 10);">높이 원래대로</a>
+                                                <a class="increase" href="javascript:textarea_increase('write_content', 10);">높이 늘이기</a>
+                                            </div>
+                                            <textarea name="write_content" id="write_content" class="write_content" rows="10"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btns">
+                                <a class="btn_grey" href="./menu07.html">목록</a>
+                                <a class="btn_blue" href="#">글쓰기</a>
+                            </div>
+                        </form>
+                    </div>
+				</div>
+				<!-- //board_wrap -->
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer">
+		<div class="footer_container">
+			<span class="logo_tschool"></span>
+			<ul class="content">
+				<li class="link">
+					<ul>
+						<li><a href="../info/info01.html">연수원소개</a></li>
+						<li class="space">I</li>
+						<li><a href="#">멤버십</a></li>
+						<li class="space">I</li>
+						<li><a href="../info/info03.html">사이트맵</a></li>
+						<li class="space">I</li>
+						<li><a href="../info/rule.html">이용약관</a></li>
+						<li class="space">I</li>
+						<li><a href="../info/policy.html">개인정보처리방침</a></li>
+						<li class="space">I</li>
+						<li><a href="../info/email.html">이메일 무단 수집거부</a></li>
+					</ul>
+				</li>
+				<li class="copyright">
+                ㈜티스쿨이앤씨 | 서울시 구로구 디지털로 33길 48 대륭포스트타워 7차 | 대표이사:박병근<br>
+                티스쿨 고객센터 : 1544-9044 | FAX : 02-6970-6179 | 메일 : tschool@tschool.net<br>
+                사업자 등록번호 : 214-87-33789 | 연수원 인가: 제02-9호 | 통신판매업신고 제 2013-서울구로-0983호
+                <a class="link" href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2013316015930200983&area1=&area2=&currpage=1&searchKey=04&searchVal=2148733789&stdate=&enddate=">사업자 정보 확인</a><br>
+                COPYRIGHT 2013 TSCHOOL ALLRIGHTS RESERVED.
+                </li>
+			</ul>
+			<span class="logo_edu"></span>
+		</div>
+	</div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

@@ -67,43 +67,45 @@ function tab_btns(common, target, eqNum){
 		<ul class="gnb_main">
 			<li class="eq1"><a href="../">홈</a></li>
 			<li class="eq2"><a href="../menu01/menu01.html">직무연수</a></li>
-			<li class="eq3"><a href="../menu02/menu01.html">자율연수</a></li>
-			<li class="eq4"><a href="../menu01.html">연수지원</a></li>
+			<li class="eq4"><a href="../menu03/menu01.html">연수지원</a></li>
 			<li class="eq5"><a href="../menu04/menu01.html">나의강의실</a></li>
 		</ul>
 	</div>
 	<!-- //nav 공통(상단 메뉴) -->
 
-	<!-- aside 공통(좌측 숨김메뉴) -->
+
+    <!-- aside 공통(좌측 숨김메뉴) -->
 	<div id="aside">
 		<div class="gnb_sub_bg"></div>
 		<ul class="gnb_sub">
 			<li class="close">
-				<a href="javascript:aside_toggle();">닫기 X</a>
+                <a href="#0" class="login">로그인 해 주세요</a>
+				<a href="javascript:aside_toggle();" class="btn_close">닫기</a>
 			</li>
-			<li class="sub" data-eq="eq4">
+			<li class="sub" data-eq="eq5">
 				<dl>
-					<dt><a href="../menu04/menu01.html">나의강의실</a></dt>
-				</dl>
-			</li>
-			<li class="sub" data-eq="eq1">
-				<dl>
-					<dt><a href="./menu01.html">직무연수</a></dt>
+					<dt><a href="./menu01.html">나의강의실</a></dt>
+                    <dd><a href="./menu02.html">결제내역</a></dd>
 				</dl>
 			</li>
 			<li class="sub" data-eq="eq2">
 				<dl>
-					<dt><a href="../menu02/menu01.html">자율연수</a></dt>
+					<dt><a href="../menu01/menu01.html">직무연수</a></dt>
 				</dl>
 			</li>
 			<li class="sub" data-eq="eq3">
 				<dl>
-					<dt><a href="../menu03/menu01.html">연수지원</a></dt>
-					<dd><a href="../menu03/menu01.html">공지사항</a></dd>
-					<dd><a href="../menu03/menu02.html">이벤트</a></dd>
-					<dd><a href="../menu03/menu03.html">Q&amp;A</a></dd>
-					<dd><a href="../menu03/menu04.html">FAQ</a></dd>
-					<dd><a href="../menu03/menu05.html">연수후기</a></dd>
+					<dt><a href="../menu02/menu01.html">자율연수</a></dt>
+				</dl>
+			</li>
+			<li class="sub" data-eq="eq4">
+				<dl>
+					<dt><a href="./menu01.html">연수지원</a></dt>
+					<dd><a href="./menu01.html">공지사항</a></dd>
+					<dd><a href="./menu02.html">이벤트</a></dd>
+					<dd><a href="./menu03.html">Q&amp;A</a></dd>
+					<dd><a href="./menu04.html">FAQ</a></dd>
+					<dd><a href="./menu05.html">연수후기</a></dd>
 				</dl>
 			</li>
 		</ul>
@@ -113,7 +115,7 @@ function tab_btns(common, target, eqNum){
 	<!-- container -->
 	<div id="container">
 		<!-- section -->
-		<div id="section">
+		<div id="section mt0">
 			<div id="article" class="page03 sub03">
 
 				<ul class="tab_btns">
@@ -124,9 +126,21 @@ function tab_btns(common, target, eqNum){
 					<li><a href="./menu05.html">연수후기</a></li>
 				</ul>
 
+                <div class="search_area">
+					<select>
+						<option value="all">전체</option>
+						<option value="제목">제목</option>
+						<option value="내용">내용</option>
+						<option value="작성자명">작성자명</option>
+					</select>
+					<input type="text" name="" alt="검색어를 입력해 주세요" class="search_input">
+					<a href="#" class="btn_grey">검색</a>
+				</div>
+
 				<div class="board_wrap">
 					<div class="title">
-						<h2>Q&amp;A</h2>
+						<h2 class="fl_l">Q&amp;A</h2>
+                        <div class="fl_r"><a class="btn_study" href="./sub01.html">글쓰기</a></div>
 					</div>
 
 					<table class="mobile_table_template01">
@@ -137,7 +151,7 @@ function tab_btns(common, target, eqNum){
 						<tbody>
 							<tr>
 								<td class="ta_l">
-									<p class="title"><a href="#">정보를 수정했습니다. 이수통보 부탁드려요</a><i class="label_new">NEW</i></p>
+									<p class="title"><a href="./sub06.html">정보를 수정했습니다. 이수통보 부탁드려요</a><i class="label_new">NEW</i> <img class="icon" src="../image/common/icon_lock.png"></p>
 									<p class="sub">moni****<span class="div_line">/</span>2018-09-05<span class="div_line">/</span>13210</p>
 								</td>
 								<td class="ta_r va_t">
@@ -146,7 +160,7 @@ function tab_btns(common, target, eqNum){
 							</tr>
 							<tr>
 								<td class="ta_l">
-									<p class="title"><a href="#">정보를 수정했습니다. 이수통보 부탁드려요</a></p>
+									<p class="title"><a href="./sub06.html">정보를 수정했습니다. 이수통보 부탁드려요</a> <img class="icon" src="../image/common/icon_lock.png"></p>
 									<p class="sub">moni****<span class="div_line">/</span>2018-09-05<span class="div_line">/</span>13210</p>
 								</td>
 								<td class="ta_r va_t">
@@ -155,7 +169,7 @@ function tab_btns(common, target, eqNum){
 							</tr>
 							<tr>
 								<td class="ta_l">
-									<p class="title"><a href="#">정보를 수정했습니다. 이수통보 부탁드려요</a></p>
+									<p class="title"><a href="./sub06.html">정보를 수정했습니다. 이수통보 부탁드려요</a></p>
 									<p class="sub">moni****<span class="div_line">/</span>2018-09-05<span class="div_line">/</span>13210</p>
 								</td>
 								<td class="ta_r va_t">
@@ -164,7 +178,7 @@ function tab_btns(common, target, eqNum){
 							</tr>
 							<tr>
 								<td class="ta_l">
-									<p class="title"><a href="#">정보를 수정했습니다. 이수통보 부탁드려요</a></p>
+									<p class="title"><a href="./sub06.html">정보를 수정했습니다. 이수통보 부탁드려요</a></p>
 									<p class="sub">moni****<span class="div_line">/</span>2018-09-05<span class="div_line">/</span>13210</p>
 								</td>
 								<td class="ta_r va_t">

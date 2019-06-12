@@ -64,7 +64,7 @@ $(window).load(function(){
 				<h1><a class="logo_tschool" href="./"><img src="./image/common/header_logo_tschool.png" alt="티스쿨 원격교육연수원"/></a></h1>
 				<ul class="member_content not_login"> <!-- member_content :: 임시로 비로그인 시에는 not_login클래스, 로그인 시에는 login클래스를 붙여 분기처리 -->
 					<li class="con login"><a class="logout" href="#">로그아웃</a></li>
-					<li class="con not_login"><a class="login" href="./member/login.html">로그인</a></li>
+					<li class="con not_login"><a class="login" href="member/login.html">로그인</a></li>
 				</ul>
 			</div>
 			<form name="search_form" class="search_form" action="">
@@ -81,7 +81,6 @@ $(window).load(function(){
 			<ul class="gnb_main">
 				<li class="eq1"><a href="./">홈</a></li>
 				<li class="eq2"><a href="./menu01/menu01.html">직무연수</a></li>
-				<li class="eq3"><a href="./menu02/menu01.html">자율연수</a></li>
 				<li class="eq4"><a href="./menu03/menu01.html">연수지원</a></li>
 				<li class="eq5"><a href="./menu04/menu01.html">나의강의실</a></li>
 			</ul>
@@ -102,12 +101,16 @@ $(window).load(function(){
 	<div id="aside">
 		<div class="gnb_sub_bg"></div>
 		<ul class="gnb_sub">
-			<li class="close">
-				<a href="javascript:aside_toggle();">닫기 X</a>
+			<li class="close" style="position:relative;">
+				<a href="member/login.html" class="login">로그인해 주세요</a>
+                <!-- 로그아웃일 경우 -->
+                <!--<div class="fl_l pl10">홍길동님</div> <a href="#" style="position:absolute; right:40px; top:12px;" class="btn_grey">로그아웃</a>-->
+				<a href="javascript:aside_toggle();" class="fl_r btn_close">닫기</a>
 			</li>
 			<li class="sub" data-eq="eq4">
 				<dl>
 					<dt><a href="./menu04/menu01.html">나의강의실</a></dt>
+                    <dd><a href="./menu04/menu02.html">결제내역</a></dd>
 				</dl>
 			</li>
 			<li class="sub" data-eq="eq1">
@@ -115,11 +118,11 @@ $(window).load(function(){
 					<dt><a href="./menu01/menu01.html">직무연수</a></dt>
 				</dl>
 			</li>
-			<li class="sub" data-eq="eq2">
+			<!--<li class="sub" data-eq="eq2">
 				<dl>
 					<dt><a href="./menu02/menu01.html">자율연수</a></dt>
 				</dl>
-			</li>
+			</li>-->
 			<li class="sub" data-eq="eq3">
 				<dl>
 					<dt><a href="./menu03/menu01.html">연수지원</a></dt>
@@ -141,12 +144,9 @@ $(window).load(function(){
 			<div id="article" class="main">
 				<div class="quick_menu">
 					<ul>
-						<li class="btn01"><a href="#a1">신규연수</a></li>
-						<li class="btn02"><a href="#a2">인기연수</a></li>
-						<li class="btn03"><a href="./menu04/menu01.html">나의강의실</a></li>
 						<li class="btn04"><a href="./menu03/menu05.html">연수후기</a></li>
-						<li class="btn05"><a href="./menu01/menu01.html">연수일정</a></li>
-						<li class="btn06"><a href="./menu03/menu04.html">FAQ</a></li>
+						<li class="btn05"><a href="./menu01/menu01.html">FAQ</a></li>
+						<li class="btn06"><a href="./menu03/menu04.html">Q&#38;A</a></li>
 					</ul>
 				</div>
 
@@ -317,31 +317,29 @@ $(window).load(function(){
 				</li>
 				<li class="link">
 					<ul>
-						<li><a href="../info/info01.html">연수원소개</a></li>
+						<!--<li><a href="../info/info01.html">연수원소개</a></li>
 						<li class="space">I</li>
 						<li><a href="#">멤버십</a></li>
+						<li class="space">I</li>-->
+						<li><a href="info/rule.html">이용약관</a></li>
 						<li class="space">I</li>
-						<li><a href="../info/info03.html">사이트맵</a></li>
+						<li><a href="info/policy.html">개인정보처리방침</a></li>
 						<li class="space">I</li>
-						<li><a href="../info/rule.html">이용약관</a></li>
-						<li class="space">I</li>
-						<li><a href="../info/policy.html">개인정보처리방침</a></li>
-						<li class="space">I</li>
-						<li><a href="../info/email.html">이메일 무단 수집거부</a></li>
+						<li><a href="info/email.html">이메일 무단 수집거부</a></li>
 					</ul>
 				</li>
 				<li class="logo">
 					<img src="./image/common/footer_logo_tschool.png" alt="티스쿨 원격교육연수원"/>
 				</li>
 				<li class="client">
-<p><strong>㈜티스쿨이앤씨</strong></p>
-<p><span>티스쿨 고객센터 : 1544-9044</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAX : 02-6970-6179</p>
-<p>메일 : tschool@tschool.net</p>
+                    <p><strong>㈜티스쿨이앤씨</strong></p>
+                    <p><span>티스쿨 고객센터 : 1544-9044</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAX : 02-6970-6179</p>
+                    <p>메일 : tschool@tschool.net</p>
 				</li>
 				<li class="copyright">
-<p>㈜티스쿨이앤씨 | 서울시 구로구 디지털로 33길 48 대륭포스트타워 7차 | 대표이사:박병근</p>
-<p>사업자 등록번호 : 214-87-33789 | 연수원 인가: 제02-9호 | 통신판매업신고 제 2013-서울구로-0983호 <a href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2013316015930200983&area1=&area2=&currpage=1&searchKey=04&searchVal=2148733789&stdate=&enddate=">사업자 정보 확인</a></p>
-<p>COPYRIGHT 2013 TSCHOOL ALLRIGHTS RESERVED.</p>
+                    <p>㈜티스쿨이앤씨 | 서울시 구로구 디지털로 33길 48 대륭포스트타워 7차 | 대표이사:박병근</p>
+                    <p>사업자 등록번호 : 214-87-33789 | 연수원 인가: 제02-9호 | 통신판매업신고 제 2013-서울구로-0983호 <a href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2013316015930200983&area1=&area2=&currpage=1&searchKey=04&searchVal=2148733789&stdate=&enddate=">사업자 정보 확인</a></p>
+                    <p>COPYRIGHT 2013 TSCHOOL ALLRIGHTS RESERVED.</p>
 				</li>
 			</ul>
 		</div>

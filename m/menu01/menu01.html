@@ -27,16 +27,20 @@ $(window).load(function(){
 	$('.gnb_main .eq2').addClass('on')
 
 	$('.subject_info .title').ellipsis();
+
+	$('.qna dt').on('click', function(){
+		$('.qna dt').removeClass('on');
+		$(this).addClass('on');
+		var $target = $(this).next('dd');
+		if(!$target.hasClass('on')){
+			$('.qna dd').removeClass('on');
+			$target.addClass('on');
+		}else{
+			$('.qna dt').removeClass('on');
+			$target.removeClass('on');
+		}
+	});
 });
-
-function tab_btns(common, target, eqNum){
-	$('.tab_btns li a').removeClass('on');
-	$('.tab_btns li').eq(eqNum).find('a').addClass('on');
-	$('.' + common).removeClass('on');
-	$('.' + target).addClass('on');
-
-	$('.subject_info .title').ellipsis();
-}
 </script>
 </head>
 <body class="min_w">
@@ -45,7 +49,7 @@ function tab_btns(common, target, eqNum){
 	<div id="header">
 		<div class="header_container">
 			<div class="header_top">
-				<a class="aside_toggle" href="javascript:aside_toggle();"><img src="../image/common/header_menu.png" alt="메뉴 열기"/></a>
+				<a class="aside_toggle" href="javascript:aside_toggle(&#41;;"><img src="../image/common/header_menu.png" alt="메뉴 열기"/></a>
 				<h1><a class="logo_tschool" href="../"><img src="../image/common/header_logo_tschool.png" alt="티스쿨 원격교육연수원"/></a></h1>
 				<ul class="member_content not_login"> <!-- member_content :: 임시로 비로그인 시에는 not_login클래스, 로그인 시에는 login클래스를 붙여 분기처리 -->
 					<li class="con login"><a class="logout" href="#">로그아웃</a></li>
@@ -68,7 +72,6 @@ function tab_btns(common, target, eqNum){
 		<ul class="gnb_main">
 			<li class="eq1"><a href="../">홈</a></li>
 			<li class="eq2"><a href="./menu01.html">직무연수</a></li>
-			<li class="eq3"><a href="../menu02/menu01.html">자율연수</a></li>
 			<li class="eq4"><a href="../menu03/menu01.html">연수지원</a></li>
 			<li class="eq5"><a href="../menu04/menu01.html">나의강의실</a></li>
 		</ul>
@@ -80,24 +83,26 @@ function tab_btns(common, target, eqNum){
 		<div class="gnb_sub_bg"></div>
 		<ul class="gnb_sub">
 			<li class="close">
-				<a href="javascript:aside_toggle();">닫기 X</a>
+                <a href="#0" class="login">로그인 해 주세요</a>
+				<a href="javascript:aside_toggle();" class="btn_close">닫기</a>
 			</li>
-			<li class="sub" data-eq="eq4">
+			<li class="sub" data-eq="eq5">
 				<dl>
-					<dt><a href="../menu04/menu01.html">나의강의실</a></dt>
-				</dl>
-			</li>
-			<li class="sub" data-eq="eq1">
-				<dl>
-					<dt><a href="./menu01.html">직무연수</a></dt>
+					<dt><a href="./menu01.html">나의강의실</a></dt>
+                    <dd><a href="./menu02.html">결제내역</a></dd>
 				</dl>
 			</li>
 			<li class="sub" data-eq="eq2">
 				<dl>
-					<dt><a href="../menu02/menu01.html">자율연수</a></dt>
+					<dt><a href="../menu01/menu01.html">직무연수</a></dt>
 				</dl>
 			</li>
 			<li class="sub" data-eq="eq3">
+				<dl>
+					<dt><a href="../menu02/menu01.html">자율연수</a></dt>
+				</dl>
+			</li>
+			<li class="sub" data-eq="eq4">
 				<dl>
 					<dt><a href="../menu03/menu01.html">연수지원</a></dt>
 					<dd><a href="../menu03/menu01.html">공지사항</a></dd>
@@ -114,14 +119,14 @@ function tab_btns(common, target, eqNum){
 	<!-- container -->
 	<div id="container">
 		<!-- section -->
-		<div id="section">
+		<div id="section mt0">
 			<div id="article" class="page01_01">
 
 				<ul class="tab_btns">
-					<li><a class="on" href="javascript:tab_btns('content_wrap', 'all', 0);">전체</a></li>
-					<li><a href="javascript:tab_btns('content_wrap', 'credit1', 1);">1학점</a></li>
-					<li><a href="javascript:tab_btns('content_wrap', 'credit2', 2);">2학점</a></li>
-					<li><a href="javascript:tab_btns('content_wrap', 'credit4', 3);">4학점</a></li>
+					<li><a class="on" href="javascript:tab_btns('content_wrap', 'all', 0&#41;;">전체</a></li>
+					<li><a href="javascript:tab_btns('content_wrap', 'credit1', 1&#41;;">1학점</a></li>
+					<li><a href="javascript:tab_btns('content_wrap', 'credit2', 2&#41;;">2학점</a></li>
+					<li><a href="javascript:tab_btns('content_wrap', 'credit4', 3&#41;;">4학점</a></li>
 				</ul>
 
 				<!-- 전체 -->
@@ -134,12 +139,12 @@ function tab_btns(common, target, eqNum){
 							<div class="subject_info">
 								<!--<p class="teacher">강사 호민애</p>-->
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">15시간 / 1학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">15시간&#47;1학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -149,12 +154,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">15시간 / 1학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">15시간&#47;1학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -164,12 +169,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">15시간 / 1학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">15시간&#47;1학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -179,12 +184,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">15시간 / 1학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">15시간&#47;1학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 					</ul>
@@ -200,12 +205,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">15시간 / 1학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">15시간&#47;1학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -215,12 +220,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">15시간 / 1학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">15시간&#47;1학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -230,12 +235,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">15시간 / 1학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">15시간&#47;1학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -245,12 +250,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">15시간 / 1학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">15시간&#47;1학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 					</ul>
@@ -265,12 +270,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">30시간 / 2학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">30시간&#47;2학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -280,12 +285,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">30시간 / 2학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">30시간&#47;2학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -295,12 +300,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">30시간 / 2학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">30시간&#47;2학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -310,12 +315,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">30시간 / 2학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">30시간&#47;2학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 					</ul>
@@ -330,12 +335,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">45시간 / 3학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">45시간&#47;3학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -345,12 +350,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">45시간 / 3학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">45시간&#47;3학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -360,12 +365,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">45시간 / 3학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">45시간&#47;3학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -375,12 +380,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">45시간 / 3학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">45시간&#47;3학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 					</ul>
@@ -395,12 +400,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">60시간 / 4학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">60시간&#47;4학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -410,12 +415,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">60시간 / 4학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">60시간&#47;4학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -425,12 +430,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">60시간 / 4학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">60시간&#47;4학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 
@@ -440,12 +445,12 @@ function tab_btns(common, target, eqNum){
 							</div>
 							<div class="subject_info">
 								<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
-								<p>학습지도 <span class="credit">60시간 / 4학점</span></p>
-								<p>75,000 <span class="price">67,500원 (10%)</span></p>
+								<p>학습지도 <span class="credit">60시간&#47;4학점</span></p>
+								<p>75,000 <span class="price">67,500원&#40;10%&#41;</span></p>
 							</div>
 							<div class="btns">
 								<a class="btn_preview" href="#">미리보기</a>
-								<a class="btn_study" href="#">자세히 보기</a>
+								<a class="btn_study" href="./sub01.html">신청하기</a>
 							</div>
 						</li>
 					</ul>

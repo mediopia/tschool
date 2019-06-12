@@ -24,7 +24,7 @@ ul,ol,li	{list-style: none;}
 img		{border: none;}
 hr			{border: none;}
 
-table		{width: 100%; border-spacing: 0; table-layout: fixed;}
+table		{width: 100%; border-spacing: 0; table-layout: fixed; border-collapse:collapse;}
 th,td		{vertical-align: middle;}
 
 a:link		{text-decoration: none; color: inherit;}
@@ -84,6 +84,7 @@ sup,sub				{line-height: 1;}
 
 .txt_point   {color: #f00 !important;}
 .txt_point2 {color: #00f !important;}
+.txt_point3 {color: #00a651 !important;}
 .txt_note   {color: #999 !important;}
 
 .pt0   {padding-top: 0px !important;}	.pr0   {padding-right: 0px !important;}		.pb0   {padding-bottom: 0px !important;}	.pl0   {padding-left: 0px !important;}
@@ -129,3 +130,10 @@ sup,sub				{line-height: 1;}
 .mt90  {margin-top: 90px !important;}	.mr90  {margin-right: 90px !important;}  	.mb90  {margin-bottom: 90px !important;}  	.ml90  {margin-left: 90px !important;}
 .mt95  {margin-top: 95px !important;}	.mr95  {margin-right: 95px !important;}  	.mb95  {margin-bottom: 95px !important;}  	.ml95  {margin-left: 95px !important;}
 .mt100 {margin-top: 100px !important;}	.mr100 {margin-right: 100px !important;}	.mb100 {margin-bottom: 100px !important;}	.ml100 {margin-left: 100px !important;}
+
+.btn-group-vertical>.btn-group:after,.btn-group-vertical>.btn-group:before,.btn-toolbar:after,.btn-toolbar:before,.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.dl-horizontal dd:after,.dl-horizontal dd:before,.form-horizontal .form-group:after,.form-horizontal .form-group:before,.modal-footer:after,.modal-footer:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.pager:after,.pager:before,.panel-body:after,.panel-body:before,.row:after,.row:before{
+display:table;content:" "
+}
+.btn-group-vertical>.btn-group:after,.btn-toolbar:after,.clearfix:after,.container-fluid:after,.container:after,.dl-horizontal dd:after,.form-horizontal .form-group:after,.modal-footer:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.pager:after,.panel-body:after,.row:after{
+clear:both
+}

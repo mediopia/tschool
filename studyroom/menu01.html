@@ -51,17 +51,18 @@ $(window).load(function(){
 <div id="wrap">
 	<!-- header 공통 -->
 	<div id="header">
-		<div class="studyroom_header_container">
+		<!--<div class="studyroom_header_container">
 			<div class="content">
 				<a class="go_tschool" href="#">티스쿨 원격 교육 연수원</a>
 				<a class="go_visang" href="#">비상 원격 평생교육원</a>
 				<a class="exit" href="#">강의실 나가기</a>
 			</div>
-		</div>
+		</div>-->
 		<div class="studyroom_container">
 			<div class="content">
 				<h1><a class="logo_tschool" href="../">티스쿨 원격교육연수원</a></h1>
 				<h2>사이버강의실</h2>
+                <a class="exit" href="#">강의실 나가기</a>
 			</div>
 		</div>
 	</div>
@@ -79,35 +80,46 @@ $(window).load(function(){
 					<ul>
 						<li><a href="./menu01.html">학습하기(목차)</a></li>
 						<li><a href="./menu02.html">온라인 시험</a></li>
-						<li><a href="#">온라인 과제</a></li>
-						<li><a href="#">강의평가</a></li>
-					</ul>
-					<ul class="etc_menu">
-						<li><a href="../menu03/menu01.html">공지사항</a></li>
-						<li><a href="../menu03/menu05.html">학습자료실</a></li>
-						<li><a href="../menu03/menu02.html">Q&amp;A</a></li>
-						<li><a href="../menu03/menu03.html">연수후기</a></li>
+						<li><a href="./menu03.html">온라인 과제</a></li>
+						<li><a href="./menu04.html">강의평가</a></li>
 					</ul>
 				</div>
+                <ul class="etc_menu">
+                    <li><a href="./menu05.html">공지사항</a></li>
+                    <li><a href="./menu06.html">학습자료실</a></li>
+                    <li><a href="./menu07.html">Q&amp;A</a></li>
+                    <li><a href="./menu08.html">연수후기</a></li>
+                </ul>
+
+                <div class="studyroom01">
+                    <div class="s_left_ban bg_review">
+                        <p class="mb20 txt_bold txt_black">연수 후기를 작성하시면<br>즉시 사용 가능한<br>포인트 1,000점 증정</p>
+                        <a class="btn btn-info form_side" href="../menu03/menu03_write.html" style="background:#4760ab; color:#fff !important;">후기쓰기</a>
+                    </div>
+
+                    <div class="s_left_ban bg_check">
+                        <a href="javascript:open_window('../popup/popup_jindo_check.html', '', 'width=600, height=350')">
+                            <p class="txt_bold txt_black">진도 체크 문제<br>해결 방법 보기</p>
+                        </a>
+                    </div>
+
+                    <div class="s_left_ban bg_cs">
+                        <p class="txt_bold txt_black">고객센터</p>
+                        <span class="mb20 txt_bold txt_s24 txt_dblue">1544-9044</span>
+                        <dl>
+                            <dt>FAX</dt>
+                            <dd>02-6970-6179</dd>
+                            <dt>상담시간</dt>
+                            <dd>09:00 ~ 18:00</dd>
+                            <dt>점심시간</dt>
+                            <dd>12:15 ~ 13:15</dd>
+                            <dt>이메일</dt>
+                            <dd>tschool@tschool.net</dd>
+                        </dl>
+                    </div>
+                </div>
 			</div>
 			<!-- //좌측 메뉴 -->
-
-			<!-- 우측 퀵메뉴 공통 -->
-			<div id="nav">
-				<a class="quick_toggle" href="javascript:quick_toggle();"></a>
-				<dl>
-                    <dt><span>QUICK<br />MENU</span></dt>
-                    <dd class="quick_1"><a href="./menu03/menu03.html">연수후기</a></dd>
-                    <dd class="quick_2"><a href="javascript:popimage('./image/common/inga.gif',480,670);">교육부<br />인가서</a></dd>
-                    <dd class="quick_3"><a href="./menu01/menu05.html">연수일정</a></dd>
-                    <dd class="quick_4"><a href="./menu04/menu04.html">이수증</a></dd>
-                    <dd class="quick_5"><a href="./menu04/menu05.html">수강연기</a></dd>
-                    <dd class="quick_6"><a href="./menu04/menu03.html">영수증<br />수강취소</a></dd>
-                    <dd class="quick_7"><a href="http://113366.com/visang">원격지원</a></dd>
-                    <dd class="quick_8"><a href="./menu03/menu02.html">묻고답하기</a></dd>
-                </dl>
-			</div>
-			<!-- //우측 퀵메뉴 공통 -->
 
 			<div id="article">
 				<!-- board_wrap -->
@@ -125,55 +137,12 @@ $(window).load(function(){
 								<col class="col_title"/>
 								<col class="col_content"/>
 							</colgroup>
-							<thead>
-								<tr>
-									<td class="col_title">NEIS개인번호</td>
-									<td class="col_content"><input type="text" name="neis_num" value="NEIS개인번호가 없습니다." class="load_value"><a class="edit" href="#">[수정]</a></td>
-									<td class="col_title">학교/기관명</td>
-									<td class="col_content"><input type="text" name="neis_num" value="울산초등학교" class="load_value"><a class="edit" href="#">[수정]</a></td>
-								</tr>
-							</thead>
 							<tbody>
-								<tr>
-									<td class="col_title">연수지명번호</td>
-									<td class="col_content" colspan="3">
-										<form class="lecture_form">
-											<div class="group">
-												<input type="radio" name="uniqueRadio_0" value="Y" onclick="textboxHold('0');"><!--
-												--><select name="unique_area_0" class="user" id="unique_area_0" disabled="true">
-													<option value="">지역</option>
-													<option>서울</option>
-													<option>부산</option>
-													<option>대구</option>
-													<option>인천</option>
-													<option>광주</option>
-													<option>대전</option>
-													<option>울산</option>
-													<option>경기</option>
-													<option>강원</option>
-													<option>충북</option>
-													<option>충남</option>
-													<option>전북</option>
-													<option>전남</option>
-													<option>경북</option>
-													<option>경남</option>
-													<option>제주</option>
-													<option>세종</option>
-												</select>
-												- <input type="text" name="unique_s01_0" size="5" maxlength="15" onfocus="reset_txt(this)" value="학교명" disabled="true" class="user" id="unique_s01">
-												- <input type="text" name="unique_s02_0" size="4" maxlength="10" onfocus="reset_txt(this)" value="년도" disabled="true" class="user" id="unique_s02">
-												- <input type="text" name="unique_s03_0" size="4" maxlength="10" onfocus="reset_txt(this)" value="지명명부번호" disabled="true" class="user" id="unique_s03">
-												<input type="submit" name="image" onfocus="blur();" value="연수지명번호 저장">
-											</div>
-											<div class="group">
-												<p>
-													<input type="radio" name="uniqueRadio_0" value="N" onclick="textboxHold('');" checked="" id="neisNo"><label for="neisNo"><span>연수 지명번호가 없습니다.</span> (사립유치원, 강사, 일반인 등)</label>
-												</p>
-												<a class="what_lecture_num" href="#">연수지명번호란?</a>
-											</div>
-										</form>
-
-									</td>
+                                <tr>
+									<td class="col_title">NEIS개인번호</td>
+									<td class="col_content">8360007 <a class="btn_white2" href="../menu04/menu07.html">수정</a></td>
+									<td class="col_title">학교/기관명</td>
+									<td class="col_content">울산초등학교 <a class="btn_white2" href="../menu04/menu07.html">수정</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -188,9 +157,9 @@ $(window).load(function(){
 							<tbody>
 								<tr>
 									<td class="col_title">기수</td>
-									<td class="col_content">2018-test 기</span></td>
+									<td class="col_content">2018-test 기</td>
 									<td class="col_title">연수시간/학점</td>
-									<td class="col_content">15시간/1학점</span></td>
+									<td class="col_content">15시간/1학점</td>
 								</tr>
 								<tr>
 									<td class="col_title">과정명</td>
@@ -225,10 +194,10 @@ $(window).load(function(){
 							</table>
 						</div>
 						<div class="notice_wrap">
-							<div class="head"><span>NOTICE</span><strong>공지사항</strong><a class="view_more" href="#">더보기+</a></div>
+							<div class="head"><span class="notice_tit">공지사항</span><a class="view_more" href="#">더보기+</a></div>
 							<table>
 								<tbody>
-									<tr>
+									<tr style="border-top:1px solie #e5e5e5">
 										<td><a href="#"><strong>[공지]</strong>전라북도 교육청 교원 연수 이수 통보 불가와 관련된 안내</a></td>
 									</tr>
 									<tr>
@@ -249,7 +218,7 @@ $(window).load(function(){
 					<div class="progress_wrap">
 						<div class="progress_area">
 							<div class="progress_graph_wrap">
-								<strong>진도율</strong>
+								<strong class="txt_bold txt_dblue">진도율<span>&#40;40점&#41;</span></strong>
 								<p class="top pass green left_80">PASS</p>
 								<div class="progress_graph">
 									<p class="div_line left_0"></p>
@@ -260,7 +229,7 @@ $(window).load(function(){
 									<p class="div_line left_100"></p>
 									<div class="pass_area"></div>
 									<div class="graph_bg" data-fill="40"><div class="graph_mask"><div class="graph_fill"></div></div></div>
-									<span class="display_progress">0%</span>
+									<span class="display_progress">40%/18점</span>
 								</div>
 								<p class="bottom grey left_0">0%</p>
 								<p class="bottom grey left_20">20%</p>
@@ -272,23 +241,24 @@ $(window).load(function(){
 
 
 							<div class="circle_graph on">
-								<div class="circle"><span>미제출</span></div>
-								<p>과제<p>
+								<div class="circle"><span class="pt15 txt_dark">제출완료</span><span class="txt_s20">74점</span></div>
+								<p>과제<span class="txt_blue">&#40;74점&#41;</span><p>
 							</div>
 							<div class="circle_graph on">
-								<div class="circle"><span>미응시</span></div>
-								<p>시험<p>
+								<div class="circle"><span class="pt15 txt_dark">미응시</span><span class="txt_s20">0점</span></div>
+								<p>시험<span class="txt_blue">&#40;74점&#41;</span><p>
 							</div>
 							<div class="circle_graph none">
-								<div class="circle"><span>해당없음</span></div>
-								<p>출석고사<p>
+								<div class="circle"><span class="pt30">해당없음</span></div>
+								<p>출석고사<span class="txt_blue">&#40;74점&#41;</span><p>
 							</div>
 							<div class="circle_graph on">
-								<div class="circle"><span>미제출</span></div>
-								<p>후기/활용기<p>
+								<div class="circle"><span class="pt30">미제출</span></div>
+								<p>후기&#47;활용기<p>
 							</div>
 						</div>
-						<a class="btn_plan" href="#">학점별 평가 계획보기</a>
+
+                        <div class="ta_r pt10 mb30"><a class="btn_blue" href="#" style="width:180px;">학점별 평가 계획보기</a></div>
 					</div>
 
 
@@ -309,15 +279,14 @@ $(window).load(function(){
 							</colgroup>
 							<thead>
 								<tr class="lecture_title">
-									<th>과정명</th>
-									<th class="ta_l" colspan="4">교실속! 메이커 교육</th>
+									<th class="ta_l txt_s24" colspan="5">교실속! 메이커 교육</th>
 								</tr>
 								<tr class="div_row">
 									<th>회차</th>
 									<th>제목</th>
 									<th>진도여부</th>
 									<th>학습페이지</th>
-									<th>진도여부</th>
+									<th>학습하기</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -326,105 +295,105 @@ $(window).load(function(){
 									<td class="ta_l">메이커 개론</td>
 									<td>학습중</td>
 									<td><strong>3</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>2강</td>
 									<td class="ta_l">기록하고 공유하는 오픈(공개) 포트폴리오</td>
 									<td>학습중</td>
 									<td><strong>2</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>3강</td>
 									<td class="ta_l">국내.외 메이커 스페이스의 현황과 사례</td>
 									<td>학습중</td>
 									<td><strong>1</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>4강</td>
 									<td class="ta_l">스스로 만드는 앱 인벤터</td>
 									<td>학습완료</td>
 									<td><strong>5</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>5강</td>
 									<td class="ta_l">CNC 조각기와 레이저 커터를 활용한 메이커 교육</td>
 									<td>-</td>
 									<td><strong>3</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>6강</td>
 									<td class="ta_l">오토마타로 알아보는 메이킹 발달사</td>
 									<td>-</td>
 									<td><strong>0</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>7강</td>
 									<td class="ta_l">DIY로 스마트폰 가지고 놀기</td>
 									<td>-</td>
 									<td><strong>0</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>8강</td>
 									<td class="ta_l">아두이노 개론</td>
 									<td>-</td>
 									<td><strong>0</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>9강</td>
 									<td class="ta_l">아두이노 프로젝트(아두이노 신호등, Bluetooth Hue)</td>
 									<td>-</td>
 									<td><strong>0</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>10강</td>
 									<td class="ta_l">수업에 활용하는 3D 프린터</td>
 									<td>-</td>
 									<td><strong>0</strong>/6</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>11강</td>
 									<td class="ta_l">드론</td>
 									<td>-</td>
 									<td><strong>0</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>12장</td>
 									<td class="ta_l">신도시 만들기</td>
 									<td>-</td>
 									<td><strong>0</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>13강</td>
 									<td class="ta_l">자율주행 자동차</td>
 									<td>-</td>
 									<td><strong>0</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>14강</td>
 									<td class="ta_l">자율주행 자동차</td>
 									<td>-</td>
 									<td><strong>0</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 								<tr>
 									<td>15강</td>
 									<td class="ta_l">영메이커</td>
 									<td>-</td>
 									<td><strong>0</strong>/5</td>
-									<td><a class="btn_blue" href="#">학습하기</a></td>
+									<td><a class="btn btn-primary" href="#">학습하기</a></td>
 								</tr>
 							</tbody>
 							<tfoot>
@@ -432,7 +401,7 @@ $(window).load(function(){
 							</tfoot>
 						</table>
 
-						<a class="btn_review" href="#">연수 후기 바로가기</a>
+						<div class="ta_r pt10 mb30"><a class="btn_blue" href="#" style="width:180px;">연수 후기 바로가기</a></div>
 					</div>
 
 				</div>

@@ -97,15 +97,15 @@ $(window).load(function(){
 
 					<div class="info_wrap">
 						<div class="lecture_title">
-							<p><span>과정명</span><span class="div_line"></span><span>나를 찾는 인생 힐링, 미술관에서 보는 유럽의 문화와 역사</span><span class="can_mobile"></span></p>
+							<p><span>나를 찾는 인생 힐링, 미술관에서 보는 유럽의 문화와 역사</span><span class="can_mobile"></span></p>
 						</div>
 						<table class="table_template01">
 							<colgroup>
 								<col width="*">
                                 <col width="12%">
-                                <col width="23%">
+                                <col width="24%">
                                 <col width="12%">
-                                <col width="23%">
+                                <col width="24%">
 							</colgroup>
 							<tbody>
 								<tr>
@@ -125,12 +125,12 @@ $(window).load(function(){
 								</tr>
 								<tr>
 									<th>연수비</th>
-                                    <td>70,000원&nbsp;&nbsp;<strong class="colorG">63,000원</strong> <strong class="colorL">(10%)</strong></td>
+                                    <td class="ta_l">70,000원&nbsp;&nbsp;<strong class="colorG">63,000원</strong> <strong class="colorL">(10%)</strong></td>
 									<th>교재비</th>
-									<td class="ta_l">-</td>
+									<td class="ta_l">12,000원 <a class="btn_white" target="_blank" href="javascript:open_window('../popup/popup_book.html', '', 'width=500, height=600')">교재보기</a></td>
 								</tr>
 								<tr>
-									<th>연수기간</th>
+									<th>강사</th>
 									<td class="ta_l" colspan="3"><strong>최만</strong></td>
 								</tr>
 							</tbody>
@@ -139,7 +139,7 @@ $(window).load(function(){
 							<a class="btn_share btn_facebook" href="javascript:SNS.Share('중등 수업 평가 혁신', 0);">페이스북</a>
 							<a class="btn_share btn_blog" href="javascript:SNS.Share('중등 수업 평가 혁신', 4);">블로그</a>
 							<a class="btn_share btn_url" href="javascript:SNS.Copy();">url</a>
-							<a class="btn_blue" href="#">▶ 미리보기</a>
+							<a class="fl_r btn_grey" href="#">미리보기</a>
 						</div>
 					</div>
 
@@ -165,16 +165,16 @@ $(window).load(function(){
 									<td>01-01기</td>
 									<td>2018년 12월 18일 ~ 01월 03일</td>
 									<td>2019년 01월 04일 ~ 01월 16일</td>
-									<td><a href="../menu04/menu02.html" class="btn_blue">신청하기</a></td>
+									<td><a href="../menu04/menu02.html" class="btn btn-primary">신청하기</a></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 
 					<div class="caution_box">
-						<ul class="blet_alert">
+						<ul class="blet_alert pl90">
 							<li>
-								재화의 정보에 관한 사항(이러닝)
+								재화의 정보에 관한 사항&#40;이러닝&#41;
 								<div class="text_contents">
 									<ul class="text_indent_list">
 										<li>※ 본 과정은 <span>모바일 또는 테블릿PC</span>에서도 PC버전의 <span>티스쿨&gt;나의강의실</span>로 접속하시면 <span>학습 및 진도체크</span>가 가능합니다.</li>
@@ -185,11 +185,16 @@ $(window).load(function(){
 					</div>
 
 					<div class="explain_content">
-						<ul class="tab_btns">
-							<li><a class="on" href="javascript:tab_btn('poster','lecture_explain','0')">연수정보</a></li>
-							<li><a href="javascript:tab_btn('index','lecture_explain','1')">강의목차</a></li>
-							<li><a href="javascript:tab_btn('teacher','lecture_explain','2')">강사소개</a></li>
-						</ul>
+                        <!-- 탭 -->
+                        <div class="board_wrap menu04_03">
+                            <ul class="tab_btns">
+                                <li class="on" data-link="history_wrap"><a class="on" href="javascript:tab_btn('poster','lecture_explain','0')">연수정보</a></li>
+                                <li data-link="group_history_wrap"><a href="javascript:tab_btn('index','lecture_explain','1')">강의목차</a></li>
+                                <li data-link="training_history_wrap"><a href="javascript:tab_btn('teacher','lecture_explain','2')">강사소개</a></li>
+                            </ul>
+                        </div>
+                        <!-- /탭 -->
+
 						<ul class="content_box">
 							<li class="poster on">
 								<img src="../image/data/poster_job/poster_001.png"/>
@@ -310,30 +315,6 @@ $(window).load(function(){
 						</ul>
 					</div>
 
-					<div class="caution_box">
-						<ul class="blet_alert">
-							<li>
-								재화의 정보에 관한 사항(이러닝)
-								<div class="text_contents">
-									<ul class="text_indent_num">
-										<li><strong>1. 제작자 또는 공급자</strong>: 티스쿨이앤씨㈜</li>
-										<li><strong>2. 이용기간</strong>: 콘텐츠 구매 시, 신청한 연수 기간 동안 이용 (이후 복습기간 1년 제공)</li>
-										<li><strong>3. 상품 제공 방식</strong>: 연중 무휴, 24시간 실시간 스트리밍 서비스 제공</li>
-										<li>
-											<strong>4. 최소 시스템 사양, 필수 소프트웨어</strong>:
-											<ul class="text_indent_hyphen">
-												<li>- CPU의 경우 펜티엄급 이상을 권장하며, 운영시스템은 Windows 98이상의 운영시스템을 필요로 합니다. 브라우저는 IE, 크롬, 파이어폭스 등에서 이용 가능합니다.</li>
-												<li>- 학습을 위하여 Adobe Flash Player(어도비 플래시 플레이어)와 스타플레이어 설치가 필요합니다.</li>
-											</ul>
-										</li>
-										<li><strong>5. 청약철회 또는 계약의 해제 해지에 따른 효과</strong>: 구매자의 단순변심에 의한 경우 콘텐츠 제공(연수 시작일) 7일 이내에 청약 철회를 할 수 있습니다.</li>
-										<li><strong>6. 소비자 상담 관련 전화번호</strong>: 티스쿨 고객센터 1544-9044</li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</div>
-
 					<div class="intro_content">
 						<h4>과정소개</h4>
 						<table class="table_template01">
@@ -399,9 +380,9 @@ $(window).load(function(){
 					</div>
 
 					<div class="review_content">
-						<div class="title">
+						<div class="title mb0">
 							<h4>연수후기</h4>
-                            <a href="../menu03/menu03.html" class="view_more">더보기 +</a>
+                            <a href="../menu03/menu03.html" class="view_more mt30">더보기 +</a>
 						</div>
 
 						<table class="table_template01">
@@ -419,49 +400,53 @@ $(window).load(function(){
 							</thead>
 							<tbody>
 								<tr>
-									<td class="ta_l"><a href="#">연수 후기</a></td>
+									<td class="ta_l"><a href="javascript:open_window('../popup/popup_yeonsu_review.html', '', 'width=600, height=800')">연수 후기</a></td>
 									<td>abc****</td>
 									<td><img src="../image/common/star05.gif" alt="별점 5점"/></td>
 								</tr>
 								<tr>
-									<td class="ta_l"><a href="#">연수 후기</a></td>
+									<td class="ta_l"><a href="javascript:open_window('../popup/popup_yeonsu_review.html', '', 'width=600, height=800')">연수 후기</a></td>
 									<td>abc****</td>
 									<td><img src="../image/common/star04.gif" alt="별점 4점"/></td>
 								</tr>
 								<tr>
-									<td class="ta_l"><a href="#">연수 후기</a></td>
+									<td class="ta_l"><a href="javascript:open_window('../popup/popup_yeonsu_review.html', '', 'width=600, height=800')">연수 후기</a></td>
 									<td>abc****</td>
 									<td><img src="../image/common/star03.gif" alt="별점 3점"/></td>
 								</tr>
 								<tr>
-									<td class="ta_l"><a href="#">연수 후기</a></td>
+									<td class="ta_l"><a href="javascript:open_window('../popup/popup_yeonsu_review.html', '', 'width=600, height=800')">연수 후기</a></td>
 									<td>abc****</td>
 									<td><img src="../image/common/star02.gif" alt="별점 2점"/></td>
 								</tr>
 								<tr>
-									<td class="ta_l"><a href="#">연수 후기</a></td>
+									<td class="ta_l"><a href="javascript:open_window('../popup/popup_yeonsu_review.html', '', 'width=600, height=800')">연수 후기</a></td>
 									<td>abc****</td>
 									<td><img src="../image/common/star01.gif" alt="별점 1점"/></td>
 								</tr>
 							</tbody>
 						</table>
 
+						<!-- 페이지 네비게이션 -->
 						<div class="pager">
-							<a class="prev" href="#">이전 페이지</a>
-							<ul>
-								<li><a class="on" href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li><a href="#">6</a></li>
-								<li><a href="#">7</a></li>
-								<li><a href="#">8</a></li>
-								<li><a href="#">9</a></li>
-								<li><a href="#">10</a></li>
-							</ul>
-							<a class="next" href="#">다음 페이지</a>
-						</div>
+                            <a class="first" href="#">처음 페이지</a>
+                            <a class="prev" href="#">이전 페이지</a>
+                            <ul>
+                                <li><a class="on" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                            </ul>
+                            <a class="next" href="#">다음 페이지</a>
+                            <a class="last" href="#">마지막 페이지</a>
+                        </div>
+                        <!-- /페이지 네비게이션 -->
 					</div>
 
 				</div>

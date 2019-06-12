@@ -110,21 +110,69 @@ $(window).load(function(){
 									<td class="col1"><input type="checkbox" name="check"></td>
 									<td class="col2">직무<br><strong>30</strong>시간</td>
 									<td class="col3">2018-47-2</td>
-									<td class="col4"><strong>교실에 혁신을 더하는 마법, 디자인씽킹</strong><a class="btn_grey plan" href="#">연수계획서</a></td>
+									<td class="col4 ta_l">
+                                        <strong>교실에 혁신을 더하는 마법, 디자인씽킹</strong>
+                                        <div class="pt5"><a class="btn_white2" target="_blank" href="javascript:open_window('../popup/popup_yeonsu_progm.html', '', 'width=700, height=800')">연수계획서 <img class="icon_arrow" src="../image/common/bul_st02.gif"></a></div>
+                                    </td>
 									<td class="col5">67,500</td>
-									<td class="col6">0</td>
+									<td class="col6"><input type="checkbox" name="check"> 11,700원</td>
 								</tr>
 							</tbody>
 						</table>
 
-						<div class="btns">
-							<a class="remove" href="#">삭제하기</a>
-							<a class="add" href="#">강좌추가</a>
-							<a class="group" href="#">단체신청하기</a>
-						</div>
+                        <div class="clearfix pt20 margin-bottom-30">
+                            <div class="fl_l">
+                                <a class="btn_grey3" href="#">삭제하기</a>
+                            </div>
+                            <div class="fl_r">
+                                <a class="btn_blue" href="../menu01/menu01.html">강좌추가</a>
+                                <a class="btn_blue" href="./menu02_group2.html">단체신청하기</a>
+                            </div>
+                        </div>
 					</div>
+                    <div class="member02 step03">
+                        <form name="user_form" class="user_wrap">
+                        <table class="user_table table_template01 mb20">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="col1">배송지 정보</th>
+                                    <td class="col2 ta_l">
+                                        <input type="radio" name="" id="" value=""> <label for="">새로운 배송지 주소</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="col1">주소</th>
+                                    <td class="col2 ta_l">
+                                        <div class="mb5"><input id="" name="" type="text" size="" onblur=""> <a class="btn btn-default form_side" href="#">우편번호 검색</a></div>
+                                        <div class="mb5"><input id="" name="" type="text" size="" onblur="" style="width:80%;"></div>
+                                        <div class=""><input id="" name="" type="text" size="" onblur="" style="width:80%;"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="col1">휴대전화</th>
+                                    <td class="col2 ta_l">
+                                        <select name="mb_hp1" class="phone_number" style="background-position:65px;">
+                                            <option value="010">010</option>
+                                            <option value="011">011</option>
+                                            <option value="016">016</option>
+                                            <option value="017">017</option>
+                                            <option value="018">018</option>
+                                            <option value="019">019</option>
+                                        </select>
+                                        - <input type="text" name="mb_hp2" value="" size="4" maxlength="4" class="phone_number"> -
+                                        <input type="text" name="mb_hp3" value="" size="5" maxlength="4" class="phone_number">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
+                    </div>
 
-					<table class="total_table table_template01">
+					<table class="total_table table_template01 mb30">
 						<colgroup>
 							<col class="col1">
 							<col class="col2">
@@ -137,12 +185,33 @@ $(window).load(function(){
 								<td class="col2 ta_l" colspan="3">0원</td>
 							</tr>
 							<tr>
-								<th class="col1">쿠폰사용</th>
-								<td class="col2 ta_l" colspan="3">0원 (보유쿠폰 : <span>3</span>장) <a class="btn_blue" href="#">쿠폰조회/적용</a></td>
+								<th class="col1">쿠폰 적용</th>
+								<td class="col2 ta_l" colspan="3">0원 (보유쿠폰 : <span>3</span>장) <a class="btn_white2" target="_blank" href="javascript:open_window('../popup/popup_coupon.html', '', 'width=600, height=1000')">쿠폰조회/적용</a></td>
+							</tr>
+                            <tr>
+								<th class="col1">쿠폰 등록</th>
+								<td class="col2 ta_l" colspan="3">
+                                    <form name="form_coupon" class="form_coupon ta_l mt0 mb0">
+                                        <input type="text" name="coupon_no1" id="coupon_no1" maxlength="4" class="coupon_input"> -
+                                        <input type="text" name="coupon_no2" id="coupon_no2" maxlength="4" class="coupon_input"> -
+                                        <input type="text" name="coupon_no3" id="coupon_no3" maxlength="4" class="coupon_input">
+                                        <a href="#" class="btn btn-default form_side">등록하기</a>
+                                    </form>
+                                </td>
 							</tr>
 							<tr>
-								<th class="col1">포인트사용</th>
-								<td class="col2 ta_l" colspan="3">0원 (보유포인트 : <span>2,740</span>점) <a class="btn_blue" href="#">사용하기</a> 지금 포인트 사용하세요!</td>
+								<th class="col1">포인트 사용</th>
+								<td class="col2 ta_l" colspan="3">0원 (보유포인트 : <span>2,740</span>점) <a class="btn_white2" href="#">사용하기</a> 지금 포인트 사용하세요!</td>
+							</tr>
+                            <tr>
+								<th class="col1">포인트 사용</th>
+								<td class="col2 ta_l" colspan="3">0원 (보유포인트 : <span>2,740</span>점)
+                                    <form name="form_coupon" class="form_coupon ta_l mt0 mb0">
+                                        <input type="text" name="" id="" maxlength="10" class="coupon_input">
+                                        <a href="#" class="btn btn-default form_side">적용</a>
+                                        <a href="#" class="btn btn-default form_side">취소</a>
+                                    </form>
+                                </td>
 							</tr>
 							<tr>
 								<th class="col1">수강료</th>
@@ -153,15 +222,19 @@ $(window).load(function(){
 						</tbody>
 					</table>
 
-					<h4>쿠폰 및 포인트 사용</h4>
-					<div class="caution_box">
-						<ul class="blet_circle">
-							<li>쿠폰사용 시 할인 적용되지 않습니다. (쿠폰 우선 적용)</li>
-							<li>교재는 쿠폰 및 포인트 적용이 되지 않습니다.</li>
-							<li>포인트는 수강료를 우선 적용합니다.</li>
-							<li>포인트는 1점 이상부터 사용 가능합니다.</li>
-						</ul>
-					</div>
+                    <div class="caution_box7 mb30" style="height:120px;">
+                        <h3>쿠폰 및 포인트<br>사용</h3>
+                        <ul class="blet_alert pl180">
+                            <li>
+                                <ul class="pt10 blet_hyphen">
+                                    <li>쿠폰사용 시 할인 적용되지 않습니다. (쿠폰 우선 적용)</li>
+                                    <li>교재는 쿠폰 및 포인트 적용이 되지 않습니다.</li>
+                                    <li>포인트는 수강료를 우선 적용합니다.</li>
+                                    <li>포인트는 1점 이상부터 사용 가능합니다.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
 					<h4>결제 수단 선택</h4>
 					<div class="pay">
@@ -177,26 +250,26 @@ $(window).load(function(){
 								</tr>
 							</tbody>
 						</table>
-						<div class="caution_box">
-							<ul class="blet_circle">
-								<li>연수 연기/변경/취소는 연수시작일로부터 7일 이내에 1회만 가능합니다.(진도 20%미만 시에만 가능)<a class="btn_grey btn_caution" target="_blank" href="javascript:open_window('../popup/popup_cancel.html', '', 'width=600, height=600')">취소/환불안내</a></li>
-							</ul>
+						<div class="caution_box8 mb30">
+                            <span>연수 연기/변경/취소는 연수시작일로부터 7일 이내에 1회만 가능합니다.(진도 20%미만 시에만 가능)</span>
+                            <a class="fl_r btn_white2" target="_blank" href="javascript:open_window('../popup/popup_cancel.html', '', 'width=600, height=800')">취소/환불안내</a>
 						</div>
 
-						<div class="caution_box">
-							<ul class="blet_alert">
-								<li>
-									연수의 공급방법 및 시기
-									<ul class="blet_circle">
-										<li>연수 구매 시, 신청한 연수 시작일에 나의 강의실을 통해 제공됩니다.</li>
-										<li>연수 서비스는 연중무휴, 실시간으로 제공됩니다.</li>
-									</ul>
-								</li>
+                        <div class="caution_box7 mb30" style="height:120px;">
+                            <h3>연수의 공급방법<br>및 시기</h3>
+                            <ul class="blet_alert pl180">
+                                <li>
+                                    <ul class="blet_hyphen pt30">
+                                        <li>연수 구매 시, 신청한 연수 시작일에 나의 강의실을 통해 제공됩니다.</li>
+                                        <li>연수 서비스는 연중무휴, 실시간으로 제공됩니다.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
 
-							</ul>
-						</div>
-
-						<a class="btn_pay" href="#">삭제하기</a>
+                        <div class="ta_c">
+                            <a class="btn btn-primary btn-lg" href="javascript:open_window('../popup/popup_payment.html', '', 'width=600, height=800')">결제하기</a>
+                        </div>
 					</div>
 				</div>
 				<!-- //board_wrap -->

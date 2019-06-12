@@ -196,8 +196,117 @@ $(window).load(function(){
 							</tbody>
 						</table>
 
-						<a href="./join04.html" class="btn_confirm">확인</a>
+                        <div class="ta_c pt30 mb30"><a class="btn btn-primary btn-lg" href="./join04.html" style="width:123px;"> 확인 </a></div>
+
 					</form>
+				</div>
+				<!-- //board_wrap -->
+
+
+                <!-- 교원, 공무원일 경우 나타나는 폼 -->
+                <!-- board_wrap -->
+				<div class="board_wrap menu04_07">
+					<form name="edit_form" class="edit_wrap">
+						<div class="teacher_edit_wrap">
+							<h4>학교 및 기관정보 입력</h4>
+							<p class="plain_text">교원 또는 교육공무원일 경우 아래 입력폼을 반드시 작성하시기 바랍니다.</p>
+
+							<table class="teacher_edit_table table_template01">
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th><em>* </em>학교/기관명</th>
+										<td class="ta_l school_cell" colspan="3">
+											<p><input type="text" name="school_name" size="46" maxlength="100" value="" readonly="" onFocus="javascript:blur();" onClick="this.blur();">&nbsp;<a href="javascript:open_window('./find_school.html', '', 'width=600, height=522')" class="btn_white2">학교 및 기관 찾기</a>
+											<p>* 해당 학교명이나 기관명이 없을 경우 1544-9044 로 연락바랍니다.</p>
+										</td>
+									</tr>
+									<tr>
+										<th>시도교육청</th>
+										<td class="ta_l">서울</td>
+										<th>관할교육지원청</th>
+										<td class="ta_l">서울특별시 교육청</td>
+									</tr>
+                                    <tr>
+										<th><em>* </em>담당과목</th>
+										<td class="ta_l school_cell" colspan="3">
+											<input type="text" name="school_name" size="46" maxlength="100" value="" readonly="" onFocus="javascript:blur();" onClick="this.blur();">
+                                            <em>예&#41;국어,체육,진로</em>
+										</td>
+									</tr>
+									<tr>
+										<th>직위구분</th>
+										<td class="ta_l radio_cell" colspan="3">
+											<p>
+												<input type="radio" id="ck01" name="school_level" value="교장"><label for="ck01">교  장</label>
+												<input type="radio" id="ck02" name="school_level" value="교감"><label for="ck02">교  감 </label>
+												<input type="radio" id="ck03" name="school_level" value="교사"><label for="ck03">교  사 </label>
+												<input type="radio" id="ck04" name="school_level" value="보건교사"><label for="ck04">보건교사 </label>
+												<input type="radio" id="ck05" name="school_level" value="유치원장"><label for="ck05">유치원장</label>
+											</p>
+											<p>
+												<input type="radio" id="ck06" name="school_level" value="유치원감"><label for="ck06">유치원감</label>
+												<input type="radio" id="ck07" name="school_level" value="유치원교사"><label for="ck07">유치원교사 </label>
+												<input type="radio" id="ck08" name="school_level" value="장학관"><label for="ck08">장학관</label>
+												<input type="radio" id="ck09" name="school_level" value="장학사"><label for="ck09">장학사</label>
+												<input type="radio" id="ck10" name="school_level" value="연구사"><label for="ck10">연구사 </label>
+											</p>
+											<p>
+												<input type="radio" id="ck11" name="school_level" value="수석교사"><label for="ck11">수석교사</label>
+												<input type="radio" id="ck12" name="school_level" value="교육연구사"><label for="ck12">교육연구사</label>
+												<input type="radio" id="ck13" name="school_level" value="기간제교사"><label for="ck13">기간제교사</label>
+												<input type="radio" id="ck14" name="school_level" value="영양교사"><label for="ck14">영양교사 </label>
+												<input type="radio" id="ck15" name="school_level" value="특수교사"><label for="ck15">특수교사 </label>
+											</p>
+											<p>
+												<input type="radio" id="ck16" name="school_level" value="사서교사"><label for="ck16">사서교사</label>
+												<input type="radio" id="ck17" name="school_level" value="연구부장"><label for="ck17">연구부장 </label>
+												<input type="radio" id="ck18" name="school_level" value="교무부장"><label for="ck18">교무부장 </label>
+												<input type="radio" id="ck19" name="school_level" value="정보부장"><label for="ck19">정보부장</label>
+												<input type="radio" id="ck20" name="school_level" value="교수"><label for="ck20">교수</label>
+											</p>
+											<p>
+												<input type="radio" id="ck21" name="school_level" value="실기교사"><label for="ck21">실기교사</label>
+												<input type="radio" id="ck22" name="school_level" value="전문상담교사"><label for="ck22">전문상담교사</label>
+												<input type="radio" id="ck23" name="school_level" value="교육연구관"><label for="ck23">교육연구관</label>
+												<input type="radio" id="ck24" name="school_level" value="교육행정직"><label for="ck24">교육행정직 </label>
+												<input type="radio" id="ck25" name="school_level" value="교육전문직"><label for="ck25">교육전문직</label>
+											</p>
+											<p>
+												<input type="radio" id="ck26" name="school_level" value="교육공무직"><label for="ck26">교육공무직 </label>
+												<input type="radio" id="ck27" name="school_level" value="방과후학교강사"><label for="ck27">방과후학교강사 </label>
+												<input type="radio" id="ck28" name="school_level" value="돌봄전담사"><label for="ck28">돌봄전담사 </label>
+												<input type="radio" id="ck29" name="school_level" value="기타"><label for="ck29">기타</label>
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<th>나이스 개인번호</th>
+										<td class="ta_l code_cell" colspan="3">
+											<p><input type="text" maxlength="10" id="identification" name="identification" value="" title="나이스 개인번호 10자리를 입력해주세요.">
+											<em>10자리로 입력해주세요.</em></p>
+											<p>(예 : A123456789 전체 <em>10</em>자리)</p>
+											<p><input type="checkbox" id="nice_indentity" name="nice_indentity" value="Y" checked="">
+											<label for="nice_indentity"><em>나이스 개인번호가 없습니다.</em> (사립유치원, 강사, 일반인 등  나이스 개인번호가 없는 경우)</label></p>
+											<div class="caution_box5">
+												<p>※ 교육부 및 KERIS '원격교육연수 이수자 통보 업무 개선(2014.02)' 지침에 따라 나이스 개인번호를<br>&nbsp;&nbsp;&nbsp;&nbsp;취합하고 있습니다.</p>
+                                                <div class="pt5 pl15"><a href="javascript:popimage('../image/common/neis.jpg',700,717);" class="btn_white2">나이스 도움말</a></div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+                            <div class="ta_c pt30 mb30"><a class="btn btn-primary btn-lg" href="#"> 교원회원으로 저장</a></div>
+
+						</div>
+					</form>
+
 				</div>
 				<!-- //board_wrap -->
 			</div>

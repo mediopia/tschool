@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1300" />
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<!--<link rel="stylesheet" type="text/css" href="http://www.momntalk.com/visangGNB/Inc/Css/Global.css">--><!-- pc -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--<script type="text/javascript" src="http://www.visang.com/book/Inc/Js/globalvisang.js"></script>--><!-- pc -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(window).load(function(){
+	setDOMS_page();
+
+	//상단메뉴와 좌측메뉴 현재 위치 표시
+	$('.gnb_main .eq4').addClass('on');
+	$('.aside_menu_wrap > ul > li').eq(2).addClass('on');
+	//--상단메뉴와 좌측메뉴 현재 위치 표시
+
+	//퀵메뉴 고정/고정해제
+	$window.scroll(function(){
+		nav_fix(0);
+	});
+
+	if($('.table_cancel_history tbody tr').length == 0){
+		$('.table_cancel_history tfoot').show();
+	}
+
+	if($('.table_group_history tbody tr').length == 0){
+		$('.table_group_history tfoot').show();
+	}
+
+	$('.tab_btns li').on('click', function(){
+		$('.tab_btns li').removeClass('on');
+		$(this).addClass('on');
+		$('.history_content').removeClass('on');
+		$('.' + $(this).attr('data-link')).addClass('on');
+	});
+});
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<script>
+        $(function(){
+            $("#header").load("../inc/header.html");
+            $("#footer").load("../inc/footer.html");
+            $("#nav").load("../inc/nav.html");
+        });
+    </script>
+	<div id="header"></div>
+	<!-- //header 공통 -->
+
+	<!-- container -->
+	<div id="container">
+
+		<!-- section -->
+		<div id="section">
+			<!-- 좌측 메뉴 -->
+			<div id="aside">
+				<div class="aside_menu_wrap">
+					<h2>나의강의실</h2>
+					<ul>
+						<li><a href="./menu01.html">나의 수강 현황</a></li>
+						<li><a href="./menu02.html">장바구니</a></li>
+						<li><a href="./menu03.html">결제내역</a></li>
+						<li><a href="./menu04.html" class="small">성적/이수증/이수통보</a></li>
+						<li><a href="./menu05.html">수강연기</a></li>
+						<li><a href="./menu06.html">포인트/쿠폰</a></li>
+						<li><a href="./menu07.html">회원정보수정</a></li>
+						<li><a href="./menu08.html">나의 문의 글</a></li>
+						<li><a href="./menu09.html">회원탈퇴</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<!-- 우측 퀵메뉴 공통 -->
+			<div id="nav"></div>
+			<!-- //우측 퀵메뉴 공통 -->
+
+			<div id="article">
+				<!-- board_wrap -->
+				<div class="board_wrap menu04_03">
+					<div class="title">
+						<h3>결제완료</h3>
+						<p class="route">홈 &gt; 나의강의실 &gt; <span>결제완료</span></p>
+					</div>
+
+					<div class="history_content history_wrap on">
+                        <h4>신청과정: <span class="txt_normal txt_orange txt_s14">주문번호 1234567897</span></h4>
+						<table class="table_template01">
+                            <colgroup>
+                                <col width="14%">
+                                <col width="*">
+                                <col width="20%">
+                            </colgroup>
+							<thead>
+								<tr>
+									<th>기수</th>
+									<th>과정명</th>
+									<th>금액</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2018-11-11</td>
+									<td>과정명00</td>
+									<td>50,000원</td>
+								</tr>
+							</tbody>
+                            <tfoot>
+								<tr>
+									<td class="col1 ta_r pr60" colspan="3">연수비 합계: <span>50,000원</span></td>
+								</tr>
+							</tfoot>
+						</table>
+
+                        <h4>결제금액</h4>
+						<table class="table_template01">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="35%">
+                                <col width="15%">
+                                <col width="35%">
+                            </colgroup>
+							<tbody>
+								<tr>
+									<th>할인금액</th>
+									<td>0원</td>
+									<th>쿠폰사용</th>
+									<td>0원</td>
+								</tr>
+                                <tr>
+									<th>포인트 사용</th>
+									<td>0원</td>
+									<th>결제금액</th>
+									<td>0원</td>
+								</tr>
+							</tbody>
+						</table>
+                        <p class="txt_red mt10">가상계좌의 경우, 입금 확인 후 최종 결제확인이 완료됩니다.</p>
+
+                        <h4>결제방법</h4>
+						<table class="table_template01">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="35%">
+                                <col width="15%">
+                                <col width="35%">
+                            </colgroup>
+							<tbody>
+								<tr>
+									<th>결제방법</th>
+									<td>
+                                        가상계좌
+                                        <span class="dpb txt_blue">우리은행 1234-5784-894</span>
+                                    </td>
+									<th>결제구분</th>
+                                    <td><span class="txt_blue">결제대기</span></td>
+								</tr>
+							</tbody>
+						</table>
+
+
+                        <div class="ta_c pt30 mb30">
+                            <a class="btn btn-primary" href="#">티스쿨 메인으로 가기</a>
+                            <a class="btn btn-primary" href="#">나의 수강현황</a>
+                        </div>
+					</div>
+
+
+				</div>
+				<!-- //board_wrap -->
+
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer"></div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

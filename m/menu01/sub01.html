@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="description" content="내용">
+<meta property="og:title" content="티스쿨원격교육연수원">
+<meta property="og:url" content="http://www.tschool.net/">
+<title>티스쿨원격교육연수원</title>
+<!-- <link rel="shortcut icon" href="/이미지경로.ico" /> -->
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script> <!-- jquery  -->
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+
+function setDOMS_page(){
+}
+
+$(document).ready(function(){
+	for(var i = 1; i < $('.qna').length; i++){
+		$('.qna.all').append($('.qna.list'+i).html());
+	}
+	for(var i = 0; i < $('.qna').length; i++){
+		var $tmp = $('.qna').eq(i);
+		for(var j = 0; j < $tmp.find('dt').length; j++){
+			$tmp.find('dt').eq(j).find('.num').html(j+1);
+		}
+	}
+});
+
+$(window).load(function(){
+	setDOMS_page();
+
+	$('.gnb_main .eq2').addClass('on')
+
+	$('.subject_info .title').ellipsis();
+
+	$('.qna dt').on('click', function(){
+		$('.qna dt').removeClass('on');
+		$(this).addClass('on');
+		var $target = $(this).next('dd');
+		if(!$target.hasClass('on')){
+			$('.qna dd').removeClass('on');
+			$target.addClass('on');
+		}else{
+			$('.qna dt').removeClass('on');
+			$target.removeClass('on');
+		}
+	});
+});
+
+function qna_filter(value){
+	$('.qna').removeClass('on');
+	$('.qna.' + value).addClass('on');
+}
+
+function tab_btns(common, target, eqNum){
+	$('.tab_btns li a').removeClass('on');
+	$('.tab_btns li').eq(eqNum).find('a').addClass('on');
+	$('.' + common).removeClass('on');
+	$('.' + target).addClass('on');
+
+	$('.subject_info .title').ellipsis();
+}
+</script>
+</head>
+<body class="min_w">
+<div id="wrap">
+	<!-- header 공통 -->
+	<div id="header">
+		<div class="header_container">
+			<div class="header_top">
+				<a class="aside_toggle" href="javascript:aside_toggle();"><img src="../image/common/header_menu.png" alt="메뉴 열기"/></a>
+				<h1><a class="logo_tschool" href="../"><img src="../image/common/header_logo_tschool.png" alt="티스쿨 원격교육연수원"/></a></h1>
+				<ul class="member_content not_login"> <!-- member_content :: 임시로 비로그인 시에는 not_login클래스, 로그인 시에는 login클래스를 붙여 분기처리 -->
+					<li class="con login"><a class="logout" href="#">로그아웃</a></li>
+					<li class="con not_login"><a class="login" href="./login.html">로그인</a></li>
+				</ul>
+			</div>
+			<form name="search_form" class="search_form" action="">
+				<fieldset>
+					<legend>강좌검색</legend>
+					<input type="text" name="search" value="" id="search_text" placeholder="검색어를 입력해 주세요" alt="검색어를 입력해 주세요" onclick="">
+					<button class="btn_search" type="submit">검색</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- //header 공통 -->
+
+	<!-- nav 공통(상단 메뉴) -->
+	<div id="nav">
+		<ul class="gnb_main">
+			<li class="eq1"><a href="../">홈</a></li>
+			<li class="eq2"><a href="./menu01.html">직무연수</a></li>
+			<li class="eq3"><a href="../menu03/menu01.html">연수지원</a></li>
+			<li class="eq4"><a href="../menu04/menu01.html">나의강의실</a></li>
+		</ul>
+	</div>
+	<!-- //nav 공통(상단 메뉴) -->
+
+	<!-- aside 공통(좌측 숨김메뉴) -->
+	<div id="aside">
+		<div class="gnb_sub_bg"></div>
+		<ul class="gnb_sub">
+			<li class="close">
+                <a href="#0" class="login">로그인 해 주세요</a>
+				<a href="javascript:aside_toggle();" class="btn_close">닫기</a>
+			</li>
+			<li class="sub" data-eq="eq4">
+				<dl>
+					<dt><a href="./menu01.html">나의강의실</a></dt>
+                    <dd><a href="./menu02.html">결제내역</a></dd>
+				</dl>
+			</li>
+			<li class="sub" data-eq="eq1">
+				<dl>
+					<dt><a href="../menu01/menu01.html">직무연수</a></dt>
+				</dl>
+			</li>
+			<li class="sub" data-eq="eq2">
+				<dl>
+					<dt><a href="../menu02/menu01.html">자율연수</a></dt>
+				</dl>
+			</li>
+			<li class="sub" data-eq="eq3">
+				<dl>
+					<dt><a href="../menu03/menu01.html">연수지원</a></dt>
+					<dd><a href="../menu03/menu01.html">공지사항</a></dd>
+					<dd><a href="../menu03/menu02.html">이벤트</a></dd>
+					<dd><a href="../menu03/menu03.html">Q&amp;A</a></dd>
+					<dd><a href="../menu03/menu04.html">FAQ</a></dd>
+					<dd><a href="../menu03/menu05.html">연수후기</a></dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	<!-- //aside 공통(좌측 숨김메뉴) -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- section -->
+		<div id="section mt0">
+			<div id="article" class="page01_01">
+
+				<div class="subject_detail">
+					<div class="subject_apply">
+						<div class="subject_info">
+							<p class="teacher">‘홍길동’ 외 3명</p>
+							<p class="title multiline"><a href="#">비주얼씽킹으로 여는 독서 토론수업 전문가되기 비주얼씽킹으로 여는 독서 토론수업 전문가되기</a></p>
+						</div>
+						<div class="thumbnail">
+							<a href="#"><img src="../image/data/thumbnail_mobile/thumb_001.png"/></a>
+						</div>
+						<div class="subject_info">
+							<p>연수분야 <span class="txt">직무</span></p>
+							<p>연수시간 <span class="credit">5시간/1학점</span></p>
+
+							<p>연수기간 <span class="num_blue">2</span>주</p>
+							<p>연수시간 <span class="num_blue">500</span>명</p>
+							<p>연수시간 <span class="txt">80,000원</span></p>
+						</div>
+						<div class="btns">
+							<a class="btn_preview" href="#">미리보기</a>
+						</div>
+					</div>
+
+					<div class="title">
+						<h2 class="mb">연수신청</h2>
+					</div>
+
+					<table class="apply_table">
+                        <colgroup>
+                            <col width="70px" />
+                            <col />
+                            <col width="70px" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>기간</th>
+                                <th>선택</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ta_c">04-02 기</td>
+                                <td class="ta_c">
+									<p class="term"><span class="tit">신청기간</span> 2019년 01월 08일 ~ 01월 23일</p>
+									<p class="term"><span class="tit">연수기간</span> 2019년 01월 24일 ~ 02월 20일</p>
+								</td>
+                                <td class="ta_c"><a href="#" class="btn_blue">신청하기</a></td>
+                            </tr>
+                            <tr>
+                                <td class="ta_c">05-02 기</td>
+                                <td class="ta_c">
+									<p class="term"><span class="tit">신청기간</span> 2019년 01월 15일 ~ 01월 30일</p>
+									<p class="term"><span class="tit">연수기간</span> 2019년 01월 31일 ~ 02월 27일</p>
+								</td>
+                                <td class="ta_c"><a href="#" class="btn_blue">신청하기</a></td>
+                            </tr>
+                            <tr>
+                                <td class="ta_c">06-02 기</td>
+                                <td class="ta_c">
+									<p class="term"><span class="tit">신청기간</span> 2019년 01월 22일 ~ 02월 07일</p>
+									<p class="term"><span class="tit">연수기간</span> 2019년 02월 08일 ~ 03월 06일</p>
+								</td>
+                                <td class="ta_c"><a href="#" class="btn_blue">신청하기</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <span class="po">* 쿠폰 및 포인트 사용을 원할 경우 PC웹에서 결제해주세요.</span>
+
+					<ul class="tab_btns2">
+						<li><a href="./sub01.html" class="on">연수정보</a></li>
+						<li><a href="./sub02.html">강의목차</a></li>
+						<li><a href="./sub03.html">강사소개</a></li>
+					</ul>
+
+					<div class="tab_content">
+						<div class="pr_img">
+							<img src="http://www.tschool.net/data/cheditor4/1901/th3L72yB4YXHG6A3ecIDU.jpg"/>
+							<div class="youtubePlay" style="left: 0px; top: 26%;">
+								<a href="https://www.youtube.com/embed/KHcGNRBs3p0" style="display: none;"></a><iframe width="100%" height="100%" src="https://www.youtube.com/embed/KHcGNRBs3p0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+							</div>
+						</div>
+						<div class="tab_title">
+							<h3>과정소개</h3>
+						</div>
+						<table class="tab_table" summary="직무연수과정 소개내용입니다.">
+							<caption>기간별 연수과정</caption>
+							<colgroup>
+								<col width="20%">
+								<col width="80%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">학습목표</th>
+									<td>
+										- 예상되는 미래 사회의 방향과 이에 맞는 미래 교육과 학교의 모습을 설명할 수 있다.<br>
+										- 미래형 교육과정을 이해하는 데 있어서 교육과정 재구성 및 디자인을 이해하고 교육과정 담론의 핵심을 설명할 수 있다. <br>
+										- 현재의 교육과정 담론을 살피고 이를 통해 미래형 교육과정의 방향과 각 담론들을 이해하고 설명할 수 있다. <br>
+										- 실제적인 교육과정 재구성을 위해 구체적으로 어떻게 노력해야 하는지를 설명할 수 있고 현장에서 교육과정 재구성을 실천할 수 있다.<br>
+										- 미래형 학교 교육과정 실현하기 위한 다양한 지원 방안을 제시할 수 있다.
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">학습개요</th>
+									<td>
+										- 예상되는 미래 사회의 방향과 이에 맞는 미래 교육과 학교의 모습을 탐색하고자 한다. 이를 위해 4차 산업 혁명 시대의 모습, 미래 교육의 방향과 특징, 미래 학교의 다양한 시나리오 등을 다룬다.<br>
+										- 미래형 교육과정을 이해하는 데 있어서 교육과정 재구성 및 디자인을 이해하고 교육과정 담론의 핵심을 이해하고자 한다. 교육과정 재구성과 디자인의 개념, 교육과정의 역사. 교육과정 개발 모델의 탐색, 이해 중심 교육과정, 역량 중심 교육과정 등을 살펴보고자 한다.<br>
+										- 현재의 교육과정 담론을 살피고 이를 통해 미래형 교육과정의 방향과 각 담론들을 이해하고자 한다. 교육과정-수업-평가-기록의 일체화, 인턴십 교육과정, 학교 선택형 교육과정과 고교 학점제, 자유학년제, 미래형 교수학습방법과 평가 등을 구체적으로 살펴보고자 한다. <br>
+										- 실제적인 교육과정 재구성을 위해 구체적으로 어떻게 노력해야 하는지를 설명할 수 있고 현장에서 교육과정 재구성을 실천할 수 있도록 구성하였다. 교과 내 재구성, 범교과적 재구성의 의미와 방법, 사례를 살펴보고 실제 실습해볼 수 있도록 하였다.<br>
+										- 미래형 학교 교육과정 실현하기 위한 다양한 지원 방안을 제시하고자 한다. 이를 위해 학습공원과 마을교육공동체, 교사학습 공동체, 교육정책적 방안 등을 다루었다.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="tab_title">
+							<h3>평가방법</h3>
+						</div>
+						<table class="tab_table" summary="평가방법 내용입니다.">
+							<caption>평가방법</caption>
+							<colgroup>
+								<col>
+								<col width="16%">
+								<col width="16%">
+								<col width="16%">
+								<col width="16%">
+								<col width="16%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>평가기준</th>
+									<th>진도율</th>
+									<th>시험(필수)</th>
+									<th>과제(필수)</th>
+									<th>출석시험</th>
+									<th>합계</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pd0">평가비율(%)</td>
+									<td class="pd0"><strong class="fc_blue">30</strong>%</td>
+									<td class="pd0"><strong class="fc_blue">40</strong>%</td>
+									<td class="pd0"><strong class="fc_blue">30</strong>%</td>
+									<td class="pd0">없음</td>
+									<td class="pd0"><strong class="fc_blue">100</strong>%</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="info_txt"><span>* 이수기준 진도율</span> - 80% 이상</span></p>
+						<p class="info_txt"><span>* 이수기준 점수</span> - (학습진도율 80% 이상,과제제출,시험응시), 총점 100점 만점에 60점 이상</span></p>
+
+						<div class="tab_title">
+							<h3>연수후기</h3>
+						</div>
+
+						<dl class="qna all on">
+						</dl>
+
+						<dl class="qna list1">
+							<dt><a href="#" onclick="return false;">종합선물이네요.</a></dt>
+							<dd>
+								<p class="wr_info">
+									작성자<span>etv****</span> 작성일<span>19-05-20 20:46</span> 평가<span><img src="http://www.tschool.net/image/content/star05.gif" alt="별점 5점"></span>
+								</p>
+								현재 시점에서 꼭 필요한 내용들로 모아놓은 연수 였습니다. 왜 좀 더 일찍 듣지 못했는지 후회되는 연수였어요.
+							</dd>
+							<dt><a href="#" onclick="return false;">동료선생님들과 함께 받으면서 토론하고 학교에 적용하고 싶은 연수였습니다.</a></dt>
+							<dd>
+								<p class="wr_info">
+									작성자<span>cri****</span> 작성일<span>19-04-29 08:03</span> 평가<span><img src="http://www.tschool.net/image/content/star05.gif" alt="별점 5점"></span>
+								</p>
+								우리학교 선생님들과 함께 받고 싶은 연수입니다. 선생님들에게 소개하고 함께 공론화과정을 거쳐서 학교에 적용하고 싶습니다.<br>
+								B형 시험문제를 봤는데 5번문제 정답을 확인해 주시기 바랍니다. 역량의 특성에 관한 문제인데 강의와 차이가 있는 것 같아서요
+							</dd>
+							<dt><a href="#" onclick="return false;">꼭 필요한 주제!!!</a></dt>
+							<dd>
+								<p class="wr_info">
+									작성자<span>ksg****</span> 작성일<span>19-01-31 10:43</span> 평가<span><img src="http://www.tschool.net/image/content/star05.gif" alt="별점 5점"></span>
+								</p>
+								미래사회를 준비하는 사람에게 방향을 제시해주어 좋은 내용이었습니다.
+							</dd>
+						</dl>
+						<div class="pager">
+							<div class="prev_btns">
+								<a class="prev_end" href="#">첫 페이지</a>
+								<a class="prev" href="#">이전 페이지</a>
+							</div>
+							<p class="current_page">1/40</p>
+							<div class="next_btns">
+								<a class="next" href="#">다음 페이지</a>
+								<a class="next_end" href="#">끝 페이지</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- //article -->
+		</div>
+		<!-- //section -->
+	</div>
+	<!--// container -->
+
+	<!-- footer 공통 -->
+	<div id="footer">
+		<div class="footer_container">
+			<ul class="content">
+				<li class="btns">
+					<a href="./login.html">로그인</a>
+					<a href="../../">PC버전</a>
+				</li>
+				<li class="link">
+					<ul>
+						<li><a href="../../info/info01.html">연수원소개</a></li>
+						<li class="space">I</li>
+						<li><a href="#">멤버십</a></li>
+						<li class="space">I</li>
+						<li><a href="../../info/info03.html">사이트맵</a></li>
+						<li class="space">I</li>
+						<li><a href="../../info/rule.html">이용약관</a></li>
+						<li class="space">I</li>
+						<li><a href="../../info/policy.html">개인정보처리방침</a></li>
+						<li class="space">I</li>
+						<li><a href="../../info/email.html">이메일 무단 수집거부</a></li>
+					</ul>
+				</li>
+				<li class="logo">
+					<img src="../image/common/footer_logo_tschool.png" alt="티스쿨 원격교육연수원"/>
+				</li>
+				<li class="client">
+<p><strong>㈜티스쿨이앤씨</strong></p>
+<p><span>티스쿨 고객센터 : 1544-9044</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAX : 02-6970-6179</p>
+<p>메일 : tschool@tschool.net</p>
+				</li>
+				<li class="copyright">
+<p>㈜티스쿨이앤씨 | 서울시 구로구 디지털로 33길 48 대륭포스트타워 7차 | 대표이사:박병근</p>
+<p>사업자 등록번호 : 214-87-33789 | 연수원 인가: 제02-9호 | 통신판매업신고 제 2013-서울구로-0983호 <a href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2013316015930200983&area1=&area2=&currpage=1&searchKey=04&searchVal=2148733789&stdate=&enddate=">사업자 정보 확인</a></p>
+<p>COPYRIGHT 2013 TSCHOOL ALLRIGHTS RESERVED.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //footer 공통 -->
+</div>
+</body>
+</html>

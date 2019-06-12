@@ -98,8 +98,14 @@ $(window).load(function(){
 					</div>
 
 					<div class="my_lecture_wrap">
+                        <div class="caution_box4">
+                            <p class="txt_s14">
+                                정영희 선생님 <span class="va_m txt_blue">&#91;회원정보 수정&#93;</span> 에서 <span class="va_m txt_bold txt_orange">나이스 개인번호</span>를 입력 해 주세요.
+                                <a class="btn_white2" href="./menu07.html">나이스 개인번호 입력 <img class="icon_arrow" src="../image/common/bul_st02.gif"></a>
+                            </p>
+                        </div>
+
 						<h4>직무연수</h4>
-						<a class="what_lecture_num" href="#">연수지명번호란?</a>
 						<table class="lecture_table">
 							<colgroup>
 								<col class="col_title"/>
@@ -110,7 +116,7 @@ $(window).load(function(){
 							<thead>
 								<tr>
 									<th class="col_title">과정명</th>
-									<th class="col_content" colspan="3">교실속! 메이커 교육<a class="go_studyroom" href="#">강의실 입장하기</a></th>
+                                    <th class="col_content" colspan="3"><span class="title">교실속! 메이커 교육</span> <a class="fl_r btn btn-primary" href="../studyroom/menu01.html">강의실 입장하기</a></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -121,49 +127,10 @@ $(window).load(function(){
 									<td class="col_content">2018-06-01~2018-12-31 <span class="d_day">D-39일</span></td>
 								</tr>
 								<tr>
-									<td class="col_title">연수지명번호</td>
-									<td class="col_content" colspan="3">
-										<form class="lecture_form">
-											<div class="group">
-												<input type="radio" name="uniqueRadio_0" value="Y" onclick="textboxHold('0');"><!--
-												--><select name="unique_area_0" class="user" id="unique_area_0" disabled="true">
-													<option value="">지역</option>
-													<option>서울</option>
-													<option>부산</option>
-													<option>대구</option>
-													<option>인천</option>
-													<option>광주</option>
-													<option>대전</option>
-													<option>울산</option>
-													<option>경기</option>
-													<option>강원</option>
-													<option>충북</option>
-													<option>충남</option>
-													<option>전북</option>
-													<option>전남</option>
-													<option>경북</option>
-													<option>경남</option>
-													<option>제주</option>
-													<option>세종</option>
-												</select>
-												- <input type="text" name="unique_s01_0" size="5" maxlength="15" onfocus="reset_txt(this)" value="학교명" disabled="true" class="user" id="unique_s01">
-												- <input type="text" name="unique_s02_0" size="4" maxlength="10" onfocus="reset_txt(this)" value="년도" disabled="true" class="user" id="unique_s02">
-												- <input type="text" name="unique_s03_0" size="4" maxlength="10" onfocus="reset_txt(this)" value="지명명부번호" disabled="true" class="user" id="unique_s03">
-												<input type="submit" name="image" onfocus="blur();" value="연수지명번호 저장">
-											</div>
-											<div class="group">
-												<p>
-													<input type="radio" name="uniqueRadio_0" value="N" onclick="textboxHold('');" checked="" id="neisNo"><label for="neisNo"><span>연수 지명번호가 없습니다.</span> (사립유치원, 강사, 일반인 등)</label>
-												</p>
-											</div>
-										</form>
-									</td>
-								</tr>
-								<tr>
 									<td class="col_title">온라인 과제</td>
-									<td class="col_content"><span class="condition">미제출</span><p class="period">(2018-11-19 ~ 2018-12-31)</p></td>
+									<td class="col_content"><a class="btn_white2">미제출 <img class="icon_arrow" src="../image/common/bul_st02.gif"></a><p class="period">(2018-11-19 ~ 2018-12-31)</p></td>
 									<td class="col_title">온라인 시험</td>
-									<td class="col_content"><span class="condition">미응시</span><p class="period">(2018-11-19 ~ 2018-12-31)</p></td>
+									<td class="col_content"><a class="btn_white2">미응시 <img class="icon_arrow" src="../image/common/bul_st02.gif"></a><p class="period">(2018-11-19 ~ 2018-12-31)</p></td>
 								</tr>
 								<tr>
 									<td class="col_title">진도율</td>
@@ -177,8 +144,38 @@ $(window).load(function(){
 							</tbody>
 						</table>
 
+                        <div class="mt35">
+                            <div class="mb10">
+                                <span class="txt_bold txt_s16 txt_dark">4학점 수강 인원 및 출석고사 안내</span> &nbsp;
+                                <a class="btn_white2" target="_blank" href="javascript:open_window('../popup/popup_grade_table.html', '', 'width=700, height=610')">연수성적분포 조견표 <img class="icon_arrow" src="../image/common/bul_st02.gif"></a>
+                            </div>
+                            <table class="edit_table table_template01 mb0">
+                                <colgroup>
+                                    <col width="15%">
+                                    <col width="35%">
+                                    <col width="15%">
+                                    <col width="35%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">수강 인원</th>
+                                        <td>5명</td>
+                                        <th scope="row">수험 번호</th>
+                                        <td>수험번호 미생성&nbsp;&nbsp;<a class="btn_white2" target="_blank" href="javascript:open_window('./off_test.html', '', 'width=760, height=700')">수험표 발급 <img class="icon_arrow" src="../image/common/bul_st02.gif"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">출석고사</th>
+                                        <td class="online">0000-00-00 (목)</td>
+                                        <th scope="row">시험 장소</th>
+                                        <td> 강원도 강릉 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
 						<h4>자율연수</h4>
-						<table class="lecture_table">
+
+						<table class="lecture_table mb0">
 							<colgroup>
 								<col class="col_title"/>
 								<col class="col_content"/>
@@ -188,13 +185,13 @@ $(window).load(function(){
 							<thead>
 								<tr>
 									<th class="col_title">과정명</th>
-									<th class="col_content" colspan="3">소중한것 먼저하기 실행편<a class="go_studyroom" href="#">강의실 입장하기</a></th>
+									<th class="col_content" colspan="3"><span class="title">소중한것 먼저하기 실행편</span> <a class="fl_r btn btn-primary" href="../studyroom/menu01.html">강의실 입장하기</a></th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td class="col_title">구분</td>
-									<td class="col_content">자율</span></td>
+									<td class="col_content">자율</td>
 									<td class="col_title">연수기간</td>
 									<td class="col_content">2018-02-13~2018-03-17 <span class="d_day">D-1일</span></td>
 								</tr>
@@ -213,47 +210,42 @@ $(window).load(function(){
 						<h4>종료된 연수</h4>
 						<table class="end_lecture_table">
 							<colgroup>
-								<col class="col1"/>
-								<col class="col2"/>
-								<col class="col3"/>
-								<col class="col4"/>
-								<col class="col5"/>
-								<col class="col6"/>
+								<col width="11%"/>
+								<col width="*"/>
+								<col width="11%"/>
+								<col width="15%"/>
+								<col width="15%"/>
 							</colgroup>
 							<thead>
 								<tr>
-									<th class="col1">구분</th>
-									<th class="col2">과정명</th>
-									<th class="col3">연수지명번호</th>
-									<th class="col4">이수여부</th>
-									<th class="col5">복습기간</th>
-									<th class="col6">복습하기</th>
+									<th>구분</th>
+									<th>과정명</th>
+									<th>이수여부</th>
+									<th>복습기간</th>
+									<th>복습하기</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td class="col1">직무</td>
-									<td class="col2">학교 위기탈출 프로젝트! 교사를 위한 학교 안전 매뉴얼</td>
-									<td class="col3">[부산-1111-1111-11111]<a class="btn_grey" href="수정">수정</a></td>
-									<td class="col4">미이수</td>
-									<td class="col5">2019-03-07 까지</td>
-									<td class="col6"><a class="btn_blue" href="../studyroom/menu01.html">복습하기</a></td>
+									<td class="ta_c">직무</td>
+									<td class="ta_l">학교 위기탈출 프로젝트! 교사를 위한 학교 안전 매뉴얼</td>
+									<td class="ta_c">미이수</td>
+									<td class="ta_c">2019-03-07 까지</td>
+									<td class="ta_c"><a class="btn btn-primary" href="../studyroom/menu01.html">복습하기</a></td>
 								</tr>
 								<tr>
-									<td class="col1">직무</td>
-									<td class="col2">2015 개정 정보 교육과정의 이해와 수업</td>
-									<td class="col3">지명번호없음<a class="btn_grey" href="수정">수정</a></td>
-									<td class="col4">미이수</td>
-									<td class="col5">2019-03-07 까지</td>
-									<td class="col6"><a class="btn_blue" href="../studyroom/menu01.html">복습하기</a></td>
+									<td class="ta_c">직무</td>
+									<td>2015 개정 정보 교육과정의 이해와 수업</td>
+									<td class="ta_c">미이수</td>
+									<td class="ta_c">2019-03-07 까지</td>
+									<td class="ta_c"><a class="btn btn-primary" href="../studyroom/menu01.html">복습하기</a></td>
 								</tr>
 								<tr>
-									<td class="col1">직무</td>
-									<td class="col2">학교 위기탈출 프로젝트! 교사를 위한 학교 안전 매뉴얼</td>
-									<td class="col3">[부산-1111-1111-11111]<a class="btn_grey" href="수정">수정</a></td>
-									<td class="col4">미이수</td>
-									<td class="col5">2019-03-07 까지</td>
-									<td class="col6"><a class="btn_blue" href="../studyroom/menu01.html">복습하기</a></td>
+									<td class="ta_c">직무</td>
+									<td>학교 위기탈출 프로젝트! 교사를 위한 학교 안전 매뉴얼</td>
+									<td class="ta_c">미이수</td>
+									<td class="ta_c">2019-03-07 까지</td>
+									<td class="ta_c"><a class="btn btn-primary" href="../studyroom/menu01.html">복습하기</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -263,22 +255,26 @@ $(window).load(function(){
 				</div>
 				<!-- //board_wrap -->
 
-				<div class="pager">
-					<a class="prev" href="#">이전 페이지</a>
-					<ul>
-						<li><a class="on" href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">6</a></li>
-						<li><a href="#">7</a></li>
-						<li><a href="#">8</a></li>
-						<li><a href="#">9</a></li>
-						<li><a href="#">10</a></li>
-					</ul>
-					<a class="next" href="#">다음 페이지</a>
-				</div>
+				<!-- 페이지 네비게이션 -->
+                <div class="pager">
+                    <a class="first" href="#">처음 페이지</a>
+                    <a class="prev" href="#">이전 페이지</a>
+                    <ul>
+                        <li><a class="on" href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                    </ul>
+                    <a class="next" href="#">다음 페이지</a>
+                    <a class="last" href="#">마지막 페이지</a>
+                </div>
+                <!-- /페이지 네비게이션 -->
 
 			</div>
 			<!-- //article -->

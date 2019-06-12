@@ -263,7 +263,7 @@ function use_coupon_check(f) {
 							</tbody>
 						</table>
 
-						<h4>연수신청 시</h4>
+						<h4>나의 쿠폰 목록</h4>
 						<table class="point_apply_table qna_table_template">
 							<colspan>
 								<col class="col1">
@@ -323,17 +323,19 @@ function use_coupon_check(f) {
 
 						<h4>쿠폰 등록</h4>
 						<div class="caution_box">
-							가지고 계신 쿠폰이 있으신가요?<br>
+							<div class="dpb">
+                            가지고 계신 쿠폰이 있으신가요?<br>
 							<span>쿠폰 번호를 등록</span>하시면 할인 혜택을 누릴 수 있습니다.
+                            </div>
 							<form name="form_coupon" class="form_coupon">
 								<input type="text" name="coupon_no1" id="coupon_no1" maxlength="5" class="coupon_input"> -
 								<input type="text" name="coupon_no2" id="coupon_no2" maxlength="5" class="coupon_input"> -
 								<input type="text" name="coupon_no3" id="coupon_no3" maxlength="5" class="coupon_input">
-								<a href="javascript:use_coupon_check(form_coupon);" class="btn_blue">쿠폰등록하기</a>
+                                <a href="javascript:use_coupon_check(form_coupon);" class="btn btn-default form_side" href="#">등록하기</a>
 							</form>
 						</div>
 
-						<h4>연수신청 시</h4>
+						<h4>나의 쿠폰 목록</h4>
 						<table class="coupon_list_table qna_table_template">
 							<colspan>
 								<col class="col1">
@@ -348,11 +350,11 @@ function use_coupon_check(f) {
 								</tr>
 							</thead>
 							<tbody>
-								<!--<tr>
+								<tr>
 									<td>쿠폰이름</td>
 									<td>혜택</td>
 									<td>0000-00-00 까지</td>
-								</tr>-->
+								</tr>
 							</tbody>
 							<tfoot>
 								<tr>
